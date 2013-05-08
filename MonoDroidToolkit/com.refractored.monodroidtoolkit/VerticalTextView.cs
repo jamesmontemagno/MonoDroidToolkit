@@ -12,6 +12,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ * 
+ * Ported from mic: http://stackoverflow.com/users/907695/mice
+ * via: http://stackoverflow.com/questions/1258275/vertical-rotated-label-in-android
  */
 
 using Android.Content;
