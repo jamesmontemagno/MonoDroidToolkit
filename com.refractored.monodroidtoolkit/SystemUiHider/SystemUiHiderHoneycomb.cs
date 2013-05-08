@@ -123,7 +123,7 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
                 // Test against mTestFlags to see if the system UI is visible.
                 if (((int)visibility & m_SystemUiHider.m_TestFlags) != 0)
                 {
-                    if (Build.VERSION.SdkInt < Build.VERSION_CODES.JellyBean)
+                    if ((int)Build.VERSION.SdkInt < 16)
                     {
                         // Pre-Jelly Bean, we must manually hide the action bar
                         // and use the old window flags API.
@@ -140,7 +140,7 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
                 else
                 {
                     m_SystemUiHider.m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_SystemUiHider.m_ShowFlags;
-                    if (Build.VERSION.SdkInt < Build.VERSION_CODES.JellyBean)
+                    if ((int)Build.VERSION.SdkInt < 16)
                     {
                         // Pre-Jelly Bean, we must manually show the action bar
                         // and use the old window flags API.
