@@ -27,22 +27,26 @@ namespace com.refractored.monodroidtoolkit
         public GridViewNoScroll(System.IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer)
             : base(javaReference, transfer)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public GridViewNoScroll(Context context, IAttributeSet attrs,
             int defStyle)
             : base(context, attrs, defStyle)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public GridViewNoScroll(Context context, IAttributeSet attrs)
             : base(context, attrs)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public GridViewNoScroll(Context context)
             : base(context)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public override bool OnTouchEvent(MotionEvent e)

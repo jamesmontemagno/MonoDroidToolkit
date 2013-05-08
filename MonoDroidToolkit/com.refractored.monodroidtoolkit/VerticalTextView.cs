@@ -47,6 +47,7 @@ namespace com.refractored.monodroidtoolkit
 
         private void Initialize()
         {
+            ResourceIdManager.UpdateIdValues();
             m_TopDown = true;
 
             var gravity = Gravity;

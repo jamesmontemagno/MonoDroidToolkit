@@ -29,22 +29,26 @@ namespace com.refractored.monodroidtoolkit
         public ScrollingTextView(System.IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer)
             : base(javaReference, transfer)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public ScrollingTextView(Context context, IAttributeSet attrs,
             int defStyle)
             : base(context, attrs, defStyle)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public ScrollingTextView(Context context, IAttributeSet attrs)
             : base(context, attrs)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         public ScrollingTextView(Context context)
             : base(context)
         {
+            ResourceIdManager.UpdateIdValues();
         }
 
         protected override void OnFocusChanged(bool gainFocus, FocusSearchDirection direction, Android.Graphics.Rect previouslyFocusedRect)

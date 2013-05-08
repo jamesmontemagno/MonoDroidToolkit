@@ -29,12 +29,14 @@ namespace com.refractored.monodroidtoolkit
             : base(javaReference, transfer)
         {
             PagerEnabled = true;
+            ResourceIdManager.UpdateIdValues();
         }
 
         public StickyViewPager(Context context, IAttributeSet attrs)
             : base(context, attrs)
         {
             PagerEnabled = true;
+            ResourceIdManager.UpdateIdValues();
 
         }
 
@@ -42,6 +44,7 @@ namespace com.refractored.monodroidtoolkit
             : base(context)
         {
             PagerEnabled = true;
+            ResourceIdManager.UpdateIdValues();
         }
 
         public override bool OnInterceptTouchEvent(MotionEvent ev)
