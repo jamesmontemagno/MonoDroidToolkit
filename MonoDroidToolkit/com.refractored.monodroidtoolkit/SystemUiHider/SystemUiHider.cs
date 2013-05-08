@@ -40,8 +40,15 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
         /// This flag isn't used on newer devices because the Action Bar
         /// </summary>
         public static int FLAG_LAYOUT_IN_SCREEN_OLDER_DEVICES = 0x1;
+
+        /// <summary>
+        /// Will force to full screen mode
+        /// </summary>
         public static int FLAG_FULLSCREEN = 0x2;
 
+        /// <summary>
+        /// force to full screen and hide navigation
+        /// </summary>
         public static int FLAG_HIDE_NAVIGATION = FLAG_FULLSCREEN | 0x4;
 
 

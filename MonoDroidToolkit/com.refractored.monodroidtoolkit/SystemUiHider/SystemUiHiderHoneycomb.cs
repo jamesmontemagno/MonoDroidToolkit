@@ -23,7 +23,7 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
     public class SystemUiHiderHoneycomb : SystemUiHiderBase
     {
 
-#if __ANDROID_11_
+#if __ANDROID_11__
         private int m_ShowFlags;
         private int m_HideFlags;
         private int m_TestFlags;
@@ -34,7 +34,7 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
         public SystemUiHiderHoneycomb(Activity activity, View anchorView, int flags)
             : base(activity, anchorView, flags)
         {
-#if __ANDROID_11_
+#if __ANDROID_11__
             m_ShowFlags = (int)SystemUiFlags.Visible;
             m_HideFlags = (int)SystemUiFlags.LowProfile;
             m_TestFlags = (int)SystemUiFlags.LowProfile;
@@ -67,14 +67,14 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
 
         public override void Setup()
         {
-#if __ANDROID_11_
+#if __ANDROID_11__
             m_AnchorView.SystemUiVisibilityChange += AnchorViewOnSystemUiVisibilityChange;
 #else
             base.Setup();
 #endif
 
         }
-#if __ANDROID_11_
+#if __ANDROID_11__
         private void AnchorViewOnSystemUiVisibilityChange(object sender, View.SystemUiVisibilityChangeEventArgs systemUiVisibilityChangeEventArgs)
         {
             // Test against mTestFlags to see if the system UI is visible.
@@ -115,7 +115,7 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
 
         public override void Show()
         {
-#if __ANDROID_11_
+#if __ANDROID_11__
             m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_ShowFlags;
 #else
             base.Show();
@@ -125,14 +125,14 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
 
         public override void Hide()
         {
-#if __ANDROID_11_
+#if __ANDROID_11__
             m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_HideFlags;
 #else
             base.Hide();
 #endif
         }
 
-#if __ANDROID_11_
+#if __ANDROID_11__
         public override bool IsVisible
         {
             get
