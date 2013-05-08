@@ -28,8 +28,6 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
         private int m_HideFlags;
         private int m_TestFlags;
         private bool m_IsVisible = true;
-
-        private SystemUiVisibilityChangeListner m_SystemUiVisibilityChangeListner;
 #endif
         public SystemUiHiderHoneycomb(Activity activity, View anchorView, int flags)
             : base(activity, anchorView, flags)
@@ -57,8 +55,6 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
                         | (int)SystemUiFlags.HideNavigation;
                 m_TestFlags = (int)SystemUiFlags.HideNavigation;
             }
-
-            m_SystemUiVisibilityChangeListner = new SystemUiVisibilityChangeListner(this);
 #endif
         }
 
