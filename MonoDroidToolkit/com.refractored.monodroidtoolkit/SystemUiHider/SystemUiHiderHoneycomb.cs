@@ -64,15 +64,54 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
 
 
 
+
         public override void Setup()
         {
 #if __ANDROID_11_
-            m_AnchorView.SetOnSystemUiVisibilityChangeListener(m_SystemUiVisibilityChangeListner);
+            m_AnchorView.SystemUiVisibilityChange += AnchorViewOnSystemUiVisibilityChange;
 #else
             base.Setup();
 #endif
 
         }
+#if __ANDROID_11_
+        private void AnchorViewOnSystemUiVisibilityChange(object sender, View.SystemUiVisibilityChangeEventArgs systemUiVisibilityChangeEventArgs)
+        {
+            // Test against mTestFlags to see if the system UI is visible.
+            if (((int)systemUiVisibilityChangeEventArgs.Visibility & m_TestFlags) != 0)
+            {
+                if ((int)Build.VERSION.SdkInt < 16)
+                {
+                    // Pre-Jelly Bean, we must manually hide the action bar
+                    // and use the old window flags API.
+                    m_Activity.ActionBar.Hide();
+                    m_Activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
+                }
+
+                // Trigger the registered listener and cache the visibility
+                // state.
+                m_OnVisibilityChangeListener.OnVisibilityChange(false);
+                IsVisible = false;
+
+            }
+            else
+            {
+                m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_ShowFlags;
+                if ((int)Build.VERSION.SdkInt < 16)
+                {
+                    // Pre-Jelly Bean, we must manually show the action bar
+                    // and use the old window flags API.
+                    m_Activity.ActionBar.Show();
+                    m_Activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
+                }
+
+                // Trigger the registered listener and cache the visibility
+                // state.
+                m_OnVisibilityChangeListener.OnVisibilityChange(true);
+                IsVisible = true;
+            }
+        }
+#endif
 
         public override void Show()
         {
@@ -103,66 +142,6 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
             set
             {
                 m_IsVisible = value;
-            }
-        }
-#endif
-
-
-#if __ANDROID_11_
-        protected class SystemUiVisibilityChangeListner : View.IOnSystemUiVisibilityChangeListener
-        {
-            private SystemUiHiderHoneycomb m_SystemUiHider;
-
-            public SystemUiVisibilityChangeListner(SystemUiHiderHoneycomb systemUiHider)
-            {
-                m_SystemUiHider = systemUiHider;
-            }
-
-            public void OnSystemUiVisibilityChange(StatusBarVisibility visibility)
-            {
-                // Test against mTestFlags to see if the system UI is visible.
-                if (((int)visibility & m_SystemUiHider.m_TestFlags) != 0)
-                {
-                    if ((int)Build.VERSION.SdkInt < 16)
-                    {
-                        // Pre-Jelly Bean, we must manually hide the action bar
-                        // and use the old window flags API.
-                        m_SystemUiHider.m_Activity.ActionBar.Hide();
-                        m_SystemUiHider.m_Activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
-                    }
-
-                    // Trigger the registered listener and cache the visibility
-                    // state.
-                    m_SystemUiHider.m_OnVisibilityChangeListener.onVisibilityChange(false);
-                    m_SystemUiHider.IsVisible = false;
-
-                }
-                else
-                {
-                    m_SystemUiHider.m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_SystemUiHider.m_ShowFlags;
-                    if ((int)Build.VERSION.SdkInt < 16)
-                    {
-                        // Pre-Jelly Bean, we must manually show the action bar
-                        // and use the old window flags API.
-                        m_SystemUiHider.m_Activity.ActionBar.Show();
-                        m_SystemUiHider.m_Activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
-                    }
-
-                    // Trigger the registered listener and cache the visibility
-                    // state.
-                    m_SystemUiHider.m_OnVisibilityChangeListener.onVisibilityChange(true);
-                    m_SystemUiHider.IsVisible = true;
-                }
-            }
-
-            public void Dispose()
-            {
-                //throw new NotImplementedException();
-            }
-
-            public IntPtr Handle
-            {
-                get { return m_SystemUiHider.m_Activity.Handle; }
             }
         }
 #endif
