@@ -17,5 +17,11 @@ MonodroidToolkit is a kit of views that I have created or port from java into Xa
 * StickyViewPager: Disable view pager from moving if you desire
 * SystemUiHider: port of auto hiding the ui in Android
 
+## Want to see something?
+Simply open up an issue.
+
+## Apps using the toolkit
+* Have an app using the toolkit? Open an issue
+
 ## License
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
