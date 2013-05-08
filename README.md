@@ -11,11 +11,11 @@ Tomasz Cielecki ([@Cheesebaron](http://www.twitter.com/Cheesebaron))
 MonodroidToolkit is a kit of views that I have created or port from java into Xamarin.Android (Mono for Android). I have found them very useful in my different projects.
 
 ## What is included?
-* VerticalTextView : Turn you text 90 or 270!
-* ScrollingTextView: Scrolls text in the view
-* GridViewNoScroll: Automatically expandes the height of the gridview so you can put it inside of a list view or scroll view
-* StickyViewPager: Disable view pager from moving if you desire
-* SystemUiHider: port of auto hiding the ui in Android
+* [Complete] VerticalTextView : Turn you text 90 or 270!
+* [Complete] ScrollingTextView: Scrolls text in the view
+* [Complete] GridViewNoScroll: Automatically expandes the height of the gridview so you can put it inside of a list view or scroll view
+* [Complete] StickyViewPager: Disable view pager from moving if you desire
+* [Under Development] SystemUiHider: port of auto hiding the ui in Android 
 
 ## Want to see something?
 Simply open up an issue.
