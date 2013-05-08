@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.refractored.monodroidtoolkit", "..\com.refractored.monodroidtoolkit\com.refractored.monodroidtoolkit.csproj", "{464993E1-35B5-4F0E-9766-7AFC030F296E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
