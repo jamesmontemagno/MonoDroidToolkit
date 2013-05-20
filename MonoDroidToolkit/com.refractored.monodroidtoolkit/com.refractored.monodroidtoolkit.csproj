@@ -14,7 +14,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <RootNamespace>com.refractored.monodroidtoolkit</RootNamespace>
     <AssemblyName>com.refractored.monodroidtoolkit</AssemblyName>
-    <TargetFrameworkVersion>v2.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GridViewNoScroll.cs" />
+    <Compile Include="NetworkUtils.cs" />
     <Compile Include="ScrollingTextView.cs" />
     <Compile Include="StickyViewPager.cs" />
     <Compile Include="SystemUiHider\SystemUiHider.cs" />
