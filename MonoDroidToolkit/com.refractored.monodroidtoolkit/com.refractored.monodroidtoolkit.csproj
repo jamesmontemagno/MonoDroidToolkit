@@ -27,10 +27,10 @@
     <ConsolePause>False</ConsolePause>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseSumatra|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>True</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>bin\ReleaseSumatra</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
@@ -53,7 +53,7 @@
     <Compile Include="ImageLoader\MemoryCache.cs" />
     <Compile Include="NetworkUtils.cs" />
     <Compile Include="Preferneces\IntEditTextPreference.cs" />
-    <Compile Include="Preferneces\IntListPreferencecs.cs" />
+    <Compile Include="Preferneces\IntListPreference.cs" />
     <Compile Include="ScrollingTextView.cs" />
     <Compile Include="StickyViewPager.cs" />
     <Compile Include="SystemUiHider\SystemUiHider.cs" />
