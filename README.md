@@ -11,12 +11,24 @@ Tomasz Cielecki ([@Cheesebaron](http://www.twitter.com/Cheesebaron))
 MonodroidToolkit is a kit of views that I have created or port from java into Xamarin.Android (Mono for Android). I have found them very useful in my different projects.
 
 ## What is included?
-* [Complete] VerticalTextView : Turn you text 90 or 270!
-* [Complete] ScrollingTextView: Scrolls text in the view
-* [Complete] GridViewNoScroll: Automatically expandes the height of the gridview so you can put it inside of a list view or scroll view
-* [Complete] StickyViewPager: Disable view pager from moving if you desire
-* [Complete] SystemUiHider: port of auto hiding the ui in Android 
-* [Complete] NetworkUtils: Get IP/MAC/Hostname of android device
+
+### Views
+
+* VerticalTextView : Turn you text 90 or 270!
+* ScrollingTextView: Scrolls text in the view
+* GridViewNoScroll: Automatically expandes the height of the gridview so you can put it inside of a list view or scroll view
+* StickyViewPager: Disable view pager from moving if you desire
+
+### Utilities
+
+* SystemUiHider: port of auto hiding the ui in Android 
+* NetworkUtils: Get IP/MAC/Hostname of android device
+* ImageLoader: Simple delay image loader and caching mechanism
+
+### Preferences
+
+* IntEditTextPrefence: Enfoces an integer is entered on an edit text preference
+* IntListPrefrences: Allows you to specify integers as the values.
 
 ## Want to see something?
 Simply open up an issue.
