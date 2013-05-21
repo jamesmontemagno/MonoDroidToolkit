@@ -52,10 +52,11 @@ namespace com.refractored.monodroidtoolkit
 
                     var buf = new StringBuilder();
                     for (int idx = 0; idx < mac.Length; idx++)
-                        buf.Append(String.Format("{0}2X:", mac[idx]));
-
-                    if (buf.Length > 0)
-                        buf.Remove(buf.Length - 1, 1);
+                    {
+                        buf.Append(mac[idx].ToString("x2"));
+                        if (idx != mac.Length - 1)
+                            buf.Append(":");
+                    }
 
                     return buf.ToString();
                 }
@@ -114,6 +115,7 @@ namespace com.refractored.monodroidtoolkit
 
         /// <summary>
         /// Get system's hostname
+        /// Can NOT be called from UI thread
         /// </summary>
         /// <returns>hostname or empty string</returns>
         public static string GetHostName()
@@ -127,14 +129,14 @@ namespace com.refractored.monodroidtoolkit
                     {
                         var addr = intf.InitAddresses[index];
                         var ipAddr = intf.IpAddresses[index];
+                       // var hostName = intf.HostNames[index];
                         
                         if (!addr.IsLoopbackAddress)
                         {
-                            String sAddr = addr.HostAddress.ToUpper();
                             bool isIPv4 = ipAddr.AddressFamily == AddressFamily.InterNetwork;
                             if (isIPv4)
                             {
-                                var hostName = addr.HostName;
+                                var hostName = addr.HostName.ToUpper();
                                 if (string.IsNullOrWhiteSpace(hostName))
                                     return string.Empty;
 
@@ -157,6 +159,7 @@ namespace com.refractored.monodroidtoolkit
             public NetworkInterface NetworkInterface { get; set; }
             public List<IPAddress> IpAddresses { get; set; }
             public List<InetAddress> InitAddresses { get; set; }
+            //public List<String> HostNames { get; set; }
             public bool IsLoopback { get; set; }
         }
 
@@ -172,6 +175,7 @@ namespace com.refractored.monodroidtoolkit
             {
 
                 var networkInterfaceClass = JNIEnv.FindClass("java/net/NetworkInterface");
+                var inetAddressClass = JNIEnv.FindClass("java/net/InetAddress");
                 var getNetworkInterfacesMethod = JNIEnv.GetStaticMethodID(networkInterfaceClass, "getNetworkInterfaces", "()Ljava/util/Enumeration;");
                 var networkInterfacesEnumeration = JNIEnv.CallStaticObjectMethod(networkInterfaceClass, getNetworkInterfacesMethod);
                 var enumerationClass = JNIEnv.FindClass("java/util/Enumeration");
@@ -203,6 +207,8 @@ namespace com.refractored.monodroidtoolkit
                     var isLoopbackMethod = Android.Runtime.JNIEnv.GetMethodID(networkInterfaceClass, "isLoopback", "()Z");
                     var isLoopback = Android.Runtime.JNIEnv.CallBooleanMethod(currentInterface, isLoopbackMethod);
 
+                    
+
                     //IntPtr isUpMethod =Android.Runtime.JNIEnv.GetMethodID(networkInterfaceClass, "isUp","()Z");
                     //bool isUp =Android.Runtime.JNIEnv.CallBooleanMethod(currentInterface, isUpMethod);
 
@@ -211,6 +217,7 @@ namespace com.refractored.monodroidtoolkit
                             NetworkInterface = adapter,
                             InitAddresses = new List<InetAddress>(),
                             IpAddresses = new List<IPAddress>(),
+                           // HostNames =  new List<string>(),
                             IsLoopback = isLoopback
                         };
 
@@ -225,6 +232,11 @@ namespace com.refractored.monodroidtoolkit
                         hasMoreInetAddresses = JNIEnv.CallBooleanMethod(inetAddressesEnumeration, hasMoreElementsMethod);
                         var address = new Java.Lang.Object(currentInetAddress, JniHandleOwnership.DoNotTransfer).JavaCast<InetAddress>();
 
+                        //var getHostNameMethod = Android.Runtime.JNIEnv.GetMethodID(inetAddressClass, "getHostName", "()Ljava/lang/String;");
+                        //IntPtr getHostResultPtr = JNIEnv.CallObjectMethod(currentInetAddress, getHostNameMethod);
+
+                        //var getHostResult = new Java.Lang.Object(getHostResultPtr, JniHandleOwnership.TransferLocalRef).JavaCast<Java.Lang.String>();
+
                         IPAddress ipAddr;
 
                         var success = IPAddress.TryParse(address.HostAddress, out ipAddr);
@@ -233,6 +245,7 @@ namespace com.refractored.monodroidtoolkit
 
                         networkInfo.InitAddresses.Add(address);
                         networkInfo.IpAddresses.Add(ipAddr);
+                        //networkInfo.HostNames.Add(getHostResult.ToString());
                         adaptors.Add(networkInfo);
                     }
                 }
