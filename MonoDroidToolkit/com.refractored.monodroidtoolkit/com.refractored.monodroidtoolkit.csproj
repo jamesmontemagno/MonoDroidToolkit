@@ -48,7 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GridViewNoScroll.cs" />
+    <Compile Include="ImageLoader\FileCache.cs" />
+    <Compile Include="ImageLoader\ImageLoader.cs" />
+    <Compile Include="ImageLoader\MemoryCache.cs" />
     <Compile Include="NetworkUtils.cs" />
+    <Compile Include="Preferneces\IntEditTextPreference.cs" />
+    <Compile Include="Preferneces\IntListPreferencecs.cs" />
     <Compile Include="ScrollingTextView.cs" />
     <Compile Include="StickyViewPager.cs" />
     <Compile Include="SystemUiHider\SystemUiHider.cs" />
