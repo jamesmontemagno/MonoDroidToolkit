@@ -15,7 +15,8 @@ MonodroidToolkit is a kit of views that I have created or port from java into Xa
 * [Complete] ScrollingTextView: Scrolls text in the view
 * [Complete] GridViewNoScroll: Automatically expandes the height of the gridview so you can put it inside of a list view or scroll view
 * [Complete] StickyViewPager: Disable view pager from moving if you desire
-* [Under Development] SystemUiHider: port of auto hiding the ui in Android 
+* [Complete] SystemUiHider: port of auto hiding the ui in Android 
+* [Complete] NetworkUtils: Get IP/MAC/Hostname of android device
 
 ## Want to see something?
 Simply open up an issue.
