@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SelectEndEditText.cs" />
     <Compile Include="GridViewNoScroll.cs" />
     <Compile Include="ImageLoader\FileCache.cs" />
     <Compile Include="ImageLoader\ImageLoader.cs" />

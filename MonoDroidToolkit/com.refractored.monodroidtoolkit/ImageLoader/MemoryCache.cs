@@ -25,9 +25,25 @@ namespace com.refractored.monodroidtoolkit.imageloader
 {
     internal class MemoryCache
     {
-        private IDictionary<String, Bitmap> m_Cache = new ConcurrentDictionary<string, Bitmap>();
+        private IDictionary<String, Bitmap> m_Cache = new ConcurrentDictionary<String, Bitmap>();
 
-        private List<string> m_CacheList = new List<string>();
+        private List<String> m_CacheList = new List<String>();
+        
+        public void PopCache(int max)
+        {
+            if (max == 0)
+                return;
+
+            if (m_CacheList.Count >= max)
+            {
+                if (m_Cache.ContainsKey(m_CacheList[0]))
+                    m_Cache.Remove(m_CacheList[0]);
+
+                m_CacheList.RemoveAt(0);
+            }
+
+
+        }
 
         public Bitmap Get(String id)
         {
@@ -42,8 +58,8 @@ namespace com.refractored.monodroidtoolkit.imageloader
             if (!m_Cache.ContainsKey(id))
                 m_Cache.Add(id, bitmap);
 
-            //if(!m_CacheList.Contains(id))
-            //    m_CacheList.Add(id);
+            if(!m_CacheList.Contains(id))
+                m_CacheList.Add(id);
 
             //if(m_CacheList.Count == 60)
             //{

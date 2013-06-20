@@ -69,18 +69,13 @@ namespace com.refractored.monodroidtoolkit.imageloader
         private int m_StubID = -1;
 
         private int m_Scale;
+        private int m_MaxImages;
 
-        public ImageLoader(Context context)
-        {
-            m_FileCache = new FileCache(context);
-            m_Scale = 64;
-        }
-
-
-        public ImageLoader(Context context, int scale)
+        public ImageLoader(Context context, int scale = 64, int maxImages = 0)
         {
             m_FileCache = new FileCache(context);
             m_Scale = scale;
+            m_MaxImages = maxImages;
         }
 
         public void DisplayImage(string url, ImageView imageView, int defaultResourceId)
@@ -94,17 +89,22 @@ namespace com.refractored.monodroidtoolkit.imageloader
                 m_ImageViews.Remove(imageView);
             }
 
+            m_MemoryCache.PopCache(m_MaxImages);
+
+
+            
+
             //if (m_ImageList.Contains(imageView))
             //    m_ImageList.Remove(imageView);
 
 
-            //if (m_ImageList.Count == 10)
-            //{
-            //    var tempImageView = m_ImageList[0];
-            //    tempImageView.SetImageResource(m_StubID);
-            //    m_ImageViews.Remove(tempImageView);
-            //    m_ImageList.RemoveAt(0);
-            //}
+            /*if (m_MemoryCache..Count == 10)
+            {
+                var tempImageView = m_ImageList[0];
+                tempImageView.SetImageResource(m_StubID);
+                m_ImageViews.Remove(tempImageView);
+                m_ImageList.RemoveAt(0);
+            }*/
 
             m_ImageViews.Add(imageView, url);
             //m_ImageList.Add(imageView);

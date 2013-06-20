@@ -62,5 +62,15 @@ namespace com.refractored.monodroidtoolkit
 
             return false;
         }
+
+        public override bool OnInterceptHoverEvent(MotionEvent e)
+        {
+            if (PagerEnabled)
+                return base.OnInterceptHoverEvent(e);
+
+            return false;
+        }
+
+      
     }
 }
