@@ -18,6 +18,7 @@ MonodroidToolkit is a kit of views that I have created or port from java into Xa
 * ScrollingTextView: Scrolls text in the view
 * GridViewNoScroll: Automatically expandes the height of the gridview so you can put it inside of a list view or scroll view
 * StickyViewPager: Disable view pager from moving if you desire
+* SelectEndEditText: EditText view that always puts cursor at the end when focus is given. Great for remote control interfaces.
 
 ### Utilities
 
