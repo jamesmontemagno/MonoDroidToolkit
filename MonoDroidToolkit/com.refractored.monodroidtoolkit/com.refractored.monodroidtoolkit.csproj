@@ -82,10 +82,11 @@
     <AndroidResource Include="Resources\Values\Styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Drawable\pin_progress_pinned.png" />
-    <AndroidResource Include="Resources\Drawable\pin_progress_shadow.png" />
-    <AndroidResource Include="Resources\Drawable\pin_progress_unpinned.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\pin_progress_pinned.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\pin_progress_shadow.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\pin_progress_unpinned.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

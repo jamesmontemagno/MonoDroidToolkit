@@ -61,12 +61,6 @@ namespace com.refractored.monodroidtoolkit
         }
 
 
-        /// <summary>
-        /// Gets or sets if action bar is visible. This directly effects the size
-        /// of the images, default is true
-        /// </summary>
-        public bool HasActionBar { get; set; }
-
         private Drawable m_ShadowDrawable;
         /// <summary>
         /// Gets or sets the drawable used as the shadow
@@ -151,13 +145,6 @@ namespace com.refractored.monodroidtoolkit
         }
 
 
-         public ProgressButton(System.IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer)
-            : base(javaReference, transfer)
-        {
-            ResourceIdManager.UpdateIdValues();
-            Initialize(null,null,0);
-        }
-
         public ProgressButton(Context context, IAttributeSet attrs,
             int defStyle)
             : base(context, attrs, defStyle)
@@ -167,7 +154,7 @@ namespace com.refractored.monodroidtoolkit
         }
 
         public ProgressButton(Context context, IAttributeSet attrs)
-            : this(context, attrs, 0)
+            : this(context, attrs, Resource.Attribute.progressButtonStyle)
         {
         }
 
@@ -180,7 +167,7 @@ namespace com.refractored.monodroidtoolkit
             int defStyle)
         {
             //set defaults first:
-            HasActionBar = true;
+
             var circleColor = Resources.GetColor(Resource.Color.progress_default_circle_color);
             var progressColor = Resources.GetColor(Resource.Color.progress_default_progress_color);
             var pinnedDrawable = Resource.Drawable.pin_progress_pinned;
@@ -199,8 +186,8 @@ namespace com.refractored.monodroidtoolkit
                                                        Resource.Attribute.progressButtonStyle,
                                                        Resource.Style.ProgressButton_Pin);
 
-                Progress = a.GetInteger(Resource.Styleable.ProgressButton_progress, 0);
-                Max = a.GetInteger(Resource.Styleable.ProgressButton_max, 100);
+                m_Progress = a.GetInteger(Resource.Styleable.ProgressButton_progress, 0);
+                m_Max = a.GetInteger(Resource.Styleable.ProgressButton_max, 100);
 
                 circleColor = a.GetColor(Resource.Styleable.ProgressButton_circleColor, circleColor);
                 progressColor = a.GetColor(Resource.Styleable.ProgressButton_progressColor, progressColor);
@@ -208,25 +195,29 @@ namespace com.refractored.monodroidtoolkit
                 unpinnedDrawable = a.GetResourceId(Resource.Styleable.ProgressButton_unpinnedDrawable, unpinnedDrawable);
                 shadowDrawable = a.GetResourceId(Resource.Styleable.ProgressButton_shadowDrawable, shadowDrawable);
 
-                m_InnerSize = a.GetDimensionPixelSize(Resource.Styleable.ProgressButton_innerSize, m_InnerSize);
+                m_InnerSize = a.GetDimensionPixelSize(Resource.Styleable.ProgressButton_innerSize, 0);
+                if(m_InnerSize == 0)
+                    m_InnerSize = Resources.GetDimensionPixelSize(Resource.Dimension.progress_inner_size);
 
                 canChecked = a.GetBoolean(Resource.Styleable.ProgressButton_pinned, canChecked);
                 canClickable = a.GetBoolean(Resource.Styleable.ProgressButton_android_clickable, canClickable);
                 canFocusable = a.GetBoolean(Resource.Styleable.ProgressButton_android_focusable, canFocusable);
 
+                SetBackgroundDrawable(a.GetDrawable(Resource.Styleable.ProgressButton_android_selectableItemBackground));
+
                 a.Recycle();
             }
 
-            PinnedDrawable = Resources.GetDrawable(pinnedDrawable);
-            PinnedDrawable.SetCallback(this);
+            m_PinnedDrawable = Resources.GetDrawable(pinnedDrawable);
+            m_PinnedDrawable.SetCallback(this);
 
-            UnpinnedDrawable = Resources.GetDrawable(unpinnedDrawable);
-            UnpinnedDrawable.SetCallback(this);
+            m_UnpinnedDrawable = Resources.GetDrawable(unpinnedDrawable);
+            m_UnpinnedDrawable.SetCallback(this);
 
-            ShadowDrawable = Resources.GetDrawable(shadowDrawable);
-            ShadowDrawable.SetCallback(this);
+            m_ShadowDrawable = Resources.GetDrawable(shadowDrawable);
+            m_ShadowDrawable.SetCallback(this);
 
-            m_DrawableSize = ShadowDrawable.IntrinsicWidth;
+            m_DrawableSize = m_ShadowDrawable.IntrinsicWidth;
 
             Checked = canChecked;
             Clickable = canClickable;
@@ -246,8 +237,8 @@ namespace com.refractored.monodroidtoolkit
 
         protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
         {
-            var drawable = HasActionBar ? m_DrawableSize : m_DrawableSize / 2;
-            SetMeasuredDimension(ResolveSize(drawable, widthMeasureSpec), ResolveSize(drawable, heightMeasureSpec));
+            SetMeasuredDimension(ResolveSize(m_DrawableSize, widthMeasureSpec), 
+                ResolveSize(m_DrawableSize, heightMeasureSpec));
         }
 
         protected override void DrawableStateChanged()
@@ -277,10 +268,8 @@ namespace com.refractored.monodroidtoolkit
         {
             base.OnDraw(canvas);
 
-            var drawable = HasActionBar ? m_DrawableSize : m_DrawableSize / 2;
-
-            m_TempRect.Set(0, 0, drawable, drawable);
-            m_TempRect.Offset((Width - drawable) / 2, (Height - drawable) / 2);
+            m_TempRect.Set(0, 0, m_DrawableSize, m_DrawableSize);
+            m_TempRect.Offset((Width - m_DrawableSize) / 2, (Height - m_DrawableSize) / 2);
 
             m_TempRectF.Set(-0.5f, -0.5f, m_InnerSize + 0.5f, m_InnerSize + 0.5f);
             m_TempRectF.Offset((Width - m_InnerSize) / 2, (Height - m_InnerSize) / 2);

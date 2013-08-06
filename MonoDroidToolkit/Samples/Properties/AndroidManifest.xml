@@ -2,5 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.refractored.monodroidtoolkit.samples" android:versionCode="1" android:versionName="1">
   <supports-screens android:xlargeScreens="true" android:largeScreens="true" />
   <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16" />
-	<application android:label="Samples"></application>
+	<application android:label="Monodroid Toolkit"></application>
 </manifest>
