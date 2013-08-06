@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+    <!-- Any customizations for your app running on devices with Theme.Holo here -->
+  </style>
+  <style name="MyThemeDark" parent="@android:style/Theme.Holo">
+    <!-- Any customizations for your app running on devices with Theme.Holo here -->
+  </style>
+  <style name="AlertThemeLight" parent="@android:style/Theme.Holo.Light.Dialog"/>
+  <style name="AlertThemeDark" parent="@android:style/Theme.Holo.Dialog"/>
+</resources>

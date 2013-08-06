@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="MyTheme" parent="@android:style/Theme.Light">
+    <item name="android:windowBackground">@drawable/background_holo_light</item>
+    <item name="android:listViewStyle">@style/ListViewStyle</item>
+    <item name="android:expandableListViewStyle">@style/ExpandableListViewStyle</item>
+  </style>
+  <style name="MyThemeDark" parent="@android:style/Theme">
+  </style>
+  <style name="AlertThemeLight" parent="@android:style/Theme.Dialog">
+    <item name="android:textColor">#FFFFFF</item>
+  </style>
+  <style name="AlertThemeDark" parent="@android:style/Theme.Dialog"/>
+
+  <style name="ListViewStyle" parent="android:Widget.ListView">
+    <item name="android:cacheColorHint">#00000000</item>
+  </style>
+
+  <style name="ExpandableListViewStyle" parent="android:Widget.ExpandableListView">
+    <item name="android:cacheColorHint">#00000000</item>
+  </style>
+</resources>

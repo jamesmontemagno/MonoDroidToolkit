@@ -6,9 +6,9 @@
               android:id="@+id/main_layout"
     >
 <Button  
-    android:id="@+id/MyButton"
+    android:id="@+id/progress_button"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="@string/Hello"
+    android:text="@string/progress_button"
     />
 </LinearLayout>

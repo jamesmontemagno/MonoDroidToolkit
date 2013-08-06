@@ -27,6 +27,36 @@ namespace com.refractored.monodroidtoolkit
 		public partial class Attribute
 		{
 			
+			// aapt resource value: 0x7f010003
+			public static int circleColor = 2130771971;
+			
+			// aapt resource value: 0x7f010008
+			public static int innerSize = 2130771976;
+			
+			// aapt resource value: 0x7f010002
+			public static int max = 2130771970;
+			
+			// aapt resource value: 0x7f010009
+			public static int pinned = 2130771977;
+			
+			// aapt resource value: 0x7f010005
+			public static int pinnedDrawable = 2130771973;
+			
+			// aapt resource value: 0x7f010001
+			public static int progress = 2130771969;
+			
+			// aapt resource value: 0x7f010000
+			public static int progressButtonStyle = 2130771968;
+			
+			// aapt resource value: 0x7f010004
+			public static int progressColor = 2130771972;
+			
+			// aapt resource value: 0x7f010007
+			public static int shadowDrawable = 2130771975;
+			
+			// aapt resource value: 0x7f010006
+			public static int unpinnedDrawable = 2130771974;
+			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -37,21 +67,141 @@ namespace com.refractored.monodroidtoolkit
 			}
 		}
 		
-		public partial class String
+		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f020001
-			public static int ApplicationName = 2130837505;
+			// aapt resource value: 0x7f030000
+			public static int progress_default_circle_color = 2130903040;
 			
-			// aapt resource value: 0x7f020000
-			public static int Hello = 2130837504;
+			// aapt resource value: 0x7f030001
+			public static int progress_default_progress_color = 2130903041;
 			
-			static String()
+			static Color()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
-			private String()
+			private Color()
+			{
+			}
+		}
+		
+		public partial class Dimension
+		{
+			
+			// aapt resource value: 0x7f040000
+			public static int progress_inner_size = 2130968576;
+			
+			static Dimension()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Dimension()
+			{
+			}
+		}
+		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7f020000
+			public static int pin_progress_pinned = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public static int pin_progress_shadow = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public static int pin_progress_unpinned = 2130837506;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public static int ProgressButton = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public static int ProgressButton_Pin = 2131034113;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] ProgressButton = new int[] {
+					16842970,
+					16842981,
+					16843534,
+					2130771969,
+					2130771970,
+					2130771971,
+					2130771972,
+					2130771973,
+					2130771974,
+					2130771975,
+					2130771976,
+					2130771977};
+			
+			// aapt resource value: 1
+			public static int ProgressButton_android_clickable = 1;
+			
+			// aapt resource value: 0
+			public static int ProgressButton_android_focusable = 0;
+			
+			// aapt resource value: 2
+			public static int ProgressButton_android_selectableItemBackground = 2;
+			
+			// aapt resource value: 5
+			public static int ProgressButton_circleColor = 5;
+			
+			// aapt resource value: 10
+			public static int ProgressButton_innerSize = 10;
+			
+			// aapt resource value: 4
+			public static int ProgressButton_max = 4;
+			
+			// aapt resource value: 11
+			public static int ProgressButton_pinned = 11;
+			
+			// aapt resource value: 7
+			public static int ProgressButton_pinnedDrawable = 7;
+			
+			// aapt resource value: 3
+			public static int ProgressButton_progress = 3;
+			
+			// aapt resource value: 6
+			public static int ProgressButton_progressColor = 6;
+			
+			// aapt resource value: 9
+			public static int ProgressButton_shadowDrawable = 9;
+			
+			// aapt resource value: 8
+			public static int ProgressButton_unpinnedDrawable = 8;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}
