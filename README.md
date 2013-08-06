@@ -33,10 +33,10 @@ MonodroidToolkit is a kit of views that I have created or port from java into Xa
 * IntListPrefrences: Allows you to specify integers as the values.
 
 ### Screenshots
-![Progress Button](https://raw.github.com/JamesMontemagno/MonoDroidToolkit/master/Screenshots/ProgressButtonInDeviceSmall.png)
+![Progress Button](https://raw.github.com/jamesmontemagno/MonoDroidToolkit/master/Screenshots/ProgressBarInDeviceSmall.png)
 
 
-For more screenshots look in the [Screenshots](https://raw.github.com/JamesMontemagno/MonoDroidToolkit/master/Screenshots) folder
+For more screenshots look in the [Screenshots](https://raw.github.com/jamesmontemagno/MonoDroidToolkit/master/Screenshots) folder
 
 ## Want to see something?
 Simply open up an issue.
