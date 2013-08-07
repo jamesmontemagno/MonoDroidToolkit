@@ -14,7 +14,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <RootNamespace>com.refractored.monodroidtoolkit</RootNamespace>
     <AssemblyName>com.refractored.monodroidtoolkit</AssemblyName>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -85,6 +85,12 @@
     <AndroidResource Include="Resources\Drawable-xhdpi\pin_progress_pinned.png" />
     <AndroidResource Include="Resources\Drawable-xhdpi\pin_progress_shadow.png" />
     <AndroidResource Include="Resources\Drawable-xhdpi\pin_progress_unpinned.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\pin_progress_pinned.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\pin_progress_shadow.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\pin_progress_unpinned.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_pinned.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_shadow.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_unpinned.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

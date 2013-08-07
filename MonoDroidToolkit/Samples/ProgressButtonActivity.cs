@@ -6,7 +6,7 @@ using com.refractored.monodroidtoolkit;
 
 namespace Samples
 {
-    [Activity(Label = "Progress Button", Theme = "@style/MyTheme")]
+    [Activity(Label = "Progress Button", Theme = "@style/MyThemeDark")]
     public class ProgressButtonActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
