@@ -91,6 +91,7 @@
     <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_pinned.png" />
     <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_shadow.png" />
     <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_unpinned.png" />
+    <AndroidResource Include="Resources\Values\Integers.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

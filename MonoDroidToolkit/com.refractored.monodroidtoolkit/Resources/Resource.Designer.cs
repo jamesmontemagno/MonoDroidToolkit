@@ -30,6 +30,12 @@ namespace com.refractored.monodroidtoolkit
 			// aapt resource value: 0x7f010003
 			public static int circleColor = 2130771971;
 			
+			// aapt resource value: 0x7f01000a
+			public static int indeterminate = 2130771978;
+			
+			// aapt resource value: 0x7f01000b
+			public static int indeterminate_interval = 2130771979;
+			
 			// aapt resource value: 0x7f010008
 			public static int innerSize = 2130771976;
 			
@@ -124,14 +130,30 @@ namespace com.refractored.monodroidtoolkit
 			}
 		}
 		
-		public partial class Style
+		public partial class Integer
 		{
 			
 			// aapt resource value: 0x7f050000
-			public static int ProgressButton = 2131034112;
+			public static int progressbutton_indeterminent_interval = 2131034112;
 			
-			// aapt resource value: 0x7f050001
-			public static int ProgressButton_Pin = 2131034113;
+			static Integer()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Integer()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060000
+			public static int ProgressButton = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public static int ProgressButton_Pin = 2131099649;
 			
 			static Style()
 			{
@@ -158,7 +180,9 @@ namespace com.refractored.monodroidtoolkit
 					2130771974,
 					2130771975,
 					2130771976,
-					2130771977};
+					2130771977,
+					2130771978,
+					2130771979};
 			
 			// aapt resource value: 1
 			public static int ProgressButton_android_clickable = 1;
@@ -171,6 +195,12 @@ namespace com.refractored.monodroidtoolkit
 			
 			// aapt resource value: 5
 			public static int ProgressButton_circleColor = 5;
+			
+			// aapt resource value: 12
+			public static int ProgressButton_indeterminate = 12;
+			
+			// aapt resource value: 13
+			public static int ProgressButton_indeterminate_interval = 13;
 			
 			// aapt resource value: 10
 			public static int ProgressButton_innerSize = 10;

@@ -30,6 +30,8 @@
     <item name="unpinnedDrawable">@drawable/pin_progress_unpinned</item>
     <item name="shadowDrawable">@drawable/pin_progress_shadow</item>
     <item name="innerSize">@dimen/progress_inner_size</item>
+    <item name="indeterminate">false</item>
+    <item name="indeterminate_interval">@integer/progressbutton_indeterminent_interval</item>
     <item name="pinned">false</item>
     <item name="android:selectableItemBackground">?android:selectableItemBackground</item>
     <item name="android:clickable">false</item>

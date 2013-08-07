@@ -27,6 +27,8 @@ namespace Samples
 		public static void UpdateIdValues()
 		{
 			com.refractored.monodroidtoolkit.Resource.Attribute.circleColor = Samples.Resource.Attribute.circleColor;
+			com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate = Samples.Resource.Attribute.indeterminate;
+			com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate_interval = Samples.Resource.Attribute.indeterminate_interval;
 			com.refractored.monodroidtoolkit.Resource.Attribute.innerSize = Samples.Resource.Attribute.innerSize;
 			com.refractored.monodroidtoolkit.Resource.Attribute.max = Samples.Resource.Attribute.max;
 			com.refractored.monodroidtoolkit.Resource.Attribute.pinned = Samples.Resource.Attribute.pinned;
@@ -42,6 +44,7 @@ namespace Samples
 			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_pinned = Samples.Resource.Drawable.pin_progress_pinned;
 			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_shadow = Samples.Resource.Drawable.pin_progress_shadow;
 			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_unpinned = Samples.Resource.Drawable.pin_progress_unpinned;
+			com.refractored.monodroidtoolkit.Resource.Integer.progressbutton_indeterminent_interval = Samples.Resource.Integer.progressbutton_indeterminent_interval;
 			com.refractored.monodroidtoolkit.Resource.Style.ProgressButton = Samples.Resource.Style.ProgressButton;
 			com.refractored.monodroidtoolkit.Resource.Style.ProgressButton_Pin = Samples.Resource.Style.ProgressButton_Pin;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton = Samples.Resource.Styleable.ProgressButton;
@@ -49,6 +52,8 @@ namespace Samples
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_focusable = Samples.Resource.Styleable.ProgressButton_android_focusable;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_selectableItemBackground = Samples.Resource.Styleable.ProgressButton_android_selectableItemBackground;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_circleColor = Samples.Resource.Styleable.ProgressButton_circleColor;
+			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate = Samples.Resource.Styleable.ProgressButton_indeterminate;
+			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate_interval = Samples.Resource.Styleable.ProgressButton_indeterminate_interval;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_innerSize = Samples.Resource.Styleable.ProgressButton_innerSize;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_max = Samples.Resource.Styleable.ProgressButton_max;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinned = Samples.Resource.Styleable.ProgressButton_pinned;
@@ -64,6 +69,12 @@ namespace Samples
 			
 			// aapt resource value: 0x7f010003
 			public const int circleColor = 2130771971;
+			
+			// aapt resource value: 0x7f01000a
+			public const int indeterminate = 2130771978;
+			
+			// aapt resource value: 0x7f01000b
+			public const int indeterminate_interval = 2130771979;
 			
 			// aapt resource value: 0x7f010008
 			public const int innerSize = 2130771976;
@@ -255,29 +266,29 @@ namespace Samples
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080007
-			public const int container = 2131230727;
+			// aapt resource value: 0x7f090007
+			public const int container = 2131296263;
 			
-			// aapt resource value: 0x7f080000
-			public const int main_layout = 2131230720;
+			// aapt resource value: 0x7f090000
+			public const int main_layout = 2131296256;
 			
-			// aapt resource value: 0x7f080003
-			public const int pin_progress_1 = 2131230723;
+			// aapt resource value: 0x7f090003
+			public const int pin_progress_1 = 2131296259;
 			
-			// aapt resource value: 0x7f080004
-			public const int pin_progress_2 = 2131230724;
+			// aapt resource value: 0x7f090004
+			public const int pin_progress_2 = 2131296260;
 			
-			// aapt resource value: 0x7f080005
-			public const int pin_progress_3 = 2131230725;
+			// aapt resource value: 0x7f090005
+			public const int pin_progress_3 = 2131296261;
 			
-			// aapt resource value: 0x7f080006
-			public const int pin_progress_4 = 2131230726;
+			// aapt resource value: 0x7f090006
+			public const int pin_progress_4 = 2131296262;
 			
-			// aapt resource value: 0x7f080001
-			public const int progress_button = 2131230721;
+			// aapt resource value: 0x7f090001
+			public const int progress_button = 2131296257;
 			
-			// aapt resource value: 0x7f080002
-			public const int progress_seek_bar = 2131230722;
+			// aapt resource value: 0x7f090002
+			public const int progress_seek_bar = 2131296258;
 			
 			static Id()
 			{
@@ -285,6 +296,22 @@ namespace Samples
 			}
 			
 			private Id()
+			{
+			}
+		}
+		
+		public partial class Integer
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int progressbutton_indeterminent_interval = 2131099648;
+			
+			static Integer()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Integer()
 			{
 			}
 		}
@@ -311,32 +338,32 @@ namespace Samples
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070001
-			public const int ApplicationName = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int ApplicationName = 2131230721;
 			
-			// aapt resource value: 0x7f070000
-			public const int Hello = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int Hello = 2131230720;
 			
-			// aapt resource value: 0x7f070003
-			public const int content_desc_pinned_downloaded = 2131165187;
+			// aapt resource value: 0x7f080003
+			public const int content_desc_pinned_downloaded = 2131230723;
 			
-			// aapt resource value: 0x7f070004
-			public const int content_desc_pinned_downloading = 2131165188;
+			// aapt resource value: 0x7f080004
+			public const int content_desc_pinned_downloading = 2131230724;
 			
-			// aapt resource value: 0x7f070005
-			public const int content_desc_pinned_not_downloaded = 2131165189;
+			// aapt resource value: 0x7f080005
+			public const int content_desc_pinned_not_downloaded = 2131230725;
 			
-			// aapt resource value: 0x7f070006
-			public const int content_desc_unpinned_downloaded = 2131165190;
+			// aapt resource value: 0x7f080006
+			public const int content_desc_unpinned_downloaded = 2131230726;
 			
-			// aapt resource value: 0x7f070007
-			public const int content_desc_unpinned_downloading = 2131165191;
+			// aapt resource value: 0x7f080007
+			public const int content_desc_unpinned_downloading = 2131230727;
 			
-			// aapt resource value: 0x7f070008
-			public const int content_desc_unpinned_not_downloaded = 2131165192;
+			// aapt resource value: 0x7f080008
+			public const int content_desc_unpinned_not_downloaded = 2131230728;
 			
-			// aapt resource value: 0x7f070002
-			public const int progress_button = 2131165186;
+			// aapt resource value: 0x7f080002
+			public const int progress_button = 2131230722;
 			
 			static String()
 			{
@@ -351,44 +378,44 @@ namespace Samples
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f06000a
-			public const int AlertThemeDark = 2131099658;
+			// aapt resource value: 0x7f07000a
+			public const int AlertThemeDark = 2131165194;
 			
-			// aapt resource value: 0x7f060009
-			public const int AlertThemeLight = 2131099657;
+			// aapt resource value: 0x7f070009
+			public const int AlertThemeLight = 2131165193;
 			
-			// aapt resource value: 0x7f06000c
-			public const int ExpandableListViewStyle = 2131099660;
+			// aapt resource value: 0x7f07000c
+			public const int ExpandableListViewStyle = 2131165196;
 			
-			// aapt resource value: 0x7f06000b
-			public const int ListViewStyle = 2131099659;
+			// aapt resource value: 0x7f07000b
+			public const int ListViewStyle = 2131165195;
 			
-			// aapt resource value: 0x7f060007
-			public const int MyTheme = 2131099655;
+			// aapt resource value: 0x7f070007
+			public const int MyTheme = 2131165191;
 			
-			// aapt resource value: 0x7f060008
-			public const int MyThemeDark = 2131099656;
+			// aapt resource value: 0x7f070008
+			public const int MyThemeDark = 2131165192;
 			
-			// aapt resource value: 0x7f060000
-			public const int ProgressButton = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int ProgressButton = 2131165184;
 			
-			// aapt resource value: 0x7f060002
-			public const int ProgressButton_1 = 2131099650;
+			// aapt resource value: 0x7f070002
+			public const int ProgressButton_1 = 2131165186;
 			
-			// aapt resource value: 0x7f060003
-			public const int ProgressButton_2 = 2131099651;
+			// aapt resource value: 0x7f070003
+			public const int ProgressButton_2 = 2131165187;
 			
-			// aapt resource value: 0x7f060004
-			public const int ProgressButton_Clickable = 2131099652;
+			// aapt resource value: 0x7f070004
+			public const int ProgressButton_Clickable = 2131165188;
 			
-			// aapt resource value: 0x7f060005
-			public const int ProgressButton_Clickable_3 = 2131099653;
+			// aapt resource value: 0x7f070005
+			public const int ProgressButton_Clickable_3 = 2131165189;
 			
-			// aapt resource value: 0x7f060006
-			public const int ProgressButton_Clickable_4 = 2131099654;
+			// aapt resource value: 0x7f070006
+			public const int ProgressButton_Clickable_4 = 2131165190;
 			
-			// aapt resource value: 0x7f060001
-			public const int ProgressButton_Pin = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int ProgressButton_Pin = 2131165185;
 			
 			static Style()
 			{
@@ -415,7 +442,9 @@ namespace Samples
 					2130771974,
 					2130771975,
 					2130771976,
-					2130771977};
+					2130771977,
+					2130771978,
+					2130771979};
 			
 			// aapt resource value: 1
 			public const int ProgressButton_android_clickable = 1;
@@ -428,6 +457,12 @@ namespace Samples
 			
 			// aapt resource value: 5
 			public const int ProgressButton_circleColor = 5;
+			
+			// aapt resource value: 12
+			public const int ProgressButton_indeterminate = 12;
+			
+			// aapt resource value: 13
+			public const int ProgressButton_indeterminate_interval = 13;
 			
 			// aapt resource value: 10
 			public const int ProgressButton_innerSize = 10;

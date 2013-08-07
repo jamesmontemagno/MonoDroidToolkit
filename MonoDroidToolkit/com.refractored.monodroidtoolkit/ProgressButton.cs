@@ -36,9 +36,13 @@ namespace com.refractored.monodroidtoolkit
         public int Max
         {
             get { return m_Max; }
-            set 
-            { 
-                m_Max = value; 
+            set
+            {
+                if (value < 0)
+                    m_Max = 0;
+                else
+                    m_Max = value; 
+
                 Invalidate();
             }
         }
@@ -52,13 +56,80 @@ namespace com.refractored.monodroidtoolkit
             get { return m_Progress; }
             set
             {
-                if(value > Max || value < 0)
-                     throw new ArgumentException(String.Format("Progress ({0}) must be between {1} and {2}", value, 0, Max));
-                
-                m_Progress = value;
+                if (value > Max)
+                    m_Progress = Max;
+                else if (value < 0)
+                    m_Progress = 0;
+                else
+                    m_Progress = value;
+
                 Invalidate();
             }
         }
+
+        private int m_IndeterminateInterval = 100;
+        public int IndeterminanteInterval
+        {
+            get { return m_IndeterminateInterval; }
+            set 
+            { 
+                m_IndeterminateInterval = value;
+                if (m_IndeterminateInterval < 50)
+                    m_IndeterminateInterval = 50;
+
+            }
+        }
+
+        private bool m_Indeterminate = false;
+        /// <summary>
+        /// Get or set if the Spinner is indeterminante
+        /// </summary>
+        public bool Indeterminante
+        {
+            get { return m_Indeterminate; }
+            set
+            {
+                
+                m_Indeterminate = value;
+                if (m_Indeterminate)
+                {
+                    //start
+                    UpdateIndeterminante();
+                }
+                else
+                {
+                    //stop
+                    if (m_IndeterminanteHandler == null)
+                        return;
+
+                    m_IndeterminanteHandler.RemoveCallbacks(IndeterminanteRunnable);
+                }
+            }
+        }
+
+        Handler m_IndeterminanteHandler = new Handler();
+        private void UpdateIndeterminante()
+        {
+            if (m_IndeterminanteHandler == null)
+                return;
+
+            m_IndeterminanteHandler.RemoveCallbacks(IndeterminanteRunnable);
+            m_IndeterminanteHandler.PostDelayed(IndeterminanteRunnable, m_IndeterminateInterval);
+        }
+
+
+        private void IndeterminanteRunnable()
+        {
+            var newProgress = Progress + 1;
+            if (newProgress > Max)
+                newProgress = 0;
+
+            Progress = newProgress;
+
+            if(Indeterminante)
+                m_IndeterminanteHandler.PostDelayed(IndeterminanteRunnable, m_IndeterminateInterval);
+        }
+
 
 
         private Drawable m_ShadowDrawable;
@@ -173,6 +244,9 @@ namespace com.refractored.monodroidtoolkit
             var pinnedDrawable = Resource.Drawable.pin_progress_pinned;
             var unpinnedDrawable = Resource.Drawable.pin_progress_unpinned;
             var shadowDrawable = Resource.Drawable.pin_progress_shadow;
+            var indeterminate = false;
+            var indeterminateInterval = Resources.GetInteger(Resource.Integer.progressbutton_indeterminent_interval);
+
             var canChecked = false;
             var canClickable = false;
             var canFocusable = false;
@@ -204,6 +278,8 @@ namespace com.refractored.monodroidtoolkit
                 canFocusable = a.GetBoolean(Resource.Styleable.ProgressButton_android_focusable, canFocusable);
 
                 SetBackgroundDrawable(a.GetDrawable(Resource.Styleable.ProgressButton_android_selectableItemBackground));
+                indeterminateInterval = a.GetInteger(Resource.Styleable.ProgressButton_indeterminate_interval, indeterminateInterval);
+                indeterminate = a.GetBoolean(Resource.Styleable.ProgressButton_indeterminate, indeterminate);
 
                 a.Recycle();
             }
@@ -225,6 +301,9 @@ namespace com.refractored.monodroidtoolkit
 
             CirclePaint = new Paint {Color = circleColor, AntiAlias = true};
             ProgressPaint = new Paint {Color = progressColor, AntiAlias = true};
+
+            m_IndeterminateInterval = indeterminateInterval;
+            Indeterminante = indeterminate;
         }
 
 

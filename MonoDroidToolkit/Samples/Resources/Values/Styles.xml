@@ -12,6 +12,7 @@
   <style name="ProgressButton.2">
     <!-- Starts pinned and is NOT clickable !-->
     <item name="pinned">true</item>
+    <item name="indeterminate">true</item>
   </style>
   <style name="ProgressButton.Clickable">
     <!-- Attributes required to make a progress button clickable !-->

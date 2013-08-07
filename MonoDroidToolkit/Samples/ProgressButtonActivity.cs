@@ -29,6 +29,7 @@ namespace Samples
             //Starts pinned, and is not clickable, so it stays pinned
             var progressButton6 = AddProgressButton(container);
             progressButton6.Pinned = true;
+            progressButton6.Indeterminante = true;
 
             //Starts pinned, is clickable so it's pinned state can be changed by user
             var progressButton7 = AddProgressButton(container);
@@ -88,6 +89,9 @@ namespace Samples
 
         private void UpdateProgressButton(ProgressButton progressButton, SeekBar progressSeekBar)
         {
+            if (progressButton.Indeterminante)
+                return;
+
             progressButton.Progress = progressSeekBar.Progress;
             UpdatePinProgressContentDescription(progressButton);
         }

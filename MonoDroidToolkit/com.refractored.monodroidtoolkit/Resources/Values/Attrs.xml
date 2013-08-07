@@ -31,6 +31,8 @@
     <attr name="shadowDrawable" format="reference"/>
     <attr name="innerSize" format="dimension"/>
     <attr name="pinned" format="boolean"/>
+    <attr name="indeterminate" format="boolean"/>
+    <attr name="indeterminate_interval" format="integer"/>
     <attr name="android:selectableItemBackground"/>
     <attr name="android:clickable"/>
     <attr name="android:focusable"/>
