@@ -20,7 +20,7 @@ MonodroidToolkit is a kit of views that I have created or port from java into Xa
 * StickyViewPager: Disable view pager from moving if you desire
 * SelectEndEditText: EditText view that always puts cursor at the end when focus is given. Great for remote control interfaces.
 * ProgressButton: Progress Bar button ported from :[@f2prateek](https://github.com/f2prateek/progressbutton)
-* HoloCircularProgressBar: Holo Circular Progress Bar, Similar to 4.1 clock, ported from [@passsy](https://github.com/passsy/android-HoloCircularProgressBar) *IMPORTANT* I have 0 to 100 scale which differs from original
+* [HoloCircularProgressBar](https://github.com/jamesmontemagno/MonoDroidToolkit/wiki/HoloCircularProgressBar): Holo Circular Progress Bar, Similar to 4.1 clock, ported from [@passsy](https://github.com/passsy/android-HoloCircularProgressBar) *IMPORTANT* I have 0 to 100 scale which differs from original
 
 ### Utilities
 
