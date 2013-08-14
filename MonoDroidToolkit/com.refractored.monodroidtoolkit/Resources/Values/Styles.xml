@@ -38,4 +38,26 @@
     <item name="android:focusable">false</item>
   </style>
 
+  <style name="CircularProgressBar">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="circular_stroke_width">5dp</item>
+    <item name="circular_progress" format="float">0.1</item>
+    <item name="circular_progress_color">@color/refractored_holo_red_light</item>
+    <item name="circular_progress_background_color">@android:color/background_light</item>
+    <item name="circular_indeterminate">false</item>
+    <item name="circular_indeterminate_interval">@integer/circular_indeterminent_interval</item>
+  </style>
+
+  <style name="CircularProgressBarLight">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="circular_stroke_width">5dp</item>
+    <item name="circular_progress" format="float">0.1</item>
+    <item name="circular_progress_color">@color/refractored_holo_red_light</item>
+    <item name="circular_progress_background_color">@android:color/darker_gray</item>
+    <item name="circular_indeterminate">false</item>
+    <item name="circular_indeterminate_interval">@integer/circular_indeterminent_interval</item>
+  </style>
+
 </resources>

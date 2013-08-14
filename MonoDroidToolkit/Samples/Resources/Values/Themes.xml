@@ -4,8 +4,10 @@
     <item name="android:windowBackground">@drawable/background_holo_light</item>
     <item name="android:listViewStyle">@style/ListViewStyle</item>
     <item name="android:expandableListViewStyle">@style/ExpandableListViewStyle</item>
+    <item name="circularProgressBarStyle">@style/CircularProgressBarLight</item>
   </style>
   <style name="MyThemeDark" parent="@android:style/Theme">
+    <item name="circularProgressBarStyle">@style/CircularProgressBar</item>
   </style>
   <style name="AlertThemeLight" parent="@android:style/Theme.Dialog">
     <item name="android:textColor">#FFFFFF</item>

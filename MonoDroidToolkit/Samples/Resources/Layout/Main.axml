@@ -11,4 +11,11 @@
     android:layout_height="wrap_content" 
     android:text="@string/progress_button"
     />
+
+  <Button
+    android:id="@+id/circular_progress_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/circular_progress_bar"
+    />
 </LinearLayout>

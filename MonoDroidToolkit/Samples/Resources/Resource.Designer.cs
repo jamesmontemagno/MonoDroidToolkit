@@ -27,6 +27,15 @@ namespace Samples
 		public static void UpdateIdValues()
 		{
 			com.refractored.monodroidtoolkit.Resource.Attribute.circleColor = Samples.Resource.Attribute.circleColor;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circularProgressBarStyle = Samples.Resource.Attribute.circularProgressBarStyle;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_gravity = Samples.Resource.Attribute.circular_gravity;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate = Samples.Resource.Attribute.circular_indeterminate;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate_interval = Samples.Resource.Attribute.circular_indeterminate_interval;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_marker_progress = Samples.Resource.Attribute.circular_marker_progress;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress = Samples.Resource.Attribute.circular_progress;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_background_color = Samples.Resource.Attribute.circular_progress_background_color;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_color = Samples.Resource.Attribute.circular_progress_color;
+			com.refractored.monodroidtoolkit.Resource.Attribute.circular_stroke_width = Samples.Resource.Attribute.circular_stroke_width;
 			com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate = Samples.Resource.Attribute.indeterminate;
 			com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate_interval = Samples.Resource.Attribute.indeterminate_interval;
 			com.refractored.monodroidtoolkit.Resource.Attribute.innerSize = Samples.Resource.Attribute.innerSize;
@@ -40,13 +49,71 @@ namespace Samples
 			com.refractored.monodroidtoolkit.Resource.Attribute.unpinnedDrawable = Samples.Resource.Attribute.unpinnedDrawable;
 			com.refractored.monodroidtoolkit.Resource.Color.progress_default_circle_color = Samples.Resource.Color.progress_default_circle_color;
 			com.refractored.monodroidtoolkit.Resource.Color.progress_default_progress_color = Samples.Resource.Color.progress_default_progress_color;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_dark = Samples.Resource.Color.refractored_background_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_dark = Samples.Resource.Color.refractored_background_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_light = Samples.Resource.Color.refractored_background_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_light = Samples.Resource.Color.refractored_background_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark = Samples.Resource.Color.refractored_bright_foreground_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark_disabled = Samples.Resource.Color.refractored_bright_foreground_dark_disabled;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_dark = Samples.Resource.Color.refractored_bright_foreground_disabled_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_light = Samples.Resource.Color.refractored_bright_foreground_disabled_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_dark = Samples.Resource.Color.refractored_bright_foreground_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_light = Samples.Resource.Color.refractored_bright_foreground_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_light = Samples.Resource.Color.refractored_bright_foreground_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_dark = Samples.Resource.Color.refractored_dim_foreground_disabled_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_light = Samples.Resource.Color.refractored_dim_foreground_disabled_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_dark = Samples.Resource.Color.refractored_dim_foreground_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_light = Samples.Resource.Color.refractored_dim_foreground_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_dark = Samples.Resource.Color.refractored_highlighted_text_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_light = Samples.Resource.Color.refractored_highlighted_text_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_dark = Samples.Resource.Color.refractored_hint_foreground_holo_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_light = Samples.Resource.Color.refractored_hint_foreground_holo_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_bright = Samples.Resource.Color.refractored_holo_blue_bright;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_dark = Samples.Resource.Color.refractored_holo_blue_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_light = Samples.Resource.Color.refractored_holo_blue_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_dark = Samples.Resource.Color.refractored_holo_green_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_light = Samples.Resource.Color.refractored_holo_green_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_dark = Samples.Resource.Color.refractored_holo_orange_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_light = Samples.Resource.Color.refractored_holo_orange_light;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_purple = Samples.Resource.Color.refractored_holo_purple;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_dark = Samples.Resource.Color.refractored_holo_red_dark;
+			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_light = Samples.Resource.Color.refractored_holo_red_light;
 			com.refractored.monodroidtoolkit.Resource.Dimension.progress_inner_size = Samples.Resource.Dimension.progress_inner_size;
 			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_pinned = Samples.Resource.Drawable.pin_progress_pinned;
 			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_shadow = Samples.Resource.Drawable.pin_progress_shadow;
 			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_unpinned = Samples.Resource.Drawable.pin_progress_unpinned;
+			com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_normal_holo = Samples.Resource.Drawable.scrubber_control_normal_holo;
+			com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_pressed_holo = Samples.Resource.Drawable.scrubber_control_pressed_holo;
+			com.refractored.monodroidtoolkit.Resource.Id.bottom = Samples.Resource.Id.bottom;
+			com.refractored.monodroidtoolkit.Resource.Id.center = Samples.Resource.Id.center;
+			com.refractored.monodroidtoolkit.Resource.Id.center_horizontal = Samples.Resource.Id.center_horizontal;
+			com.refractored.monodroidtoolkit.Resource.Id.center_vertical = Samples.Resource.Id.center_vertical;
+			com.refractored.monodroidtoolkit.Resource.Id.clip = Samples.Resource.Id.clip;
+			com.refractored.monodroidtoolkit.Resource.Id.clip_horizontal = Samples.Resource.Id.clip_horizontal;
+			com.refractored.monodroidtoolkit.Resource.Id.clip_vertical = Samples.Resource.Id.clip_vertical;
+			com.refractored.monodroidtoolkit.Resource.Id.end = Samples.Resource.Id.end;
+			com.refractored.monodroidtoolkit.Resource.Id.fill = Samples.Resource.Id.fill;
+			com.refractored.monodroidtoolkit.Resource.Id.fill_horizontal = Samples.Resource.Id.fill_horizontal;
+			com.refractored.monodroidtoolkit.Resource.Id.fill_vertical = Samples.Resource.Id.fill_vertical;
+			com.refractored.monodroidtoolkit.Resource.Id.left = Samples.Resource.Id.left;
+			com.refractored.monodroidtoolkit.Resource.Id.right = Samples.Resource.Id.right;
+			com.refractored.monodroidtoolkit.Resource.Id.start = Samples.Resource.Id.start;
+			com.refractored.monodroidtoolkit.Resource.Id.top = Samples.Resource.Id.top;
+			com.refractored.monodroidtoolkit.Resource.Integer.circular_indeterminent_interval = Samples.Resource.Integer.circular_indeterminent_interval;
 			com.refractored.monodroidtoolkit.Resource.Integer.progressbutton_indeterminent_interval = Samples.Resource.Integer.progressbutton_indeterminent_interval;
+			com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBar = Samples.Resource.Style.CircularProgressBar;
+			com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBarLight = Samples.Resource.Style.CircularProgressBarLight;
 			com.refractored.monodroidtoolkit.Resource.Style.ProgressButton = Samples.Resource.Style.ProgressButton;
 			com.refractored.monodroidtoolkit.Resource.Style.ProgressButton_Pin = Samples.Resource.Style.ProgressButton_Pin;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar = Samples.Resource.Styleable.HoloCircularProgressBar;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_gravity = Samples.Resource.Styleable.HoloCircularProgressBar_circular_gravity;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate = Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval = Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress = Samples.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress = Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color = Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_color = Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress_color;
+			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width = Samples.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton = Samples.Resource.Styleable.ProgressButton;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_clickable = Samples.Resource.Styleable.ProgressButton_android_clickable;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_focusable = Samples.Resource.Styleable.ProgressButton_android_focusable;
@@ -62,6 +129,8 @@ namespace Samples
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progressColor = Samples.Resource.Styleable.ProgressButton_progressColor;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_shadowDrawable = Samples.Resource.Styleable.ProgressButton_shadowDrawable;
 			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_unpinnedDrawable = Samples.Resource.Styleable.ProgressButton_unpinnedDrawable;
+			com.refractored.monodroidtoolkit.Resource.Styleable.Theme = Samples.Resource.Styleable.Theme;
+			com.refractored.monodroidtoolkit.Resource.Styleable.Theme_circularProgressBarStyle = Samples.Resource.Styleable.Theme_circularProgressBarStyle;
 		}
 		
 		public partial class Attribute
@@ -69,6 +138,33 @@ namespace Samples
 			
 			// aapt resource value: 0x7f010003
 			public const int circleColor = 2130771971;
+			
+			// aapt resource value: 0x7f010014
+			public const int circularProgressBarStyle = 2130771988;
+			
+			// aapt resource value: 0x7f01000c
+			public const int circular_gravity = 2130771980;
+			
+			// aapt resource value: 0x7f010012
+			public const int circular_indeterminate = 2130771986;
+			
+			// aapt resource value: 0x7f010013
+			public const int circular_indeterminate_interval = 2130771987;
+			
+			// aapt resource value: 0x7f01000f
+			public const int circular_marker_progress = 2130771983;
+			
+			// aapt resource value: 0x7f01000e
+			public const int circular_progress = 2130771982;
+			
+			// aapt resource value: 0x7f010011
+			public const int circular_progress_background_color = 2130771985;
+			
+			// aapt resource value: 0x7f010010
+			public const int circular_progress_color = 2130771984;
+			
+			// aapt resource value: 0x7f01000d
+			public const int circular_stroke_width = 2130771981;
 			
 			// aapt resource value: 0x7f01000a
 			public const int indeterminate = 2130771978;
@@ -116,98 +212,185 @@ namespace Samples
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int background_dark = 2130968578;
+			// aapt resource value: 0x7f05001f
+			public const int background_dark = 2131034143;
 			
-			// aapt resource value: 0x7f040007
-			public const int background_holo_dark = 2130968583;
+			// aapt resource value: 0x7f050024
+			public const int background_holo_dark = 2131034148;
 			
-			// aapt resource value: 0x7f040008
-			public const int background_holo_light = 2130968584;
+			// aapt resource value: 0x7f050025
+			public const int background_holo_light = 2131034149;
 			
-			// aapt resource value: 0x7f040003
-			public const int background_light = 2130968579;
+			// aapt resource value: 0x7f050020
+			public const int background_light = 2131034144;
 			
-			// aapt resource value: 0x7f040004
-			public const int bright_foreground_dark = 2130968580;
+			// aapt resource value: 0x7f050021
+			public const int bright_foreground_dark = 2131034145;
 			
-			// aapt resource value: 0x7f040006
-			public const int bright_foreground_dark_disabled = 2130968582;
+			// aapt resource value: 0x7f050023
+			public const int bright_foreground_dark_disabled = 2131034147;
 			
-			// aapt resource value: 0x7f04000b
-			public const int bright_foreground_disabled_holo_dark = 2130968587;
+			// aapt resource value: 0x7f050028
+			public const int bright_foreground_disabled_holo_dark = 2131034152;
 			
-			// aapt resource value: 0x7f04000c
-			public const int bright_foreground_disabled_holo_light = 2130968588;
+			// aapt resource value: 0x7f050029
+			public const int bright_foreground_disabled_holo_light = 2131034153;
 			
-			// aapt resource value: 0x7f040009
-			public const int bright_foreground_holo_dark = 2130968585;
+			// aapt resource value: 0x7f050026
+			public const int bright_foreground_holo_dark = 2131034150;
 			
-			// aapt resource value: 0x7f04000a
-			public const int bright_foreground_holo_light = 2130968586;
+			// aapt resource value: 0x7f050027
+			public const int bright_foreground_holo_light = 2131034151;
 			
-			// aapt resource value: 0x7f040005
-			public const int bright_foreground_light = 2130968581;
+			// aapt resource value: 0x7f050022
+			public const int bright_foreground_light = 2131034146;
 			
-			// aapt resource value: 0x7f04000e
-			public const int dim_foreground_disabled_holo_dark = 2130968590;
+			// aapt resource value: 0x7f05002b
+			public const int dim_foreground_disabled_holo_dark = 2131034155;
 			
-			// aapt resource value: 0x7f040011
-			public const int dim_foreground_disabled_holo_light = 2130968593;
+			// aapt resource value: 0x7f05002e
+			public const int dim_foreground_disabled_holo_light = 2131034158;
 			
-			// aapt resource value: 0x7f04000d
-			public const int dim_foreground_holo_dark = 2130968589;
+			// aapt resource value: 0x7f05002a
+			public const int dim_foreground_holo_dark = 2131034154;
 			
-			// aapt resource value: 0x7f040010
-			public const int dim_foreground_holo_light = 2130968592;
+			// aapt resource value: 0x7f05002d
+			public const int dim_foreground_holo_light = 2131034157;
 			
-			// aapt resource value: 0x7f040013
-			public const int highlighted_text_holo_dark = 2130968595;
+			// aapt resource value: 0x7f050030
+			public const int highlighted_text_holo_dark = 2131034160;
 			
-			// aapt resource value: 0x7f040014
-			public const int highlighted_text_holo_light = 2130968596;
+			// aapt resource value: 0x7f050031
+			public const int highlighted_text_holo_light = 2131034161;
 			
-			// aapt resource value: 0x7f04000f
-			public const int hint_foreground_holo_dark = 2130968591;
+			// aapt resource value: 0x7f05002c
+			public const int hint_foreground_holo_dark = 2131034156;
 			
-			// aapt resource value: 0x7f040012
-			public const int hint_foreground_holo_light = 2130968594;
+			// aapt resource value: 0x7f05002f
+			public const int hint_foreground_holo_light = 2131034159;
 			
-			// aapt resource value: 0x7f04001e
-			public const int holo_blue_bright = 2130968606;
+			// aapt resource value: 0x7f05003b
+			public const int holo_blue_bright = 2131034171;
 			
-			// aapt resource value: 0x7f040018
-			public const int holo_blue_dark = 2130968600;
+			// aapt resource value: 0x7f050035
+			public const int holo_blue_dark = 2131034165;
 			
-			// aapt resource value: 0x7f040015
-			public const int holo_blue_light = 2130968597;
+			// aapt resource value: 0x7f050032
+			public const int holo_blue_light = 2131034162;
 			
-			// aapt resource value: 0x7f040019
-			public const int holo_green_dark = 2130968601;
+			// aapt resource value: 0x7f050036
+			public const int holo_green_dark = 2131034166;
 			
-			// aapt resource value: 0x7f040016
-			public const int holo_green_light = 2130968598;
+			// aapt resource value: 0x7f050033
+			public const int holo_green_light = 2131034163;
 			
-			// aapt resource value: 0x7f04001d
-			public const int holo_orange_dark = 2130968605;
+			// aapt resource value: 0x7f05003a
+			public const int holo_orange_dark = 2131034170;
 			
-			// aapt resource value: 0x7f04001c
-			public const int holo_orange_light = 2130968604;
+			// aapt resource value: 0x7f050039
+			public const int holo_orange_light = 2131034169;
 			
-			// aapt resource value: 0x7f04001b
-			public const int holo_purple = 2130968603;
+			// aapt resource value: 0x7f050038
+			public const int holo_purple = 2131034168;
 			
-			// aapt resource value: 0x7f04001a
-			public const int holo_red_dark = 2130968602;
+			// aapt resource value: 0x7f050037
+			public const int holo_red_dark = 2131034167;
 			
-			// aapt resource value: 0x7f040017
-			public const int holo_red_light = 2130968599;
+			// aapt resource value: 0x7f050034
+			public const int holo_red_light = 2131034164;
 			
-			// aapt resource value: 0x7f040000
-			public const int progress_default_circle_color = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int progress_default_circle_color = 2131034112;
 			
-			// aapt resource value: 0x7f040001
-			public const int progress_default_progress_color = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int progress_default_progress_color = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int refractored_background_dark = 2131034114;
+			
+			// aapt resource value: 0x7f050007
+			public const int refractored_background_holo_dark = 2131034119;
+			
+			// aapt resource value: 0x7f050008
+			public const int refractored_background_holo_light = 2131034120;
+			
+			// aapt resource value: 0x7f050003
+			public const int refractored_background_light = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int refractored_bright_foreground_dark = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int refractored_bright_foreground_dark_disabled = 2131034118;
+			
+			// aapt resource value: 0x7f05000b
+			public const int refractored_bright_foreground_disabled_holo_dark = 2131034123;
+			
+			// aapt resource value: 0x7f05000c
+			public const int refractored_bright_foreground_disabled_holo_light = 2131034124;
+			
+			// aapt resource value: 0x7f050009
+			public const int refractored_bright_foreground_holo_dark = 2131034121;
+			
+			// aapt resource value: 0x7f05000a
+			public const int refractored_bright_foreground_holo_light = 2131034122;
+			
+			// aapt resource value: 0x7f050005
+			public const int refractored_bright_foreground_light = 2131034117;
+			
+			// aapt resource value: 0x7f05000e
+			public const int refractored_dim_foreground_disabled_holo_dark = 2131034126;
+			
+			// aapt resource value: 0x7f050011
+			public const int refractored_dim_foreground_disabled_holo_light = 2131034129;
+			
+			// aapt resource value: 0x7f05000d
+			public const int refractored_dim_foreground_holo_dark = 2131034125;
+			
+			// aapt resource value: 0x7f050010
+			public const int refractored_dim_foreground_holo_light = 2131034128;
+			
+			// aapt resource value: 0x7f050013
+			public const int refractored_highlighted_text_holo_dark = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int refractored_highlighted_text_holo_light = 2131034132;
+			
+			// aapt resource value: 0x7f05000f
+			public const int refractored_hint_foreground_holo_dark = 2131034127;
+			
+			// aapt resource value: 0x7f050012
+			public const int refractored_hint_foreground_holo_light = 2131034130;
+			
+			// aapt resource value: 0x7f05001e
+			public const int refractored_holo_blue_bright = 2131034142;
+			
+			// aapt resource value: 0x7f050018
+			public const int refractored_holo_blue_dark = 2131034136;
+			
+			// aapt resource value: 0x7f050015
+			public const int refractored_holo_blue_light = 2131034133;
+			
+			// aapt resource value: 0x7f050019
+			public const int refractored_holo_green_dark = 2131034137;
+			
+			// aapt resource value: 0x7f050016
+			public const int refractored_holo_green_light = 2131034134;
+			
+			// aapt resource value: 0x7f05001d
+			public const int refractored_holo_orange_dark = 2131034141;
+			
+			// aapt resource value: 0x7f05001c
+			public const int refractored_holo_orange_light = 2131034140;
+			
+			// aapt resource value: 0x7f05001b
+			public const int refractored_holo_purple = 2131034139;
+			
+			// aapt resource value: 0x7f05001a
+			public const int refractored_holo_red_dark = 2131034138;
+			
+			// aapt resource value: 0x7f050017
+			public const int refractored_holo_red_light = 2131034135;
 			
 			static Color()
 			{
@@ -222,8 +405,8 @@ namespace Samples
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int progress_inner_size = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int progress_inner_size = 2131099648;
 			
 			static Dimension()
 			{
@@ -253,6 +436,12 @@ namespace Samples
 			// aapt resource value: 0x7f020004
 			public const int pin_progress_unpinned = 2130837508;
 			
+			// aapt resource value: 0x7f020005
+			public const int scrubber_control_normal_holo = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int scrubber_control_pressed_holo = 2130837510;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -266,29 +455,83 @@ namespace Samples
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090007
-			public const int container = 2131296263;
+			// aapt resource value: 0x7f040000
+			public const int bottom = 2130968576;
 			
-			// aapt resource value: 0x7f090000
-			public const int main_layout = 2131296256;
+			// aapt resource value: 0x7f040001
+			public const int center = 2130968577;
 			
-			// aapt resource value: 0x7f090003
-			public const int pin_progress_1 = 2131296259;
+			// aapt resource value: 0x7f040002
+			public const int center_horizontal = 2130968578;
 			
-			// aapt resource value: 0x7f090004
-			public const int pin_progress_2 = 2131296260;
+			// aapt resource value: 0x7f040003
+			public const int center_vertical = 2130968579;
 			
-			// aapt resource value: 0x7f090005
-			public const int pin_progress_3 = 2131296261;
+			// aapt resource value: 0x7f040013
+			public const int circular_progress_bar = 2130968595;
 			
-			// aapt resource value: 0x7f090006
-			public const int pin_progress_4 = 2131296262;
+			// aapt resource value: 0x7f040004
+			public const int clip = 2130968580;
 			
-			// aapt resource value: 0x7f090001
-			public const int progress_button = 2131296257;
+			// aapt resource value: 0x7f040005
+			public const int clip_horizontal = 2130968581;
 			
-			// aapt resource value: 0x7f090002
-			public const int progress_seek_bar = 2131296258;
+			// aapt resource value: 0x7f040006
+			public const int clip_vertical = 2130968582;
+			
+			// aapt resource value: 0x7f040019
+			public const int container = 2130968601;
+			
+			// aapt resource value: 0x7f040007
+			public const int end = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int fill = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int fill_horizontal = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int fill_vertical = 2130968586;
+			
+			// aapt resource value: 0x7f04000f
+			public const int holoCircularProgressBar1 = 2130968591;
+			
+			// aapt resource value: 0x7f04000b
+			public const int left = 2130968587;
+			
+			// aapt resource value: 0x7f040011
+			public const int main_layout = 2130968593;
+			
+			// aapt resource value: 0x7f040015
+			public const int pin_progress_1 = 2130968597;
+			
+			// aapt resource value: 0x7f040016
+			public const int pin_progress_2 = 2130968598;
+			
+			// aapt resource value: 0x7f040017
+			public const int pin_progress_3 = 2130968599;
+			
+			// aapt resource value: 0x7f040018
+			public const int pin_progress_4 = 2130968600;
+			
+			// aapt resource value: 0x7f040012
+			public const int progress_button = 2130968594;
+			
+			// aapt resource value: 0x7f040014
+			public const int progress_seek_bar = 2130968596;
+			
+			// aapt resource value: 0x7f04000c
+			public const int right = 2130968588;
+			
+			// aapt resource value: 0x7f04000d
+			public const int start = 2130968589;
+			
+			// aapt resource value: 0x7f040010
+			public const int switch_theme = 2130968592;
+			
+			// aapt resource value: 0x7f04000e
+			public const int top = 2130968590;
 			
 			static Id()
 			{
@@ -303,8 +546,11 @@ namespace Samples
 		public partial class Integer
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int progressbutton_indeterminent_interval = 2131099648;
+			// aapt resource value: 0x7f070001
+			public const int circular_indeterminent_interval = 2131165185;
+			
+			// aapt resource value: 0x7f070000
+			public const int progressbutton_indeterminent_interval = 2131165184;
 			
 			static Integer()
 			{
@@ -320,10 +566,13 @@ namespace Samples
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int circular_progress_bar = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int progress_button = 2130903041;
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int progress_button = 2130903042;
 			
 			static Layout()
 			{
@@ -338,32 +587,38 @@ namespace Samples
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int ApplicationName = 2131230721;
+			// aapt resource value: 0x7f090001
+			public const int ApplicationName = 2131296257;
 			
-			// aapt resource value: 0x7f080000
-			public const int Hello = 2131230720;
+			// aapt resource value: 0x7f090000
+			public const int Hello = 2131296256;
 			
-			// aapt resource value: 0x7f080003
-			public const int content_desc_pinned_downloaded = 2131230723;
+			// aapt resource value: 0x7f090003
+			public const int circular_progress_bar = 2131296259;
 			
-			// aapt resource value: 0x7f080004
-			public const int content_desc_pinned_downloading = 2131230724;
+			// aapt resource value: 0x7f090004
+			public const int content_desc_pinned_downloaded = 2131296260;
 			
-			// aapt resource value: 0x7f080005
-			public const int content_desc_pinned_not_downloaded = 2131230725;
+			// aapt resource value: 0x7f090005
+			public const int content_desc_pinned_downloading = 2131296261;
 			
-			// aapt resource value: 0x7f080006
-			public const int content_desc_unpinned_downloaded = 2131230726;
+			// aapt resource value: 0x7f090006
+			public const int content_desc_pinned_not_downloaded = 2131296262;
 			
-			// aapt resource value: 0x7f080007
-			public const int content_desc_unpinned_downloading = 2131230727;
+			// aapt resource value: 0x7f090007
+			public const int content_desc_unpinned_downloaded = 2131296263;
 			
-			// aapt resource value: 0x7f080008
-			public const int content_desc_unpinned_not_downloaded = 2131230728;
+			// aapt resource value: 0x7f090008
+			public const int content_desc_unpinned_downloading = 2131296264;
 			
-			// aapt resource value: 0x7f080002
-			public const int progress_button = 2131230722;
+			// aapt resource value: 0x7f090009
+			public const int content_desc_unpinned_not_downloaded = 2131296265;
+			
+			// aapt resource value: 0x7f090002
+			public const int progress_button = 2131296258;
+			
+			// aapt resource value: 0x7f09000a
+			public const int switch_theme = 2131296266;
 			
 			static String()
 			{
@@ -378,44 +633,50 @@ namespace Samples
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f07000a
-			public const int AlertThemeDark = 2131165194;
+			// aapt resource value: 0x7f08000c
+			public const int AlertThemeDark = 2131230732;
 			
-			// aapt resource value: 0x7f070009
-			public const int AlertThemeLight = 2131165193;
+			// aapt resource value: 0x7f08000b
+			public const int AlertThemeLight = 2131230731;
 			
-			// aapt resource value: 0x7f07000c
-			public const int ExpandableListViewStyle = 2131165196;
+			// aapt resource value: 0x7f080002
+			public const int CircularProgressBar = 2131230722;
 			
-			// aapt resource value: 0x7f07000b
-			public const int ListViewStyle = 2131165195;
+			// aapt resource value: 0x7f080003
+			public const int CircularProgressBarLight = 2131230723;
 			
-			// aapt resource value: 0x7f070007
-			public const int MyTheme = 2131165191;
+			// aapt resource value: 0x7f08000e
+			public const int ExpandableListViewStyle = 2131230734;
 			
-			// aapt resource value: 0x7f070008
-			public const int MyThemeDark = 2131165192;
+			// aapt resource value: 0x7f08000d
+			public const int ListViewStyle = 2131230733;
 			
-			// aapt resource value: 0x7f070000
-			public const int ProgressButton = 2131165184;
+			// aapt resource value: 0x7f080009
+			public const int MyTheme = 2131230729;
 			
-			// aapt resource value: 0x7f070002
-			public const int ProgressButton_1 = 2131165186;
+			// aapt resource value: 0x7f08000a
+			public const int MyThemeDark = 2131230730;
 			
-			// aapt resource value: 0x7f070003
-			public const int ProgressButton_2 = 2131165187;
+			// aapt resource value: 0x7f080000
+			public const int ProgressButton = 2131230720;
 			
-			// aapt resource value: 0x7f070004
-			public const int ProgressButton_Clickable = 2131165188;
+			// aapt resource value: 0x7f080004
+			public const int ProgressButton_1 = 2131230724;
 			
-			// aapt resource value: 0x7f070005
-			public const int ProgressButton_Clickable_3 = 2131165189;
+			// aapt resource value: 0x7f080005
+			public const int ProgressButton_2 = 2131230725;
 			
-			// aapt resource value: 0x7f070006
-			public const int ProgressButton_Clickable_4 = 2131165190;
+			// aapt resource value: 0x7f080006
+			public const int ProgressButton_Clickable = 2131230726;
 			
-			// aapt resource value: 0x7f070001
-			public const int ProgressButton_Pin = 2131165185;
+			// aapt resource value: 0x7f080007
+			public const int ProgressButton_Clickable_3 = 2131230727;
+			
+			// aapt resource value: 0x7f080008
+			public const int ProgressButton_Clickable_4 = 2131230728;
+			
+			// aapt resource value: 0x7f080001
+			public const int ProgressButton_Pin = 2131230721;
 			
 			static Style()
 			{
@@ -429,6 +690,40 @@ namespace Samples
 		
 		public partial class Styleable
 		{
+			
+			public static int[] HoloCircularProgressBar = new int[] {
+					2130771980,
+					2130771981,
+					2130771982,
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987};
+			
+			// aapt resource value: 0
+			public const int HoloCircularProgressBar_circular_gravity = 0;
+			
+			// aapt resource value: 6
+			public const int HoloCircularProgressBar_circular_indeterminate = 6;
+			
+			// aapt resource value: 7
+			public const int HoloCircularProgressBar_circular_indeterminate_interval = 7;
+			
+			// aapt resource value: 3
+			public const int HoloCircularProgressBar_circular_marker_progress = 3;
+			
+			// aapt resource value: 2
+			public const int HoloCircularProgressBar_circular_progress = 2;
+			
+			// aapt resource value: 5
+			public const int HoloCircularProgressBar_circular_progress_background_color = 5;
+			
+			// aapt resource value: 4
+			public const int HoloCircularProgressBar_circular_progress_color = 4;
+			
+			// aapt resource value: 1
+			public const int HoloCircularProgressBar_circular_stroke_width = 1;
 			
 			public static int[] ProgressButton = new int[] {
 					16842970,
@@ -487,6 +782,12 @@ namespace Samples
 			
 			// aapt resource value: 8
 			public const int ProgressButton_unpinnedDrawable = 8;
+			
+			public static int[] Theme = new int[] {
+					2130771988};
+			
+			// aapt resource value: 0
+			public const int Theme_circularProgressBarStyle = 0;
 			
 			static Styleable()
 			{

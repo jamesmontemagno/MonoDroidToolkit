@@ -3,6 +3,7 @@
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">Samples</string>
   <string name="progress_button">Progress Button</string>
+  <string name="circular_progress_bar">Circular Progress Bar</string>
   <string name="content_desc_pinned_downloaded">Pinned to device and downloaded</string>
   <string name="content_desc_pinned_downloading">Pinned to device and downloading</string>
   <string name="content_desc_pinned_not_downloaded">
@@ -12,4 +13,5 @@
   <string name="content_desc_unpinned_downloaded">Temporarily downloaded</string>
   <string name="content_desc_unpinned_downloading">Temporarily downloading</string>
   <string name="content_desc_unpinned_not_downloaded">Not downloaded</string>
+  <string name="switch_theme">Switch Theme</string>
 </resources>

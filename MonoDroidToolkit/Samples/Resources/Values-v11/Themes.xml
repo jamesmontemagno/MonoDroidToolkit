@@ -2,9 +2,11 @@
 <resources>
   <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
     <!-- Any customizations for your app running on devices with Theme.Holo here -->
+    <item name="circularProgressBarStyle">@style/CircularProgressBarLight</item>
   </style>
   <style name="MyThemeDark" parent="@android:style/Theme.Holo">
     <!-- Any customizations for your app running on devices with Theme.Holo here -->
+    <item name="circularProgressBarStyle">@style/CircularProgressBar</item>
   </style>
   <style name="AlertThemeLight" parent="@android:style/Theme.Holo.Light.Dialog"/>
   <style name="AlertThemeDark" parent="@android:style/Theme.Holo.Dialog"/>

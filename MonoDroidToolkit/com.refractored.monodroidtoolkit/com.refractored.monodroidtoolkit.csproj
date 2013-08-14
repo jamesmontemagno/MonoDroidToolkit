@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HoloCircularProgressBar.cs" />
     <Compile Include="ProgressButton.cs" />
     <Compile Include="SelectEndEditText.cs" />
     <Compile Include="GridViewNoScroll.cs" />
@@ -77,7 +78,9 @@
     <AndroidResource Include="Resources\Values\Attrs.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Values\Colors.xml" />
+    <AndroidResource Include="Resources\Values\Colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\Values\Dimens.xml" />
     <AndroidResource Include="Resources\Values\Styles.xml">
       <SubType>Designer</SubType>
@@ -92,6 +95,12 @@
     <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_shadow.png" />
     <AndroidResource Include="Resources\Drawable-hdpi\pin_progress_unpinned.png" />
     <AndroidResource Include="Resources\Values\Integers.xml" />
+    <AndroidResource Include="Resources\Drawable-hdpi\scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\scrubber_control_pressed_holo.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\scrubber_control_pressed_holo.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\scrubber_control_normal_holo.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\scrubber_control_pressed_holo.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
