@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/jamesmontemagno/MonoDroidToolkit.png)](http://waffle.io/jamesmontemagno/MonoDroidToolkit)
+
 MonoDroidToolkit
 ================
 
