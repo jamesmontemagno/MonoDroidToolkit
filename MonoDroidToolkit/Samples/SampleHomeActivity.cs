@@ -17,6 +17,9 @@ namespace Samples
 
             FindViewById<Button>(Resource.Id.circular_progress_bar).Click +=
               (sender, args) => StartActivity(typeof(CircularProgressBarActivity));
+
+            FindViewById<Button>(Resource.Id.scale_image).Click +=
+              (sender, args) => StartActivity(typeof(ScaleImageActivity));
         }
     }
 }

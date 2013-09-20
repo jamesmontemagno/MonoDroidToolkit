@@ -26,111 +26,111 @@ namespace Samples
 		
 		public static void UpdateIdValues()
 		{
-			com.refractored.monodroidtoolkit.Resource.Attribute.circleColor = Samples.Resource.Attribute.circleColor;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circularProgressBarStyle = Samples.Resource.Attribute.circularProgressBarStyle;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_gravity = Samples.Resource.Attribute.circular_gravity;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate = Samples.Resource.Attribute.circular_indeterminate;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate_interval = Samples.Resource.Attribute.circular_indeterminate_interval;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_marker_progress = Samples.Resource.Attribute.circular_marker_progress;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress = Samples.Resource.Attribute.circular_progress;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_background_color = Samples.Resource.Attribute.circular_progress_background_color;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_color = Samples.Resource.Attribute.circular_progress_color;
-			com.refractored.monodroidtoolkit.Resource.Attribute.circular_stroke_width = Samples.Resource.Attribute.circular_stroke_width;
-			com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate = Samples.Resource.Attribute.indeterminate;
-			com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate_interval = Samples.Resource.Attribute.indeterminate_interval;
-			com.refractored.monodroidtoolkit.Resource.Attribute.innerSize = Samples.Resource.Attribute.innerSize;
-			com.refractored.monodroidtoolkit.Resource.Attribute.max = Samples.Resource.Attribute.max;
-			com.refractored.monodroidtoolkit.Resource.Attribute.pinned = Samples.Resource.Attribute.pinned;
-			com.refractored.monodroidtoolkit.Resource.Attribute.pinnedDrawable = Samples.Resource.Attribute.pinnedDrawable;
-			com.refractored.monodroidtoolkit.Resource.Attribute.progress = Samples.Resource.Attribute.progress;
-			com.refractored.monodroidtoolkit.Resource.Attribute.progressButtonStyle = Samples.Resource.Attribute.progressButtonStyle;
-			com.refractored.monodroidtoolkit.Resource.Attribute.progressColor = Samples.Resource.Attribute.progressColor;
-			com.refractored.monodroidtoolkit.Resource.Attribute.shadowDrawable = Samples.Resource.Attribute.shadowDrawable;
-			com.refractored.monodroidtoolkit.Resource.Attribute.unpinnedDrawable = Samples.Resource.Attribute.unpinnedDrawable;
-			com.refractored.monodroidtoolkit.Resource.Color.progress_default_circle_color = Samples.Resource.Color.progress_default_circle_color;
-			com.refractored.monodroidtoolkit.Resource.Color.progress_default_progress_color = Samples.Resource.Color.progress_default_progress_color;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_dark = Samples.Resource.Color.refractored_background_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_dark = Samples.Resource.Color.refractored_background_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_light = Samples.Resource.Color.refractored_background_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_background_light = Samples.Resource.Color.refractored_background_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark = Samples.Resource.Color.refractored_bright_foreground_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark_disabled = Samples.Resource.Color.refractored_bright_foreground_dark_disabled;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_dark = Samples.Resource.Color.refractored_bright_foreground_disabled_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_light = Samples.Resource.Color.refractored_bright_foreground_disabled_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_dark = Samples.Resource.Color.refractored_bright_foreground_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_light = Samples.Resource.Color.refractored_bright_foreground_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_light = Samples.Resource.Color.refractored_bright_foreground_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_dark = Samples.Resource.Color.refractored_dim_foreground_disabled_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_light = Samples.Resource.Color.refractored_dim_foreground_disabled_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_dark = Samples.Resource.Color.refractored_dim_foreground_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_light = Samples.Resource.Color.refractored_dim_foreground_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_dark = Samples.Resource.Color.refractored_highlighted_text_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_light = Samples.Resource.Color.refractored_highlighted_text_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_dark = Samples.Resource.Color.refractored_hint_foreground_holo_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_light = Samples.Resource.Color.refractored_hint_foreground_holo_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_bright = Samples.Resource.Color.refractored_holo_blue_bright;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_dark = Samples.Resource.Color.refractored_holo_blue_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_light = Samples.Resource.Color.refractored_holo_blue_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_dark = Samples.Resource.Color.refractored_holo_green_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_light = Samples.Resource.Color.refractored_holo_green_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_dark = Samples.Resource.Color.refractored_holo_orange_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_light = Samples.Resource.Color.refractored_holo_orange_light;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_purple = Samples.Resource.Color.refractored_holo_purple;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_dark = Samples.Resource.Color.refractored_holo_red_dark;
-			com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_light = Samples.Resource.Color.refractored_holo_red_light;
-			com.refractored.monodroidtoolkit.Resource.Dimension.progress_inner_size = Samples.Resource.Dimension.progress_inner_size;
-			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_pinned = Samples.Resource.Drawable.pin_progress_pinned;
-			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_shadow = Samples.Resource.Drawable.pin_progress_shadow;
-			com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_unpinned = Samples.Resource.Drawable.pin_progress_unpinned;
-			com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_normal_holo = Samples.Resource.Drawable.scrubber_control_normal_holo;
-			com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_pressed_holo = Samples.Resource.Drawable.scrubber_control_pressed_holo;
-			com.refractored.monodroidtoolkit.Resource.Id.bottom = Samples.Resource.Id.bottom;
-			com.refractored.monodroidtoolkit.Resource.Id.center = Samples.Resource.Id.center;
-			com.refractored.monodroidtoolkit.Resource.Id.center_horizontal = Samples.Resource.Id.center_horizontal;
-			com.refractored.monodroidtoolkit.Resource.Id.center_vertical = Samples.Resource.Id.center_vertical;
-			com.refractored.monodroidtoolkit.Resource.Id.clip = Samples.Resource.Id.clip;
-			com.refractored.monodroidtoolkit.Resource.Id.clip_horizontal = Samples.Resource.Id.clip_horizontal;
-			com.refractored.monodroidtoolkit.Resource.Id.clip_vertical = Samples.Resource.Id.clip_vertical;
-			com.refractored.monodroidtoolkit.Resource.Id.end = Samples.Resource.Id.end;
-			com.refractored.monodroidtoolkit.Resource.Id.fill = Samples.Resource.Id.fill;
-			com.refractored.monodroidtoolkit.Resource.Id.fill_horizontal = Samples.Resource.Id.fill_horizontal;
-			com.refractored.monodroidtoolkit.Resource.Id.fill_vertical = Samples.Resource.Id.fill_vertical;
-			com.refractored.monodroidtoolkit.Resource.Id.left = Samples.Resource.Id.left;
-			com.refractored.monodroidtoolkit.Resource.Id.right = Samples.Resource.Id.right;
-			com.refractored.monodroidtoolkit.Resource.Id.start = Samples.Resource.Id.start;
-			com.refractored.monodroidtoolkit.Resource.Id.top = Samples.Resource.Id.top;
-			com.refractored.monodroidtoolkit.Resource.Integer.circular_indeterminent_interval = Samples.Resource.Integer.circular_indeterminent_interval;
-			com.refractored.monodroidtoolkit.Resource.Integer.progressbutton_indeterminent_interval = Samples.Resource.Integer.progressbutton_indeterminent_interval;
-			com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBar = Samples.Resource.Style.CircularProgressBar;
-			com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBarLight = Samples.Resource.Style.CircularProgressBarLight;
-			com.refractored.monodroidtoolkit.Resource.Style.ProgressButton = Samples.Resource.Style.ProgressButton;
-			com.refractored.monodroidtoolkit.Resource.Style.ProgressButton_Pin = Samples.Resource.Style.ProgressButton_Pin;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar = Samples.Resource.Styleable.HoloCircularProgressBar;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_gravity = Samples.Resource.Styleable.HoloCircularProgressBar_circular_gravity;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate = Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval = Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress = Samples.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress = Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color = Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_color = Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress_color;
-			com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width = Samples.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton = Samples.Resource.Styleable.ProgressButton;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_clickable = Samples.Resource.Styleable.ProgressButton_android_clickable;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_focusable = Samples.Resource.Styleable.ProgressButton_android_focusable;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_selectableItemBackground = Samples.Resource.Styleable.ProgressButton_android_selectableItemBackground;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_circleColor = Samples.Resource.Styleable.ProgressButton_circleColor;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate = Samples.Resource.Styleable.ProgressButton_indeterminate;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate_interval = Samples.Resource.Styleable.ProgressButton_indeterminate_interval;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_innerSize = Samples.Resource.Styleable.ProgressButton_innerSize;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_max = Samples.Resource.Styleable.ProgressButton_max;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinned = Samples.Resource.Styleable.ProgressButton_pinned;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinnedDrawable = Samples.Resource.Styleable.ProgressButton_pinnedDrawable;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progress = Samples.Resource.Styleable.ProgressButton_progress;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progressColor = Samples.Resource.Styleable.ProgressButton_progressColor;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_shadowDrawable = Samples.Resource.Styleable.ProgressButton_shadowDrawable;
-			com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_unpinnedDrawable = Samples.Resource.Styleable.ProgressButton_unpinnedDrawable;
-			com.refractored.monodroidtoolkit.Resource.Styleable.Theme = Samples.Resource.Styleable.Theme;
-			com.refractored.monodroidtoolkit.Resource.Styleable.Theme_circularProgressBarStyle = Samples.Resource.Styleable.Theme_circularProgressBarStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circleColor = global::Samples.Resource.Attribute.circleColor;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circularProgressBarStyle = global::Samples.Resource.Attribute.circularProgressBarStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_gravity = global::Samples.Resource.Attribute.circular_gravity;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate = global::Samples.Resource.Attribute.circular_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate_interval = global::Samples.Resource.Attribute.circular_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_marker_progress = global::Samples.Resource.Attribute.circular_marker_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress = global::Samples.Resource.Attribute.circular_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_background_color = global::Samples.Resource.Attribute.circular_progress_background_color;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_color = global::Samples.Resource.Attribute.circular_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_stroke_width = global::Samples.Resource.Attribute.circular_stroke_width;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate = global::Samples.Resource.Attribute.indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate_interval = global::Samples.Resource.Attribute.indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.innerSize = global::Samples.Resource.Attribute.innerSize;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.max = global::Samples.Resource.Attribute.max;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.pinned = global::Samples.Resource.Attribute.pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.pinnedDrawable = global::Samples.Resource.Attribute.pinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progress = global::Samples.Resource.Attribute.progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progressButtonStyle = global::Samples.Resource.Attribute.progressButtonStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progressColor = global::Samples.Resource.Attribute.progressColor;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.shadowDrawable = global::Samples.Resource.Attribute.shadowDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.unpinnedDrawable = global::Samples.Resource.Attribute.unpinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Color.progress_default_circle_color = global::Samples.Resource.Color.progress_default_circle_color;
+			global::com.refractored.monodroidtoolkit.Resource.Color.progress_default_progress_color = global::Samples.Resource.Color.progress_default_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_dark = global::Samples.Resource.Color.refractored_background_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_dark = global::Samples.Resource.Color.refractored_background_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_light = global::Samples.Resource.Color.refractored_background_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_light = global::Samples.Resource.Color.refractored_background_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark = global::Samples.Resource.Color.refractored_bright_foreground_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark_disabled = global::Samples.Resource.Color.refractored_bright_foreground_dark_disabled;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_dark = global::Samples.Resource.Color.refractored_bright_foreground_disabled_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_light = global::Samples.Resource.Color.refractored_bright_foreground_disabled_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_dark = global::Samples.Resource.Color.refractored_bright_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_light = global::Samples.Resource.Color.refractored_bright_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_light = global::Samples.Resource.Color.refractored_bright_foreground_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_dark = global::Samples.Resource.Color.refractored_dim_foreground_disabled_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_light = global::Samples.Resource.Color.refractored_dim_foreground_disabled_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_dark = global::Samples.Resource.Color.refractored_dim_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_light = global::Samples.Resource.Color.refractored_dim_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_dark = global::Samples.Resource.Color.refractored_highlighted_text_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_light = global::Samples.Resource.Color.refractored_highlighted_text_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_dark = global::Samples.Resource.Color.refractored_hint_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_light = global::Samples.Resource.Color.refractored_hint_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_bright = global::Samples.Resource.Color.refractored_holo_blue_bright;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_dark = global::Samples.Resource.Color.refractored_holo_blue_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_light = global::Samples.Resource.Color.refractored_holo_blue_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_dark = global::Samples.Resource.Color.refractored_holo_green_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_light = global::Samples.Resource.Color.refractored_holo_green_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_dark = global::Samples.Resource.Color.refractored_holo_orange_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_light = global::Samples.Resource.Color.refractored_holo_orange_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_purple = global::Samples.Resource.Color.refractored_holo_purple;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_dark = global::Samples.Resource.Color.refractored_holo_red_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_light = global::Samples.Resource.Color.refractored_holo_red_light;
+			global::com.refractored.monodroidtoolkit.Resource.Dimension.progress_inner_size = global::Samples.Resource.Dimension.progress_inner_size;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_pinned = global::Samples.Resource.Drawable.pin_progress_pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_shadow = global::Samples.Resource.Drawable.pin_progress_shadow;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_unpinned = global::Samples.Resource.Drawable.pin_progress_unpinned;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_normal_holo = global::Samples.Resource.Drawable.scrubber_control_normal_holo;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_pressed_holo = global::Samples.Resource.Drawable.scrubber_control_pressed_holo;
+			global::com.refractored.monodroidtoolkit.Resource.Id.bottom = global::Samples.Resource.Id.bottom;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center = global::Samples.Resource.Id.center;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center_horizontal = global::Samples.Resource.Id.center_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center_vertical = global::Samples.Resource.Id.center_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip = global::Samples.Resource.Id.clip;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip_horizontal = global::Samples.Resource.Id.clip_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip_vertical = global::Samples.Resource.Id.clip_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.end = global::Samples.Resource.Id.end;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill = global::Samples.Resource.Id.fill;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill_horizontal = global::Samples.Resource.Id.fill_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill_vertical = global::Samples.Resource.Id.fill_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.left = global::Samples.Resource.Id.left;
+			global::com.refractored.monodroidtoolkit.Resource.Id.right = global::Samples.Resource.Id.right;
+			global::com.refractored.monodroidtoolkit.Resource.Id.start = global::Samples.Resource.Id.start;
+			global::com.refractored.monodroidtoolkit.Resource.Id.top = global::Samples.Resource.Id.top;
+			global::com.refractored.monodroidtoolkit.Resource.Integer.circular_indeterminent_interval = global::Samples.Resource.Integer.circular_indeterminent_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Integer.progressbutton_indeterminent_interval = global::Samples.Resource.Integer.progressbutton_indeterminent_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBar = global::Samples.Resource.Style.CircularProgressBar;
+			global::com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBarLight = global::Samples.Resource.Style.CircularProgressBarLight;
+			global::com.refractored.monodroidtoolkit.Resource.Style.ProgressButton = global::Samples.Resource.Style.ProgressButton;
+			global::com.refractored.monodroidtoolkit.Resource.Style.ProgressButton_Pin = global::Samples.Resource.Style.ProgressButton_Pin;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar = global::Samples.Resource.Styleable.HoloCircularProgressBar;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_gravity = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_gravity;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_color = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton = global::Samples.Resource.Styleable.ProgressButton;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_clickable = global::Samples.Resource.Styleable.ProgressButton_android_clickable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_focusable = global::Samples.Resource.Styleable.ProgressButton_android_focusable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_selectableItemBackground = global::Samples.Resource.Styleable.ProgressButton_android_selectableItemBackground;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_circleColor = global::Samples.Resource.Styleable.ProgressButton_circleColor;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate = global::Samples.Resource.Styleable.ProgressButton_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate_interval = global::Samples.Resource.Styleable.ProgressButton_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_innerSize = global::Samples.Resource.Styleable.ProgressButton_innerSize;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_max = global::Samples.Resource.Styleable.ProgressButton_max;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinned = global::Samples.Resource.Styleable.ProgressButton_pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinnedDrawable = global::Samples.Resource.Styleable.ProgressButton_pinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progress = global::Samples.Resource.Styleable.ProgressButton_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progressColor = global::Samples.Resource.Styleable.ProgressButton_progressColor;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_shadowDrawable = global::Samples.Resource.Styleable.ProgressButton_shadowDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_unpinnedDrawable = global::Samples.Resource.Styleable.ProgressButton_unpinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.Theme = global::Samples.Resource.Styleable.Theme;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.Theme_circularProgressBarStyle = global::Samples.Resource.Styleable.Theme_circularProgressBarStyle;
 		}
 		
 		public partial class Attribute
@@ -442,6 +442,9 @@ namespace Samples
 			// aapt resource value: 0x7f020006
 			public const int scrubber_control_pressed_holo = 2130837510;
 			
+			// aapt resource value: 0x7f020007
+			public const int seattle = 2130837511;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -479,8 +482,8 @@ namespace Samples
 			// aapt resource value: 0x7f040006
 			public const int clip_vertical = 2130968582;
 			
-			// aapt resource value: 0x7f040019
-			public const int container = 2130968601;
+			// aapt resource value: 0x7f04001a
+			public const int container = 2130968602;
 			
 			// aapt resource value: 0x7f040007
 			public const int end = 2130968583;
@@ -503,26 +506,29 @@ namespace Samples
 			// aapt resource value: 0x7f040011
 			public const int main_layout = 2130968593;
 			
-			// aapt resource value: 0x7f040015
-			public const int pin_progress_1 = 2130968597;
-			
 			// aapt resource value: 0x7f040016
-			public const int pin_progress_2 = 2130968598;
+			public const int pin_progress_1 = 2130968598;
 			
 			// aapt resource value: 0x7f040017
-			public const int pin_progress_3 = 2130968599;
+			public const int pin_progress_2 = 2130968599;
 			
 			// aapt resource value: 0x7f040018
-			public const int pin_progress_4 = 2130968600;
+			public const int pin_progress_3 = 2130968600;
+			
+			// aapt resource value: 0x7f040019
+			public const int pin_progress_4 = 2130968601;
 			
 			// aapt resource value: 0x7f040012
 			public const int progress_button = 2130968594;
 			
-			// aapt resource value: 0x7f040014
-			public const int progress_seek_bar = 2130968596;
+			// aapt resource value: 0x7f040015
+			public const int progress_seek_bar = 2130968597;
 			
 			// aapt resource value: 0x7f04000c
 			public const int right = 2130968588;
+			
+			// aapt resource value: 0x7f040014
+			public const int scale_image = 2130968596;
 			
 			// aapt resource value: 0x7f04000d
 			public const int start = 2130968589;
@@ -574,6 +580,9 @@ namespace Samples
 			// aapt resource value: 0x7f030002
 			public const int progress_button = 2130903042;
 			
+			// aapt resource value: 0x7f030003
+			public const int ScaleImage = 2130903043;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -616,6 +625,9 @@ namespace Samples
 			
 			// aapt resource value: 0x7f090002
 			public const int progress_button = 2131296258;
+			
+			// aapt resource value: 0x7f09000b
+			public const int scale_image = 2131296267;
 			
 			// aapt resource value: 0x7f09000a
 			public const int switch_theme = 2131296266;

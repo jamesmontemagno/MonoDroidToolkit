@@ -30,7 +30,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseSumatra|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>True</Optimize>
-    <OutputPath>bin\ReleaseSumatra</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="HoloCircularProgressBar.cs" />
     <Compile Include="ProgressButton.cs" />
+    <Compile Include="ScaleImageView.cs" />
     <Compile Include="SelectEndEditText.cs" />
     <Compile Include="GridViewNoScroll.cs" />
     <Compile Include="ImageLoader\FileCache.cs" />

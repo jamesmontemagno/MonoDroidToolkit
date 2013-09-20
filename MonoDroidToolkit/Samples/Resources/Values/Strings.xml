@@ -14,4 +14,5 @@
   <string name="content_desc_unpinned_downloading">Temporarily downloading</string>
   <string name="content_desc_unpinned_not_downloaded">Not downloaded</string>
   <string name="switch_theme">Switch Theme</string>
+  <string name="scale_image">Scale Image</string>
 </resources>

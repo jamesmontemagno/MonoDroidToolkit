@@ -18,4 +18,11 @@
     android:layout_height="wrap_content"
     android:text="@string/circular_progress_bar"
     />
+
+  <Button
+   android:id="@+id/scale_image"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:text="@string/scale_image"
+    />
 </LinearLayout>
