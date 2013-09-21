@@ -35,11 +35,16 @@ namespace com.refractored.monodroidtoolkit
             m_ScaleImageView = imageView;
         }
 
+        public override bool OnDown(MotionEvent e)
+        {
+            return true;
+        }
+
         public override bool OnDoubleTap(MotionEvent e)
         {
             m_ScaleImageView.MaxZoomTo((int)e.GetX(), (int)e.GetY());
             m_ScaleImageView.Cutting();
-            return base.OnDoubleTap(e);
+            return true;
         }
     }
 
@@ -301,7 +306,6 @@ namespace com.refractored.monodroidtoolkit
                     }
                     break;
             }
-
             return true;
         }
 
