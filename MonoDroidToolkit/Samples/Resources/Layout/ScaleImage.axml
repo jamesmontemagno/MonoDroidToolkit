@@ -7,7 +7,6 @@
 <com.refractored.monodroidtoolkit.ScaleImageView
   android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-  android:layout_gravity="center"
   android:src="@drawable/seattle">
   
 </com.refractored.monodroidtoolkit.ScaleImageView>

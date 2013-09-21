@@ -56,7 +56,7 @@ namespace com.refractored.monodroidtoolkit
         private int m_IntrinsicWidth;
         private int m_IntrinsicHeight;
         private float m_Scale;
-        private float m_MinScale = 1.0f;
+        private float m_MinScale;
         private float m_PreviousDistance;
         private int m_PreviousMoveX;
         private int m_PreviousMoveY;
@@ -195,7 +195,7 @@ namespace com.refractored.monodroidtoolkit
         {
             var width = (int)(m_IntrinsicWidth * Scale);
             var height = (int)(m_IntrinsicHeight * Scale);
-            if (TranslateX < -(-width - m_Width))
+            if (TranslateX < -(width - m_Width))
             {
                 m_Matrix.PostTranslate(-(TranslateX + width - m_Width), 0);
             }
@@ -284,6 +284,7 @@ namespace com.refractored.monodroidtoolkit
                             var distanceY = m_PreviousMoveY - (int)e.GetY();
                             m_PreviousMoveX = (int)e.GetX();
                             m_PreviousMoveY = (int)e.GetY();
+
                             m_Matrix.PostTranslate(-distanceX, -distanceY);
                             this.Cutting();
                         }
