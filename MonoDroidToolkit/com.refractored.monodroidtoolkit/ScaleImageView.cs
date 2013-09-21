@@ -116,7 +116,7 @@ namespace com.refractored.monodroidtoolkit
             m_Height = b - t;
 
             m_Matrix.Reset();
-            var r_norm = r - 1;
+            var r_norm = r - l;
             m_Scale = (float)r_norm / (float)m_IntrinsicWidth;
 
             var paddingHeight = 0;
@@ -166,7 +166,7 @@ namespace com.refractored.monodroidtoolkit
 
         public void MaxZoomTo(int x, int y)
         {
-            if (Math.Abs(this.m_MinScale - this.Scale) > float.Epsilon && (Scale - m_MinScale) > 0.1f)
+            if (this.m_MinScale != this.Scale && (Scale - m_MinScale) > 0.1f)
             {
                 var scale = m_MinScale / Scale;
                 ZoomTo(scale, x, y);
