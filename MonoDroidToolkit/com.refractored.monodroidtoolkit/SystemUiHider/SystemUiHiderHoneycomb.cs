@@ -80,7 +80,9 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
                 {
                     // Pre-Jelly Bean, we must manually hide the action bar
                     // and use the old window flags API.
-                    m_Activity.ActionBar.Hide();
+                    if(m_Activity.ActionBar != null)
+                        m_Activity.ActionBar.Hide();
+
                     m_Activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
                 }
 
@@ -97,7 +99,9 @@ namespace com.refractored.monodroidtoolkit.SystemUiHider
                 {
                     // Pre-Jelly Bean, we must manually show the action bar
                     // and use the old window flags API.
-                    m_Activity.ActionBar.Show();
+                    if(m_Activity.ActionBar != null)
+                        m_Activity.ActionBar.Show();
+
                     m_Activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
                 }
 
