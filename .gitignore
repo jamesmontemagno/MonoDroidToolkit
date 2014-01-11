@@ -16,6 +16,7 @@ TestResults
 # Build results
 [Dd]ebug/
 [Rr]elease/
+[Cc]omponents
 x64/
 *_i.c
 *_p.c
