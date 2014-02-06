@@ -247,8 +247,12 @@ namespace com.refractored.monodroidtoolkit
 
         public override bool OnTouchEvent(MotionEvent e)
         {
-            if(m_GestureDetector.OnTouchEvent(e))
+            if (m_GestureDetector.OnTouchEvent(e))
+            {
+                m_PreviousMoveX = (int)e.GetX();
+                m_PreviousMoveY = (int)e.GetY();
                 return true;
+            }
 
             var touchCount = e.PointerCount;
             switch (e.Action)
@@ -262,11 +266,6 @@ namespace com.refractored.monodroidtoolkit
                             var distance = this.Distance(e.GetX(0), e.GetX(1), e.GetY(0), e.GetY(1));
                             m_PreviousDistance = distance;
                             m_IsScaling = true;
-                        }
-                        else
-                        {
-                            m_PreviousMoveX = (int)e.GetX();
-                            m_PreviousMoveY = (int)e.GetY();
                         }
                     }
                     break;
