@@ -3,26 +3,35 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-              android:id="@+id/main_layout"
-    >
-<Button  
-    android:id="@+id/progress_button"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/progress_button"
-    />
-
-  <Button
-    android:id="@+id/circular_progress_bar"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/circular_progress_bar"
-    />
-
-  <Button
-   android:id="@+id/scale_image"
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:text="@string/scale_image"
-    />
+    android:id="@+id/main_layout">
+    <Button
+        android:id="@+id/progress_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_button" />
+    <Button
+        android:id="@+id/circular_progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/circular_progress_bar" />
+    <Button
+        android:id="@+id/scale_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scale_image" />
+    <Button
+        android:id="@+id/image_loader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/image_loader" />
+    <Button
+        android:id="@+id/hide_ui"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hide_ui" />
+    <Button
+        android:id="@+id/network"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/network" />
 </LinearLayout>

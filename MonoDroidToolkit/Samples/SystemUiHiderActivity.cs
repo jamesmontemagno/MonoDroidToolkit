@@ -6,6 +6,7 @@ using com.refractored.monodroidtoolkit.SystemUiHider;
 namespace Samples
 {
 
+  [Activity (Label = "HideUI")]
     public class SystemUiHiderActivity : Activity, SystemUiHider.IOnVisibilityChangeListener, View.IOnClickListener, View.IOnTouchListener
     {
         private static readonly bool AUTO_HIDE = true;

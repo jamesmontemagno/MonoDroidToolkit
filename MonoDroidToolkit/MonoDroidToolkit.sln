@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.refractored.monodroidtoolkit", "com.refractored.monodroidtoolkit\com.refractored.monodroidtoolkit.csproj", "{464993E1-35B5-4F0E-9766-7AFC030F296E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples.csproj", "{8D7098EB-14EC-4AA0-8C71-61EB8DD4B736}"
@@ -13,8 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Release|Any CPU.ActiveCfg = ReleaseSumatra|Any CPU
-		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Release|Any CPU.Build.0 = ReleaseSumatra|Any CPU
+		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464993E1-35B5-4F0E-9766-7AFC030F296E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D7098EB-14EC-4AA0-8C71-61EB8DD4B736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D7098EB-14EC-4AA0-8C71-61EB8DD4B736}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7098EB-14EC-4AA0-8C71-61EB8DD4B736}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

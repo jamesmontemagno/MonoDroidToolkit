@@ -20,6 +20,15 @@ namespace Samples
 
             FindViewById<Button>(Resource.Id.scale_image).Click +=
               (sender, args) => StartActivity(typeof(ScaleImageActivity));
+
+            FindViewById<Button>(Resource.Id.image_loader).Click +=
+                (sender, args) => StartActivity(typeof(ImageLoaderActivity));
+
+            FindViewById<Button>(Resource.Id.hide_ui).Click +=
+                  (sender, args) => StartActivity(typeof(SystemUiHiderActivity));
+
+            FindViewById<Button>(Resource.Id.network).Click +=
+                    (sender, args) => StartActivity(typeof(NetworkActivity));
         }
     }
 }

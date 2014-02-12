@@ -33,7 +33,7 @@ namespace com.refractored.monodroidtoolkit
         /// </summary>
         /// <param name="interfaceName">interfaceName eth0, wlan0 or NULL=use first interface </param>
         /// <returns>mac address or empty string</returns>
-        public static string GetMacAddress(string interfaceName)
+        public static string GetMacAddress(string interfaceName = null)
         {
             try
             {

@@ -2,7 +2,7 @@
 <resources>
 
   <color name="background_dark">#ff000000</color>
-  <color name="background_light">#ffffffff</color>
+  <color name="background_light">#ffe4e4e4</color>
   <color name="bright_foreground_dark">@color/background_light</color>
   <color name="bright_foreground_light">@color/background_dark</color>
   <color name="bright_foreground_dark_disabled">#80ffffff</color>
