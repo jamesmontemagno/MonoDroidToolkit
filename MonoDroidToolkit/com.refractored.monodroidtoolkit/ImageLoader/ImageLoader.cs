@@ -173,7 +173,7 @@ namespace com.refractored.monodroidtoolkit.imageloader
             try
             {
                 //decode image size
-                BitmapFactory.Options options = new BitmapFactory.Options {InJustDecodeBounds = true};
+                BitmapFactory.Options options = new BitmapFactory.Options {InJustDecodeBounds = true, InPurgeable = true};
 
                 BitmapFactory.DecodeStream(new FileStream(file.Path, FileMode.OpenOrCreate, FileAccess.ReadWrite,FileShare.ReadWrite), null, options);//FileStream?
             
