@@ -3,6 +3,8 @@
 MonoDroidToolkit
 ================
 
+Now available on NuGet: https://www.nuget.org/packages/MonoDroid.Toolkit
+
 Created by:
 James Montemagno ([@JamesMontemagno](http://www.twitter.com/jamesmontemagno))
 
