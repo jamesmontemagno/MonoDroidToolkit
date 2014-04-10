@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+   <metadata minClientVersion="2.7.2">
+       <id>MonoDroid.Toolkit</id>
+       <version>1.0.0.0</version>
+       <title>MonoDroid Toolkit</title>
+       <authors>James Montemagno</authors>
+       <owners>James Montemagno</owners>
+       <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+       <projectUrl>https://github.com/jamesmontemagno/monodroidtoolkit</projectUrl>
+       <requireLicenseAcceptance>false</requireLicenseAcceptance>
+       <description>
+         MonoDroid Toolkit provides a bunch of utilities for Xamarin.Android including:
+
+         Documentation and sample code at:
+         https://github.com/jamesmontemagno/monodroidtoolkit
+         
+         -Image Loader and File Cachine
+         -Holo Circular Progress Bar
+         -Network Utils (mac, ip, etc)
+         -ProgressButton
+         -Scaling Image View
+         -Scrolling Text View
+         -Sticky View Pager
+         -Vertical Text View
+         -More
+
+         *Requires Support v4 Component to be installed
+       </description>
+       <summary>Toolkit for Xamarin.Android apps with a bunch of controls and utilities.</summary>
+       <tags>xamarin, mono for android, monodroid, xamarin.android, toolkit</tags>
+       <dependencies>
+       </dependencies>
+   </metadata>
+   <files>
+
+     <!--Xamarin.Android-->
+     <file src="MonoDroidToolkit\com.refractored.monodroidtoolkit\bin\Release\com.refractored.monodroidtoolkit.dll" target="lib\MonoAndroid10\com.refractored.monodroidtoolkit.dll" />
+   
+   </files>
+</package>
