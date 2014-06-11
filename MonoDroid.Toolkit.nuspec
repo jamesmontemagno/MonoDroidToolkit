@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.7.2">
        <id>MonoDroid.Toolkit</id>
-       <version>1.0.0.0</version>
+       <version>1.1.0.0</version>
        <title>MonoDroid Toolkit</title>
        <authors>James Montemagno</authors>
        <owners>James Montemagno</owners>
@@ -24,13 +24,12 @@
          -Sticky View Pager
          -Vertical Text View
          -More
-
-         *Requires Support v4 Component to be installed
        </description>
        <summary>Toolkit for Xamarin.Android apps with a bunch of controls and utilities.</summary>
        <tags>xamarin, mono for android, monodroid, xamarin.android, toolkit</tags>
-       <dependencies>
-       </dependencies>
+      <dependencies>
+       <dependency id="Xamarin.Android.Support.v4" version="19.0.2" />
+     </dependencies>
    </metadata>
    <files>
 
