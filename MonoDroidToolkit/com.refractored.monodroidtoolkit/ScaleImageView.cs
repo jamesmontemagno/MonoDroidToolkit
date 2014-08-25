@@ -178,24 +178,29 @@ namespace com.refractored.monodroidtoolkit
             }
         }
 
-        public void ZoomTo(float scale, int x, int y)
+    public void ZoomTo(float scale, int x, int y)
+    {
+        if (Scale * scale < m_MinScale)
         {
-            if (Scale * scale < m_MinScale)
-                return;
-
-            if (scale >= 1 && Scale * scale > m_MaxScale)
-                return;
-
-            m_Matrix.PostScale(scale, scale);
-            //move to center
-            m_Matrix.PostTranslate(-(m_Width * scale - m_Width) / 2, -(m_Height * scale - m_Height) / 2);
-
-            //move x and y distance
-            m_Matrix.PostTranslate(-(x - (m_Width / 2)) * scale, 0);
-            m_Matrix.PostTranslate(0, -(y - (m_Height / 2)) * scale);
-            ImageMatrix = m_Matrix;
+            scale = m_MinScale / Scale;
         }
+        else
+        {
+            if (scale >= 1 && Scale * scale > m_MaxScale)
+            {
+                scale = m_MaxScale / Scale;
+            }
+        }
+        m_Matrix.PostScale(scale, scale);
+        //move to center
+        m_Matrix.PostTranslate(-(m_Width * scale - m_Width) / 2, -(m_Height * scale - m_Height) / 2);
 
+        //move x and y distance
+        m_Matrix.PostTranslate(-(x - (m_Width / 2)) * scale, 0);
+        m_Matrix.PostTranslate(0, -(y - (m_Height / 2)) * scale);
+        ImageMatrix = m_Matrix;
+    }
+    
         public void Cutting()
         {
             var width = (int)(m_IntrinsicWidth * Scale);
