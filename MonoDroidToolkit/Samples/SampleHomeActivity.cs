@@ -4,7 +4,7 @@ using Android.Widget;
 
 namespace Samples
 {
-    [Activity(Label = "Samples", MainLauncher = true)]
+    [Activity(Label = "MonoDroid Toolkit", MainLauncher = true)]
     public class SampleHomeActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
