@@ -1,8 +1,8 @@
-﻿<Properties>
+﻿<Properties StartupItem="Samples/Samples.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Samples/SampleHomeActivity.cs">
     <Files>
-      <File FileName="Samples/SampleHomeActivity.cs" Line="41" Column="41" />
+      <File FileName="Samples/SampleHomeActivity.cs" Line="34" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
