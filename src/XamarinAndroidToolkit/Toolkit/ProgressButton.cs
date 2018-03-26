@@ -29,69 +29,69 @@ namespace MonoDroidToolkit
 {
     public class ProgressButton : CompoundButton
     {
-        private int m_Max = 100;
+        private int max = 100;
         /// <summary>
         /// Gets or sets the maximum progress, Defaults to 100
         /// </summary>
         public int Max
         {
-            get { return m_Max; }
+            get { return max; }
             set
             {
                 if (value < 0)
-                    m_Max = 0;
+                    max = 0;
                 else
-                    m_Max = value; 
+                    max = value; 
 
                 Invalidate();
             }
         }
 
-        private int m_Progress = 0;
+        private int progress = 0;
         /// <summary>
         /// Gets or sets the current progress, Defaults to 0.
         /// </summary>
         public int Progress
         {
-            get { return m_Progress; }
+            get { return progress; }
             set
             {
                 if (value > Max)
-                    m_Progress = Max;
+                    progress = Max;
                 else if (value < 0)
-                    m_Progress = 0;
+                    progress = 0;
                 else
-                    m_Progress = value;
+                    progress = value;
 
                 Invalidate();
             }
         }
 
-        private int m_IndeterminateInterval = 100;
+        private int indeterminateInterval = 100;
         public int IndeterminanteInterval
         {
-            get { return m_IndeterminateInterval; }
+            get { return indeterminateInterval; }
             set 
             { 
-                m_IndeterminateInterval = value;
-                if (m_IndeterminateInterval < 50)
-                    m_IndeterminateInterval = 50;
+                indeterminateInterval = value;
+                if (indeterminateInterval < 50)
+                    indeterminateInterval = 50;
 
             }
         }
 
-        private bool m_Indeterminate = false;
+        private bool indeterminate = false;
         /// <summary>
         /// Get or set if the Spinner is indeterminante
         /// </summary>
         public bool Indeterminante
         {
-            get { return m_Indeterminate; }
+            get { return indeterminate; }
             set
             {
                 
-                m_Indeterminate = value;
-                if (m_Indeterminate)
+                indeterminate = value;
+                if (indeterminate)
                 {
                     //start
                     UpdateIndeterminante();
@@ -99,22 +99,22 @@ namespace MonoDroidToolkit
                 else
                 {
                     //stop
-                    if (m_IndeterminanteHandler == null)
+                    if (indeterminanteHandler == null)
                         return;
 
-                    m_IndeterminanteHandler.RemoveCallbacks(IndeterminanteRunnable);
+                    indeterminanteHandler.RemoveCallbacks(IndeterminanteRunnable);
                 }
             }
         }
 
-        Handler m_IndeterminanteHandler = new Handler();
+        Handler indeterminanteHandler = new Handler();
         private void UpdateIndeterminante()
         {
-            if (m_IndeterminanteHandler == null)
+            if (indeterminanteHandler == null)
                 return;
 
-            m_IndeterminanteHandler.RemoveCallbacks(IndeterminanteRunnable);
-            m_IndeterminanteHandler.PostDelayed(IndeterminanteRunnable, m_IndeterminateInterval);
+            indeterminanteHandler.RemoveCallbacks(IndeterminanteRunnable);
+            indeterminanteHandler.PostDelayed(IndeterminanteRunnable, indeterminateInterval);
         }
 
 
@@ -127,43 +127,43 @@ namespace MonoDroidToolkit
             Progress = newProgress;
 
             if(Indeterminante)
-                m_IndeterminanteHandler.PostDelayed(IndeterminanteRunnable, m_IndeterminateInterval);
+                indeterminanteHandler.PostDelayed(IndeterminanteRunnable, indeterminateInterval);
         }
 
 
 
-        private Drawable m_ShadowDrawable;
+        private Drawable shadowDrawable;
         /// <summary>
         /// Gets or sets the drawable used as the shadow
         /// </summary>
         public Drawable ShadowDrawable
         {
-            get { return m_ShadowDrawable; }
+            get { return shadowDrawable; }
             set 
             { 
-                m_ShadowDrawable = value;
-                m_DrawableSize = m_ShadowDrawable.IntrinsicWidth; 
+                shadowDrawable = value;
+                drawableSize = shadowDrawable.IntrinsicWidth; 
                 Invalidate();
             }
         }
 
-        private Drawable m_UnpinnedDrawable;
+        private Drawable unpinnedDrawable;
         /// <summary>
         /// Gets or sets the drawable displayed when the user unpins an item.
         /// </summary>
         public Drawable UnpinnedDrawable
         {
-            get { return m_UnpinnedDrawable; }
-            set { m_UnpinnedDrawable = value; Invalidate(); }
+            get { return unpinnedDrawable; }
+            set { unpinnedDrawable = value; Invalidate(); }
         }
 
-        private Drawable m_PinnedDrawable;
+        private Drawable pinnedDrawable;
         /// <summary>
         /// Gets or sets the drawable displayed when the user pins an item.
         /// </summary>
         public Drawable PinnedDrawable {
-            get { return m_PinnedDrawable; }
-            set { m_PinnedDrawable = value; Invalidate(); }
+            get { return pinnedDrawable; }
+            set { pinnedDrawable = value; Invalidate(); }
         }
 
    
@@ -197,20 +197,20 @@ namespace MonoDroidToolkit
         }
 
         private Paint ProgressPaint { get; set; }
-        private readonly Rect m_TempRect = new Rect();
-        private readonly RectF m_TempRectF = new RectF();
-        private int m_DrawableSize;
-        private int m_InnerSize;
+        private readonly Rect tempRect = new Rect();
+        private readonly RectF tempRectF = new RectF();
+        private int drawableSize;
+        private int innerSize;
 
         /// <summary>
         /// Gets or sets the inner isze
         /// </summary>
         public int InnerSize
         {
-            get { return m_InnerSize; }
+            get { return innerSize; }
             set 
             { 
-                m_InnerSize = value;
+                innerSize = value;
                 Invalidate();
             }
         }
@@ -250,7 +250,7 @@ namespace MonoDroidToolkit
             var canChecked = false;
             var canClickable = false;
             var canFocusable = false;
-            m_InnerSize = Resources.GetDimensionPixelSize(Resource.Dimension.progress_inner_size);
+            innerSize = Resources.GetDimensionPixelSize(Resource.Dimension.progress_inner_size);
 
 
             if (context != null && attrs != null)
@@ -260,8 +260,8 @@ namespace MonoDroidToolkit
                                                        Resource.Attribute.progressButtonStyle,
                                                        Resource.Style.ProgressButton_Pin);
 
-                m_Progress = a.GetInteger(Resource.Styleable.ProgressButton_progress, 0);
-                m_Max = a.GetInteger(Resource.Styleable.ProgressButton_max, 100);
+                progress = a.GetInteger(Resource.Styleable.ProgressButton_progress, 0);
+                max = a.GetInteger(Resource.Styleable.ProgressButton_max, 100);
 
                 circleColor = a.GetColor(Resource.Styleable.ProgressButton_circleColor, circleColor);
                 progressColor = a.GetColor(Resource.Styleable.ProgressButton_progressColor, progressColor);
@@ -269,9 +269,9 @@ namespace MonoDroidToolkit
                 unpinnedDrawable = a.GetResourceId(Resource.Styleable.ProgressButton_unpinnedDrawable, unpinnedDrawable);
                 shadowDrawable = a.GetResourceId(Resource.Styleable.ProgressButton_shadowDrawable, shadowDrawable);
 
-                m_InnerSize = a.GetDimensionPixelSize(Resource.Styleable.ProgressButton_innerSize, 0);
-                if(m_InnerSize == 0)
-                    m_InnerSize = Resources.GetDimensionPixelSize(Resource.Dimension.progress_inner_size);
+                innerSize = a.GetDimensionPixelSize(Resource.Styleable.ProgressButton_innerSize, 0);
+                if(innerSize == 0)
+                    innerSize = Resources.GetDimensionPixelSize(Resource.Dimension.progress_inner_size);
 
                 canChecked = a.GetBoolean(Resource.Styleable.ProgressButton_pinned, canChecked);
                 canClickable = a.GetBoolean(Resource.Styleable.ProgressButton_android_clickable, canClickable);
@@ -284,16 +284,16 @@ namespace MonoDroidToolkit
                 a.Recycle();
             }
 
-            m_PinnedDrawable = Resources.GetDrawable(pinnedDrawable);
-            m_PinnedDrawable.SetCallback(this);
+            this.pinnedDrawable = base.Resources.GetDrawable(pinnedDrawable);
+            this.pinnedDrawable.SetCallback(this);
 
-            m_UnpinnedDrawable = Resources.GetDrawable(unpinnedDrawable);
-            m_UnpinnedDrawable.SetCallback(this);
+            this.unpinnedDrawable = base.Resources.GetDrawable(unpinnedDrawable);
+            this.unpinnedDrawable.SetCallback(this);
 
-            m_ShadowDrawable = Resources.GetDrawable(shadowDrawable);
-            m_ShadowDrawable.SetCallback(this);
+            this.shadowDrawable = base.Resources.GetDrawable(shadowDrawable);
+            this.shadowDrawable.SetCallback(this);
 
-            m_DrawableSize = m_ShadowDrawable.IntrinsicWidth;
+			drawableSize = this.shadowDrawable.IntrinsicWidth;
 
             Checked = canChecked;
             Clickable = canClickable;
@@ -302,7 +302,7 @@ namespace MonoDroidToolkit
             CirclePaint = new Paint {Color = circleColor, AntiAlias = true};
             ProgressPaint = new Paint {Color = progressColor, AntiAlias = true};
 
-            m_IndeterminateInterval = indeterminateInterval;
+            this.indeterminateInterval = indeterminateInterval;
             Indeterminante = indeterminate;
         }
 
@@ -316,27 +316,27 @@ namespace MonoDroidToolkit
 
         protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
         {
-            SetMeasuredDimension(ResolveSize(m_DrawableSize, widthMeasureSpec), 
-                ResolveSize(m_DrawableSize, heightMeasureSpec));
+            SetMeasuredDimension(ResolveSize(drawableSize, widthMeasureSpec), 
+                ResolveSize(drawableSize, heightMeasureSpec));
         }
 
         protected override void DrawableStateChanged()
         {
             base.DrawableStateChanged();
 
-            if (m_PinnedDrawable.IsStateful)
+            if (pinnedDrawable.IsStateful)
             {
-                m_PinnedDrawable.SetState(GetDrawableState());
+                pinnedDrawable.SetState(GetDrawableState());
             }
 
-            if (m_UnpinnedDrawable.IsStateful)
+            if (unpinnedDrawable.IsStateful)
             {
-                m_UnpinnedDrawable.SetState(GetDrawableState());
+                unpinnedDrawable.SetState(GetDrawableState());
             }
 
-            if (m_ShadowDrawable.IsStateful)
+            if (shadowDrawable.IsStateful)
             {
-                m_ShadowDrawable.SetState(GetDrawableState());
+                shadowDrawable.SetState(GetDrawableState());
             }
 
             Invalidate();
@@ -347,21 +347,21 @@ namespace MonoDroidToolkit
         {
             base.OnDraw(canvas);
 
-            m_TempRect.Set(0, 0, m_DrawableSize, m_DrawableSize);
-            m_TempRect.Offset((Width - m_DrawableSize) / 2, (Height - m_DrawableSize) / 2);
+            tempRect.Set(0, 0, drawableSize, drawableSize);
+            tempRect.Offset((Width - drawableSize) / 2, (Height - drawableSize) / 2);
 
-            m_TempRectF.Set(-0.5f, -0.5f, m_InnerSize + 0.5f, m_InnerSize + 0.5f);
-            m_TempRectF.Offset((Width - m_InnerSize) / 2, (Height - m_InnerSize) / 2);
+            tempRectF.Set(-0.5f, -0.5f, innerSize + 0.5f, innerSize + 0.5f);
+            tempRectF.Offset((Width - innerSize) / 2, (Height - innerSize) / 2);
 
-            canvas.DrawArc(m_TempRectF, 0, 360, true, CirclePaint);
-            canvas.DrawArc(m_TempRectF,-90, 360 * Progress / Max, true, ProgressPaint);
+            canvas.DrawArc(tempRectF, 0, 360, true, CirclePaint);
+            canvas.DrawArc(tempRectF,-90, 360 * Progress / Max, true, ProgressPaint);
 
             var iconDrawable = Checked ? PinnedDrawable : UnpinnedDrawable;
-            iconDrawable.Bounds = m_TempRect;
+            iconDrawable.Bounds = tempRect;
             iconDrawable.Draw(canvas);
 
-            m_ShadowDrawable.Bounds = m_TempRect;
-            m_ShadowDrawable.Draw(canvas);
+            shadowDrawable.Bounds = tempRect;
+            shadowDrawable.Draw(canvas);
 
         }
 
@@ -371,8 +371,8 @@ namespace MonoDroidToolkit
             {
                 var bundle = new Bundle();
                 bundle.PutParcelable("instanceState", base.OnSaveInstanceState());
-                bundle.PutInt("max", m_Max);
-                bundle.PutInt("progress", m_Progress);
+                bundle.PutInt("max", max);
+                bundle.PutInt("progress", progress);
 
                 return bundle;
             }
@@ -385,8 +385,8 @@ namespace MonoDroidToolkit
             var bundle = state as Bundle;
             if (bundle != null)
             {
-                m_Max = bundle.GetInt("max", 100);
-                m_Progress = bundle.GetInt("progress", 0);
+                max = bundle.GetInt("max", 100);
+                progress = bundle.GetInt("progress", 0);
                 base.OnRestoreInstanceState(bundle.GetParcelable("instanceState") as IParcelable);
                 return;
             }

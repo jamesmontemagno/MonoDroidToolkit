@@ -52,10 +52,10 @@ namespace MonoDroidToolkit
         public static int FLAG_HIDE_NAVIGATION = FLAG_FULLSCREEN | 0x4;
 
 
-        protected Activity m_Activity;
-        protected View m_AnchorView;
-        protected int m_Flags;
-        protected IOnVisibilityChangeListener m_OnVisibilityChangeListener;
+        protected Activity activity;
+        protected View anchorView;
+        protected int flags;
+        protected IOnVisibilityChangeListener onVisibilityChangeListener;
 
         public static SystemUiHider GetInstance(Activity activity, View anchorView, int flags)
         {
@@ -71,9 +71,9 @@ namespace MonoDroidToolkit
 
         protected SystemUiHider(Activity activity, View anchorView, int flags)
         {
-            m_Activity = activity;
-            m_AnchorView = anchorView;
-            m_Flags = flags;
+            this.activity = activity;
+            this.anchorView = anchorView;
+            this.flags = flags;
         }
 
         public abstract void Setup();
@@ -101,7 +101,7 @@ namespace MonoDroidToolkit
                 listener = new DummyListener();
             }
 
-            m_OnVisibilityChangeListener = listener;
+            onVisibilityChangeListener = listener;
         }
 
         /// <summary>

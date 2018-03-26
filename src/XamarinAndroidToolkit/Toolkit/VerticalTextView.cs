@@ -27,7 +27,7 @@ namespace MonoDroidToolkit
 {
     public class VerticalTextView : TextView
     {
-        private bool m_TopDown;
+        private bool topDown;
 
         public VerticalTextView(System.IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer)
             : base(javaReference, transfer)
@@ -51,13 +51,13 @@ namespace MonoDroidToolkit
         private void Initialize()
         {
             ResourceIdManager.UpdateIdValues();
-            m_TopDown = true;
+            topDown = true;
 
             var gravity = Gravity;
             if (Android.Views.Gravity.IsVertical(gravity) && (gravity & GravityFlags.VerticalGravityMask) == GravityFlags.Bottom)
             {
                 Gravity = ((gravity & GravityFlags.HorizontalGravityMask) | GravityFlags.Top);
-                m_TopDown = false;
+                topDown = false;
             }
         }
 
@@ -74,7 +74,7 @@ namespace MonoDroidToolkit
 
             canvas.Save();
 
-            if (m_TopDown)
+            if (topDown)
             {
                 canvas.Translate(this.Width, 0);
                 canvas.Rotate(90.0f);

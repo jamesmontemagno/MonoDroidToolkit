@@ -36,13 +36,13 @@ namespace MonoDroidToolkit
     {
         public static void CopyStream(Stream inputStream, OutputStream os)
         {
-            int buffer_size = 1024;
+            var buffer_size = 1024;
             try
             {
-                byte[] bytes = new byte[buffer_size];
+                var bytes = new byte[buffer_size];
                 for (;;)
                 {
-                    int count = inputStream.Read(bytes, 0, buffer_size);
+                    var count = inputStream.Read(bytes, 0, buffer_size);
                     if (count <= 0)
                         break;
                     os.Write(bytes, 0, count);
@@ -62,34 +62,34 @@ namespace MonoDroidToolkit
             }
         }
 
-        private MemoryCache m_MemoryCache = new MemoryCache();
-        private FileCache m_FileCache;
+        private MemoryCache memoryCache = new MemoryCache();
+        private FileCache fileCache;
 
-        private IDictionary<ImageView, String> m_ImageViews = new ConcurrentDictionary<ImageView, String>();
-        private int m_StubID = -1;
+        private IDictionary<ImageView, String> imageViews = new ConcurrentDictionary<ImageView, String>();
+        private int stubId = -1;
 
-        private int m_Scale;
-        private int m_MaxImages;
+        private int scale;
+        private int maxImages;
 
         public ImageLoader(Context context, int scale = 64, int maxImages = 0)
         {
-            m_FileCache = new FileCache(context);
-            m_Scale = scale;
-            m_MaxImages = maxImages;
+            fileCache = new FileCache(context);
+            this.scale = scale;
+            this.maxImages = maxImages;
         }
 
         public void DisplayImage(string url, ImageView imageView, int defaultResourceId)
         {
-            m_StubID = defaultResourceId;
-            if (m_ImageViews.ContainsKey(imageView))
+            stubId = defaultResourceId;
+            if (imageViews.ContainsKey(imageView))
             {
                 if (defaultResourceId != -1)
                     imageView.SetImageResource(defaultResourceId);
 
-                m_ImageViews.Remove(imageView);
+                imageViews.Remove(imageView);
             }
 
-            m_MemoryCache.PopCache(m_MaxImages);
+            memoryCache.PopCache(maxImages);
 
 
 
@@ -106,14 +106,14 @@ namespace MonoDroidToolkit
                 m_ImageList.RemoveAt(0);
             }*/
 
-            m_ImageViews.Add(imageView, url);
+            imageViews.Add(imageView, url);
             //m_ImageList.Add(imageView);
 
 
 
 
 
-            var bitmap = m_MemoryCache.Get(url);
+            var bitmap = memoryCache.Get(url);
             if (bitmap != null)
             {
                 imageView.SetImageBitmap(bitmap);
@@ -134,10 +134,10 @@ namespace MonoDroidToolkit
 
         private Bitmap GetBitmap(string url)
         {
-            File f = m_FileCache.GetFile(url);
+            var f = fileCache.GetFile(url);
 
             ////from SD cache
-            Bitmap b = DecodeFile(f, m_Scale);
+            var b = DecodeFile(f, scale);
             if (b != null)
                 return b;
 
@@ -145,8 +145,8 @@ namespace MonoDroidToolkit
             try
             {
                 Bitmap bitmap = null;
-                URL imageUrl = new URL(url);
-                HttpURLConnection conn = (HttpURLConnection)imageUrl.OpenConnection();
+                var imageUrl = new URL(url);
+                var conn = (HttpURLConnection)imageUrl.OpenConnection();
                 conn.ConnectTimeout = 5000;
                 conn.ReadTimeout = 5000;
                 conn.InstanceFollowRedirects = true;
@@ -158,7 +158,7 @@ namespace MonoDroidToolkit
                 OutputStream os = new FileOutputStream(f);
                 CopyStream(inputStream, os);
                 os.Close();
-                bitmap = DecodeFile(f, m_Scale);
+                bitmap = DecodeFile(f, scale);
                 return bitmap;
             }
             catch (Exception ex)
@@ -173,13 +173,13 @@ namespace MonoDroidToolkit
             try
             {
                 //decode image size
-                BitmapFactory.Options options = new BitmapFactory.Options { InJustDecodeBounds = true, InPurgeable = true };
+                var options = new BitmapFactory.Options { InJustDecodeBounds = true, InPurgeable = true };
 
                 BitmapFactory.DecodeStream(new FileStream(file.Path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite), null, options);//FileStream?
 
                 //Find the correct scale value. It should be the power of 2.
-                int tempWidth = options.OutWidth;
-                int tempHeight = options.OutHeight;
+                var tempWidth = options.OutWidth;
+				var tempHeight = options.OutHeight;
 
                 var scale = 1;
 
@@ -193,8 +193,8 @@ namespace MonoDroidToolkit
                     scale *= 2;
                 }
 
-                //decode with inSampleSize
-                BitmapFactory.Options options2 = new BitmapFactory.Options { InSampleSize = scale };
+				//decode with inSampleSize
+				var options2 = new BitmapFactory.Options { InSampleSize = scale };
 
                 return BitmapFactory.DecodeStream(new FileStream(file.Path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite), null, options2);//FileStream?
             }
@@ -210,10 +210,10 @@ namespace MonoDroidToolkit
         {
             try
             {
-                if (!m_ImageViews.ContainsKey(photoToLoad.ImageView))
+                if (!imageViews.ContainsKey(photoToLoad.ImageView))
                     return true;
 
-                if (!m_ImageViews[photoToLoad.ImageView].Equals(photoToLoad.Url))
+                if (!imageViews[photoToLoad.ImageView].Equals(photoToLoad.Url))
                     return true;
             }
             catch (Exception)
@@ -232,8 +232,8 @@ namespace MonoDroidToolkit
             if (ImageViewReused(photoToLoad))
                 return;
 
-            Bitmap bitmap = GetBitmap(photoToLoad.Url);
-            m_MemoryCache.Put(photoToLoad.Url, bitmap);
+			var bitmap = GetBitmap(photoToLoad.Url);
+            memoryCache.Put(photoToLoad.Url, bitmap);
             if (ImageViewReused(photoToLoad))
                 return;
 
@@ -250,21 +250,21 @@ namespace MonoDroidToolkit
                                            photoToLoad.ImageView.Visibility = Android.Views.ViewStates.Visible;
                                            if (bitmap != null)
                                                photoToLoad.ImageView.SetImageBitmap(bitmap);
-                                           else if (m_StubID != -1)
-                                               photoToLoad.ImageView.SetImageResource(m_StubID);
+                                           else if (stubId != -1)
+                                               photoToLoad.ImageView.SetImageResource(stubId);
                                        });
         }
 
         public void ClearCache()
         {
-            m_MemoryCache.Clear();
+            memoryCache.Clear();
             //m_FileCache.Clear();
-            m_ImageViews.Clear();
+            imageViews.Clear();
         }
 
         public void ClearFileCache()
         {
-            m_FileCache.Clear();
+            fileCache.Clear();
         }
     }
 }

@@ -24,36 +24,36 @@ namespace MonoDroidToolkit
     {
 
 #if __ANDROID_11__
-        private int m_ShowFlags;
-        private int m_HideFlags;
-        private int m_TestFlags;
-        private bool m_IsVisible = true;
+        private int showFlags;
+        private int hideFlags;
+        private int testFlags;
+        private bool isVisible = true;
 #endif
         public SystemUiHiderHoneycomb(Activity activity, View anchorView, int flags)
             : base(activity, anchorView, flags)
         {
 #if __ANDROID_11__
-            m_ShowFlags = (int)SystemUiFlags.Visible;
-            m_HideFlags = (int)SystemUiFlags.LowProfile;
-            m_TestFlags = (int)SystemUiFlags.LowProfile;
+            showFlags = (int)SystemUiFlags.Visible;
+            hideFlags = (int)SystemUiFlags.LowProfile;
+            testFlags = (int)SystemUiFlags.LowProfile;
 
-            if ((m_Flags & FLAG_FULLSCREEN) != 0)
+            if ((base.flags & FLAG_FULLSCREEN) != 0)
             {
-                // If the client requested fullscreen, add flags relevant to hiding
-                // the status bar. Note that some of these constants are new as of
-                // API 16 (Jelly Bean). It is safe to use them, as they are inlined
-                // at compile-time and do nothing on pre-Jelly Bean devices.
-                m_ShowFlags |= (int)SystemUiFlags.LayoutFullscreen;
-                m_HideFlags |= (int)SystemUiFlags.LayoutFullscreen | (int)SystemUiFlags.Fullscreen;
+				// If the client requested fullscreen, add flags relevant to hiding
+				// the status bar. Note that some of these constants are new as of
+				// API 16 (Jelly Bean). It is safe to use them, as they are inlined
+				// at compile-time and do nothing on pre-Jelly Bean devices.
+				showFlags |= (int)SystemUiFlags.LayoutFullscreen;
+				hideFlags |= (int)SystemUiFlags.LayoutFullscreen | (int)SystemUiFlags.Fullscreen;
             }
 
-            if ((m_Flags & FLAG_HIDE_NAVIGATION) != 0)
+            if ((base.flags & FLAG_HIDE_NAVIGATION) != 0)
             {
-                // If the client requested hiding navigation, add relevant flags.
-                m_ShowFlags |= (int)SystemUiFlags.LayoutHideNavigation;
-                m_HideFlags |= (int)SystemUiFlags.LayoutHideNavigation
+				// If the client requested hiding navigation, add relevant flags.
+				showFlags |= (int)SystemUiFlags.LayoutHideNavigation;
+				hideFlags |= (int)SystemUiFlags.LayoutHideNavigation
                         | (int)SystemUiFlags.HideNavigation;
-                m_TestFlags = (int)SystemUiFlags.HideNavigation;
+				testFlags = (int)SystemUiFlags.HideNavigation;
             }
 #endif
         }
@@ -64,7 +64,7 @@ namespace MonoDroidToolkit
         public override void Setup()
         {
 #if __ANDROID_11__
-            m_AnchorView.SystemUiVisibilityChange += AnchorViewOnSystemUiVisibilityChange;
+            anchorView.SystemUiVisibilityChange += AnchorViewOnSystemUiVisibilityChange;
 #else
             base.Setup();
 #endif
@@ -74,40 +74,40 @@ namespace MonoDroidToolkit
         private void AnchorViewOnSystemUiVisibilityChange(object sender, View.SystemUiVisibilityChangeEventArgs systemUiVisibilityChangeEventArgs)
         {
             // Test against mTestFlags to see if the system UI is visible.
-            if (((int)systemUiVisibilityChangeEventArgs.Visibility & m_TestFlags) != 0)
+            if (((int)systemUiVisibilityChangeEventArgs.Visibility & testFlags) != 0)
             {
                 if ((int)Build.VERSION.SdkInt < 16)
                 {
                     // Pre-Jelly Bean, we must manually hide the action bar
                     // and use the old window flags API.
-                    if(m_Activity.ActionBar != null)
-                        m_Activity.ActionBar.Hide();
+                    if(activity.ActionBar != null)
+                        activity.ActionBar.Hide();
 
-                    m_Activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
+                    activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
                 }
 
                 // Trigger the registered listener and cache the visibility
                 // state.
-                m_OnVisibilityChangeListener.OnVisibilityChange(false);
+                onVisibilityChangeListener.OnVisibilityChange(false);
                 IsVisible = false;
 
             }
             else
             {
-                m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_ShowFlags;
+                anchorView.SystemUiVisibility = (StatusBarVisibility)showFlags;
                 if ((int)Build.VERSION.SdkInt < 16)
                 {
                     // Pre-Jelly Bean, we must manually show the action bar
                     // and use the old window flags API.
-                    if(m_Activity.ActionBar != null)
-                        m_Activity.ActionBar.Show();
+                    if(activity.ActionBar != null)
+                        activity.ActionBar.Show();
 
-                    m_Activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
+                    activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
                 }
 
                 // Trigger the registered listener and cache the visibility
                 // state.
-                m_OnVisibilityChangeListener.OnVisibilityChange(true);
+                onVisibilityChangeListener.OnVisibilityChange(true);
                 IsVisible = true;
             }
         }
@@ -116,7 +116,7 @@ namespace MonoDroidToolkit
         public override void Show()
         {
 #if __ANDROID_11__
-            m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_ShowFlags;
+            anchorView.SystemUiVisibility = (StatusBarVisibility)showFlags;
 #else
             base.Show();
 #endif
@@ -126,7 +126,7 @@ namespace MonoDroidToolkit
         public override void Hide()
         {
 #if __ANDROID_11__
-            m_AnchorView.SystemUiVisibility = (StatusBarVisibility)m_HideFlags;
+            anchorView.SystemUiVisibility = (StatusBarVisibility)hideFlags;
 #else
             base.Hide();
 #endif
@@ -137,11 +137,11 @@ namespace MonoDroidToolkit
         {
             get
             {
-                return m_IsVisible;
+                return isVisible;
             }
             set
             {
-                m_IsVisible = value;
+                isVisible = value;
             }
         }
 #endif

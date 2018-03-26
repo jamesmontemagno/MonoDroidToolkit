@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>MonoAndroid80</TargetFramework>
+
+    <AssemblyName>MonoDroidToolkit</AssemblyName>
+    <RootNamespace>MonoDroidToolkit</RootNamespace>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    <Version>1.0.0.0</Version>
+    <Authors>James Montemagno</Authors>
+    <PackageId>MonoDroid.Toolkit</PackageId>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageLicenseUrl>https://github.com/jamesmontemagno/MonoDroidToolkit/blob/master/LICENSE.md</PackageLicenseUrl>
+    <Owners>JamesMontemagno</Owners>
+    <PackageProjectUrl>https://github.com/jamesmontemagno/MonoDroidToolkit</PackageProjectUrl>
+    
+    <Summary>Toolkit for Xamarin.Android apps with a bunch of controls and utilities.</Summary>
+    <PackageTags>xamarin, mono for android, monodroid, xamarin.android, toolkit</PackageTags>
+    <Title>Toolkit for Xamarin.Android</Title>
+    <Description>
+      MonoDroid Toolkit provides a bunch of utilities for Xamarin.Android including:
+
+      Documentation and sample code at:
+      https://github.com/jamesmontemagno/monodroidtoolkit
+
+      -Image Loader and File Cachine
+      -Holo Circular Progress Bar
+      -Network Utils (mac, ip, etc)
+      -ProgressButton
+      -Scaling Image View
+      -Scrolling Text View
+      -Sticky View Pager
+      -Vertical Text View
+      -More
+    </Description>
+    <Copyright>Copyright 2018</Copyright>
+    <RepositoryUrl>https://github.com/jamesmontemagno/MonoDroidToolkit</RepositoryUrl>
+    <PackageReleaseNotes>See: https://github.com/jamesmontemagno/MonoDroidToolkit </PackageReleaseNotes>
+
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>default</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
+
+    <DebugType>full</DebugType>
+
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- This None is here so the conditionally included files show up in the Solution Explorer -->
+    <None Include="**\*.cs;**\*.xml;**\*.axml;**\*.png" Exclude="obj\**\*.*;bin\**\*.*" />
+    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.2.0" PrivateAssets="All" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.0.2" />
+    <Compile Include="Toolkit\**\*.cs" />
+    <AndroidResource Include="Resources\**\*.axml" />
+    <AndroidResource Include="Resources\**\*.xml" />
+    <AndroidResource Include="Resources\**\*.png" />
+  </ItemGroup>
+  
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+</Project>

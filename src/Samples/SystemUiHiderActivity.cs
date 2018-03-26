@@ -22,7 +22,7 @@ namespace Samples
 
             SetContentView(Resource.Layout.Main);
 
-            View contentView = FindViewById(Resource.Id.main_layout);
+            var contentView = FindViewById(Resource.Id.main_layout);
 
             if (contentView == null)
                 return;

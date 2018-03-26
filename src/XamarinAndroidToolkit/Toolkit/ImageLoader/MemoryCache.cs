@@ -25,21 +25,21 @@ namespace MonoDroidToolkit
 {
     internal class MemoryCache
     {
-        private IDictionary<String, Bitmap> m_Cache = new ConcurrentDictionary<String, Bitmap>();
+        private IDictionary<String, Bitmap> cache = new ConcurrentDictionary<String, Bitmap>();
 
-        private List<String> m_CacheList = new List<String>();
+        private List<String> cacheList = new List<String>();
 
         public void PopCache(int max)
         {
             if (max == 0)
                 return;
 
-            if (m_CacheList.Count >= max)
+            if (cacheList.Count >= max)
             {
-                if (m_Cache.ContainsKey(m_CacheList[0]))
-                    m_Cache.Remove(m_CacheList[0]);
+                if (cache.ContainsKey(cacheList[0]))
+                    cache.Remove(cacheList[0]);
 
-                m_CacheList.RemoveAt(0);
+                cacheList.RemoveAt(0);
             }
 
 
@@ -47,19 +47,19 @@ namespace MonoDroidToolkit
 
         public Bitmap Get(String id)
         {
-            if (!m_Cache.ContainsKey(id))
+            if (!cache.ContainsKey(id))
                 return null;
 
-            return m_Cache[id];
+            return cache[id];
         }
 
         public void Put(string id, Bitmap bitmap)
         {
-            if (!m_Cache.ContainsKey(id))
-                m_Cache.Add(id, bitmap);
+            if (!cache.ContainsKey(id))
+                cache.Add(id, bitmap);
 
-            if (!m_CacheList.Contains(id))
-                m_CacheList.Add(id);
+            if (!cacheList.Contains(id))
+                cacheList.Add(id);
 
             //if(m_CacheList.Count == 60)
             //{
@@ -74,8 +74,8 @@ namespace MonoDroidToolkit
 
         public void Clear()
         {
-            m_Cache.Clear();
-            m_CacheList.Clear();
+            cache.Clear();
+            cacheList.Clear();
         }
 
     }

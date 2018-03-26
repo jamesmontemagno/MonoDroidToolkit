@@ -36,6 +36,15 @@ namespace Samples
 			global::MonoDroidToolkit.Resource.Attribute.circular_progress_background_color = global::Samples.Resource.Attribute.circular_progress_background_color;
 			global::MonoDroidToolkit.Resource.Attribute.circular_progress_color = global::Samples.Resource.Attribute.circular_progress_color;
 			global::MonoDroidToolkit.Resource.Attribute.circular_stroke_width = global::Samples.Resource.Attribute.circular_stroke_width;
+			global::MonoDroidToolkit.Resource.Attribute.font = global::Samples.Resource.Attribute.font;
+			global::MonoDroidToolkit.Resource.Attribute.fontProviderAuthority = global::Samples.Resource.Attribute.fontProviderAuthority;
+			global::MonoDroidToolkit.Resource.Attribute.fontProviderCerts = global::Samples.Resource.Attribute.fontProviderCerts;
+			global::MonoDroidToolkit.Resource.Attribute.fontProviderFetchStrategy = global::Samples.Resource.Attribute.fontProviderFetchStrategy;
+			global::MonoDroidToolkit.Resource.Attribute.fontProviderFetchTimeout = global::Samples.Resource.Attribute.fontProviderFetchTimeout;
+			global::MonoDroidToolkit.Resource.Attribute.fontProviderPackage = global::Samples.Resource.Attribute.fontProviderPackage;
+			global::MonoDroidToolkit.Resource.Attribute.fontProviderQuery = global::Samples.Resource.Attribute.fontProviderQuery;
+			global::MonoDroidToolkit.Resource.Attribute.fontStyle = global::Samples.Resource.Attribute.fontStyle;
+			global::MonoDroidToolkit.Resource.Attribute.fontWeight = global::Samples.Resource.Attribute.fontWeight;
 			global::MonoDroidToolkit.Resource.Attribute.indeterminate = global::Samples.Resource.Attribute.indeterminate;
 			global::MonoDroidToolkit.Resource.Attribute.indeterminate_interval = global::Samples.Resource.Attribute.indeterminate_interval;
 			global::MonoDroidToolkit.Resource.Attribute.innerSize = global::Samples.Resource.Attribute.innerSize;
@@ -47,6 +56,9 @@ namespace Samples
 			global::MonoDroidToolkit.Resource.Attribute.progressColor = global::Samples.Resource.Attribute.progressColor;
 			global::MonoDroidToolkit.Resource.Attribute.shadowDrawable = global::Samples.Resource.Attribute.shadowDrawable;
 			global::MonoDroidToolkit.Resource.Attribute.unpinnedDrawable = global::Samples.Resource.Attribute.unpinnedDrawable;
+			global::MonoDroidToolkit.Resource.Boolean.abc_action_bar_embed_tabs = global::Samples.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::MonoDroidToolkit.Resource.Color.notification_action_color_filter = global::Samples.Resource.Color.notification_action_color_filter;
+			global::MonoDroidToolkit.Resource.Color.notification_icon_bg_color = global::Samples.Resource.Color.notification_icon_bg_color;
 			global::MonoDroidToolkit.Resource.Color.progress_default_circle_color = global::Samples.Resource.Color.progress_default_circle_color;
 			global::MonoDroidToolkit.Resource.Color.progress_default_progress_color = global::Samples.Resource.Color.progress_default_progress_color;
 			global::MonoDroidToolkit.Resource.Color.refractored_background_dark = global::Samples.Resource.Color.refractored_background_dark;
@@ -78,16 +90,58 @@ namespace Samples
 			global::MonoDroidToolkit.Resource.Color.refractored_holo_purple = global::Samples.Resource.Color.refractored_holo_purple;
 			global::MonoDroidToolkit.Resource.Color.refractored_holo_red_dark = global::Samples.Resource.Color.refractored_holo_red_dark;
 			global::MonoDroidToolkit.Resource.Color.refractored_holo_red_light = global::Samples.Resource.Color.refractored_holo_red_light;
+			global::MonoDroidToolkit.Resource.Color.ripple_material_light = global::Samples.Resource.Color.ripple_material_light;
+			global::MonoDroidToolkit.Resource.Color.secondary_text_default_material_light = global::Samples.Resource.Color.secondary_text_default_material_light;
+			global::MonoDroidToolkit.Resource.Dimension.compat_button_inset_horizontal_material = global::Samples.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::MonoDroidToolkit.Resource.Dimension.compat_button_inset_vertical_material = global::Samples.Resource.Dimension.compat_button_inset_vertical_material;
+			global::MonoDroidToolkit.Resource.Dimension.compat_button_padding_horizontal_material = global::Samples.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::MonoDroidToolkit.Resource.Dimension.compat_button_padding_vertical_material = global::Samples.Resource.Dimension.compat_button_padding_vertical_material;
+			global::MonoDroidToolkit.Resource.Dimension.compat_control_corner_material = global::Samples.Resource.Dimension.compat_control_corner_material;
+			global::MonoDroidToolkit.Resource.Dimension.notification_action_icon_size = global::Samples.Resource.Dimension.notification_action_icon_size;
+			global::MonoDroidToolkit.Resource.Dimension.notification_action_text_size = global::Samples.Resource.Dimension.notification_action_text_size;
+			global::MonoDroidToolkit.Resource.Dimension.notification_big_circle_margin = global::Samples.Resource.Dimension.notification_big_circle_margin;
+			global::MonoDroidToolkit.Resource.Dimension.notification_content_margin_start = global::Samples.Resource.Dimension.notification_content_margin_start;
+			global::MonoDroidToolkit.Resource.Dimension.notification_large_icon_height = global::Samples.Resource.Dimension.notification_large_icon_height;
+			global::MonoDroidToolkit.Resource.Dimension.notification_large_icon_width = global::Samples.Resource.Dimension.notification_large_icon_width;
+			global::MonoDroidToolkit.Resource.Dimension.notification_main_column_padding_top = global::Samples.Resource.Dimension.notification_main_column_padding_top;
+			global::MonoDroidToolkit.Resource.Dimension.notification_media_narrow_margin = global::Samples.Resource.Dimension.notification_media_narrow_margin;
+			global::MonoDroidToolkit.Resource.Dimension.notification_right_icon_size = global::Samples.Resource.Dimension.notification_right_icon_size;
+			global::MonoDroidToolkit.Resource.Dimension.notification_right_side_padding_top = global::Samples.Resource.Dimension.notification_right_side_padding_top;
+			global::MonoDroidToolkit.Resource.Dimension.notification_small_icon_background_padding = global::Samples.Resource.Dimension.notification_small_icon_background_padding;
+			global::MonoDroidToolkit.Resource.Dimension.notification_small_icon_size_as_large = global::Samples.Resource.Dimension.notification_small_icon_size_as_large;
+			global::MonoDroidToolkit.Resource.Dimension.notification_subtext_size = global::Samples.Resource.Dimension.notification_subtext_size;
+			global::MonoDroidToolkit.Resource.Dimension.notification_top_pad = global::Samples.Resource.Dimension.notification_top_pad;
+			global::MonoDroidToolkit.Resource.Dimension.notification_top_pad_large_text = global::Samples.Resource.Dimension.notification_top_pad_large_text;
 			global::MonoDroidToolkit.Resource.Dimension.progress_inner_size = global::Samples.Resource.Dimension.progress_inner_size;
+			global::MonoDroidToolkit.Resource.Drawable.notification_action_background = global::Samples.Resource.Drawable.notification_action_background;
+			global::MonoDroidToolkit.Resource.Drawable.notification_bg = global::Samples.Resource.Drawable.notification_bg;
+			global::MonoDroidToolkit.Resource.Drawable.notification_bg_low = global::Samples.Resource.Drawable.notification_bg_low;
+			global::MonoDroidToolkit.Resource.Drawable.notification_bg_low_normal = global::Samples.Resource.Drawable.notification_bg_low_normal;
+			global::MonoDroidToolkit.Resource.Drawable.notification_bg_low_pressed = global::Samples.Resource.Drawable.notification_bg_low_pressed;
+			global::MonoDroidToolkit.Resource.Drawable.notification_bg_normal = global::Samples.Resource.Drawable.notification_bg_normal;
+			global::MonoDroidToolkit.Resource.Drawable.notification_bg_normal_pressed = global::Samples.Resource.Drawable.notification_bg_normal_pressed;
+			global::MonoDroidToolkit.Resource.Drawable.notification_icon_background = global::Samples.Resource.Drawable.notification_icon_background;
+			global::MonoDroidToolkit.Resource.Drawable.notification_template_icon_bg = global::Samples.Resource.Drawable.notification_template_icon_bg;
+			global::MonoDroidToolkit.Resource.Drawable.notification_template_icon_low_bg = global::Samples.Resource.Drawable.notification_template_icon_low_bg;
+			global::MonoDroidToolkit.Resource.Drawable.notification_tile_bg = global::Samples.Resource.Drawable.notification_tile_bg;
+			global::MonoDroidToolkit.Resource.Drawable.notify_panel_notification_icon_bg = global::Samples.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::MonoDroidToolkit.Resource.Drawable.pin_progress_pinned = global::Samples.Resource.Drawable.pin_progress_pinned;
 			global::MonoDroidToolkit.Resource.Drawable.pin_progress_shadow = global::Samples.Resource.Drawable.pin_progress_shadow;
 			global::MonoDroidToolkit.Resource.Drawable.pin_progress_unpinned = global::Samples.Resource.Drawable.pin_progress_unpinned;
 			global::MonoDroidToolkit.Resource.Drawable.scrubber_control_normal_holo = global::Samples.Resource.Drawable.scrubber_control_normal_holo;
 			global::MonoDroidToolkit.Resource.Drawable.scrubber_control_pressed_holo = global::Samples.Resource.Drawable.scrubber_control_pressed_holo;
+			global::MonoDroidToolkit.Resource.Id.action_container = global::Samples.Resource.Id.action_container;
+			global::MonoDroidToolkit.Resource.Id.action_divider = global::Samples.Resource.Id.action_divider;
+			global::MonoDroidToolkit.Resource.Id.action_image = global::Samples.Resource.Id.action_image;
+			global::MonoDroidToolkit.Resource.Id.action_text = global::Samples.Resource.Id.action_text;
+			global::MonoDroidToolkit.Resource.Id.actions = global::Samples.Resource.Id.actions;
+			global::MonoDroidToolkit.Resource.Id.async = global::Samples.Resource.Id.async;
+			global::MonoDroidToolkit.Resource.Id.blocking = global::Samples.Resource.Id.blocking;
 			global::MonoDroidToolkit.Resource.Id.bottom = global::Samples.Resource.Id.bottom;
 			global::MonoDroidToolkit.Resource.Id.center = global::Samples.Resource.Id.center;
 			global::MonoDroidToolkit.Resource.Id.center_horizontal = global::Samples.Resource.Id.center_horizontal;
 			global::MonoDroidToolkit.Resource.Id.center_vertical = global::Samples.Resource.Id.center_vertical;
+			global::MonoDroidToolkit.Resource.Id.chronometer = global::Samples.Resource.Id.chronometer;
 			global::MonoDroidToolkit.Resource.Id.clip = global::Samples.Resource.Id.clip;
 			global::MonoDroidToolkit.Resource.Id.clip_horizontal = global::Samples.Resource.Id.clip_horizontal;
 			global::MonoDroidToolkit.Resource.Id.clip_vertical = global::Samples.Resource.Id.clip_vertical;
@@ -95,16 +149,59 @@ namespace Samples
 			global::MonoDroidToolkit.Resource.Id.fill = global::Samples.Resource.Id.fill;
 			global::MonoDroidToolkit.Resource.Id.fill_horizontal = global::Samples.Resource.Id.fill_horizontal;
 			global::MonoDroidToolkit.Resource.Id.fill_vertical = global::Samples.Resource.Id.fill_vertical;
+			global::MonoDroidToolkit.Resource.Id.forever = global::Samples.Resource.Id.forever;
+			global::MonoDroidToolkit.Resource.Id.icon = global::Samples.Resource.Id.icon;
+			global::MonoDroidToolkit.Resource.Id.icon_group = global::Samples.Resource.Id.icon_group;
+			global::MonoDroidToolkit.Resource.Id.info = global::Samples.Resource.Id.info;
+			global::MonoDroidToolkit.Resource.Id.italic = global::Samples.Resource.Id.italic;
 			global::MonoDroidToolkit.Resource.Id.left = global::Samples.Resource.Id.left;
+			global::MonoDroidToolkit.Resource.Id.line1 = global::Samples.Resource.Id.line1;
+			global::MonoDroidToolkit.Resource.Id.line3 = global::Samples.Resource.Id.line3;
+			global::MonoDroidToolkit.Resource.Id.normal = global::Samples.Resource.Id.normal;
+			global::MonoDroidToolkit.Resource.Id.notification_background = global::Samples.Resource.Id.notification_background;
+			global::MonoDroidToolkit.Resource.Id.notification_main_column = global::Samples.Resource.Id.notification_main_column;
+			global::MonoDroidToolkit.Resource.Id.notification_main_column_container = global::Samples.Resource.Id.notification_main_column_container;
 			global::MonoDroidToolkit.Resource.Id.right = global::Samples.Resource.Id.right;
+			global::MonoDroidToolkit.Resource.Id.right_icon = global::Samples.Resource.Id.right_icon;
+			global::MonoDroidToolkit.Resource.Id.right_side = global::Samples.Resource.Id.right_side;
 			global::MonoDroidToolkit.Resource.Id.start = global::Samples.Resource.Id.start;
+			global::MonoDroidToolkit.Resource.Id.text = global::Samples.Resource.Id.text;
+			global::MonoDroidToolkit.Resource.Id.text2 = global::Samples.Resource.Id.text2;
+			global::MonoDroidToolkit.Resource.Id.time = global::Samples.Resource.Id.time;
+			global::MonoDroidToolkit.Resource.Id.title = global::Samples.Resource.Id.title;
 			global::MonoDroidToolkit.Resource.Id.top = global::Samples.Resource.Id.top;
 			global::MonoDroidToolkit.Resource.Integer.circular_indeterminent_interval = global::Samples.Resource.Integer.circular_indeterminent_interval;
 			global::MonoDroidToolkit.Resource.Integer.progressbutton_indeterminent_interval = global::Samples.Resource.Integer.progressbutton_indeterminent_interval;
+			global::MonoDroidToolkit.Resource.Integer.status_bar_notification_info_maxnum = global::Samples.Resource.Integer.status_bar_notification_info_maxnum;
+			global::MonoDroidToolkit.Resource.Layout.notification_action = global::Samples.Resource.Layout.notification_action;
+			global::MonoDroidToolkit.Resource.Layout.notification_action_tombstone = global::Samples.Resource.Layout.notification_action_tombstone;
+			global::MonoDroidToolkit.Resource.Layout.notification_template_custom_big = global::Samples.Resource.Layout.notification_template_custom_big;
+			global::MonoDroidToolkit.Resource.Layout.notification_template_icon_group = global::Samples.Resource.Layout.notification_template_icon_group;
+			global::MonoDroidToolkit.Resource.Layout.notification_template_part_chronometer = global::Samples.Resource.Layout.notification_template_part_chronometer;
+			global::MonoDroidToolkit.Resource.Layout.notification_template_part_time = global::Samples.Resource.Layout.notification_template_part_time;
+			global::MonoDroidToolkit.Resource.String.status_bar_notification_info_overflow = global::Samples.Resource.String.status_bar_notification_info_overflow;
 			global::MonoDroidToolkit.Resource.Style.CircularProgressBar = global::Samples.Resource.Style.CircularProgressBar;
 			global::MonoDroidToolkit.Resource.Style.CircularProgressBarLight = global::Samples.Resource.Style.CircularProgressBarLight;
 			global::MonoDroidToolkit.Resource.Style.ProgressButton = global::Samples.Resource.Style.ProgressButton;
 			global::MonoDroidToolkit.Resource.Style.ProgressButton_Pin = global::Samples.Resource.Style.ProgressButton_Pin;
+			global::MonoDroidToolkit.Resource.Style.TextAppearance_Compat_Notification = global::Samples.Resource.Style.TextAppearance_Compat_Notification;
+			global::MonoDroidToolkit.Resource.Style.TextAppearance_Compat_Notification_Info = global::Samples.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::MonoDroidToolkit.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Samples.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::MonoDroidToolkit.Resource.Style.TextAppearance_Compat_Notification_Time = global::Samples.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::MonoDroidToolkit.Resource.Style.TextAppearance_Compat_Notification_Title = global::Samples.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::MonoDroidToolkit.Resource.Style.Widget_Compat_NotificationActionContainer = global::Samples.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::MonoDroidToolkit.Resource.Style.Widget_Compat_NotificationActionText = global::Samples.Resource.Style.Widget_Compat_NotificationActionText;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily = global::Samples.Resource.Styleable.FontFamily;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily_fontProviderAuthority = global::Samples.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily_fontProviderCerts = global::Samples.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Samples.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Samples.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily_fontProviderPackage = global::Samples.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamily_fontProviderQuery = global::Samples.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamilyFont = global::Samples.Resource.Styleable.FontFamilyFont;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamilyFont_font = global::Samples.Resource.Styleable.FontFamilyFont_font;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamilyFont_fontStyle = global::Samples.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::MonoDroidToolkit.Resource.Styleable.FontFamilyFont_fontWeight = global::Samples.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::MonoDroidToolkit.Resource.Styleable.HoloCircularProgressBar = global::Samples.Resource.Styleable.HoloCircularProgressBar;
 			global::MonoDroidToolkit.Resource.Styleable.HoloCircularProgressBar_circular_gravity = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_gravity;
 			global::MonoDroidToolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate = global::Samples.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate;
@@ -136,68 +233,95 @@ namespace Samples
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010003
-			public const int circleColor = 2130771971;
-			
-			// aapt resource value: 0x7f010014
-			public const int circularProgressBarStyle = 2130771988;
-			
 			// aapt resource value: 0x7f01000c
-			public const int circular_gravity = 2130771980;
+			public const int circleColor = 2130771980;
 			
-			// aapt resource value: 0x7f010012
-			public const int circular_indeterminate = 2130771986;
+			// aapt resource value: 0x7f01001d
+			public const int circularProgressBarStyle = 2130771997;
 			
-			// aapt resource value: 0x7f010013
-			public const int circular_indeterminate_interval = 2130771987;
+			// aapt resource value: 0x7f010015
+			public const int circular_gravity = 2130771989;
 			
-			// aapt resource value: 0x7f01000f
-			public const int circular_marker_progress = 2130771983;
+			// aapt resource value: 0x7f01001b
+			public const int circular_indeterminate = 2130771995;
 			
-			// aapt resource value: 0x7f01000e
-			public const int circular_progress = 2130771982;
+			// aapt resource value: 0x7f01001c
+			public const int circular_indeterminate_interval = 2130771996;
 			
-			// aapt resource value: 0x7f010011
-			public const int circular_progress_background_color = 2130771985;
+			// aapt resource value: 0x7f010018
+			public const int circular_marker_progress = 2130771992;
 			
-			// aapt resource value: 0x7f010010
-			public const int circular_progress_color = 2130771984;
+			// aapt resource value: 0x7f010017
+			public const int circular_progress = 2130771991;
 			
-			// aapt resource value: 0x7f01000d
-			public const int circular_stroke_width = 2130771981;
+			// aapt resource value: 0x7f01001a
+			public const int circular_progress_background_color = 2130771994;
 			
-			// aapt resource value: 0x7f01000a
-			public const int indeterminate = 2130771978;
+			// aapt resource value: 0x7f010019
+			public const int circular_progress_color = 2130771993;
 			
-			// aapt resource value: 0x7f01000b
-			public const int indeterminate_interval = 2130771979;
-			
-			// aapt resource value: 0x7f010008
-			public const int innerSize = 2130771976;
-			
-			// aapt resource value: 0x7f010002
-			public const int max = 2130771970;
-			
-			// aapt resource value: 0x7f010009
-			public const int pinned = 2130771977;
-			
-			// aapt resource value: 0x7f010005
-			public const int pinnedDrawable = 2130771973;
-			
-			// aapt resource value: 0x7f010001
-			public const int progress = 2130771969;
-			
-			// aapt resource value: 0x7f010000
-			public const int progressButtonStyle = 2130771968;
-			
-			// aapt resource value: 0x7f010004
-			public const int progressColor = 2130771972;
+			// aapt resource value: 0x7f010016
+			public const int circular_stroke_width = 2130771990;
 			
 			// aapt resource value: 0x7f010007
-			public const int shadowDrawable = 2130771975;
+			public const int font = 2130771975;
+			
+			// aapt resource value: 0x7f010000
+			public const int fontProviderAuthority = 2130771968;
+			
+			// aapt resource value: 0x7f010003
+			public const int fontProviderCerts = 2130771971;
+			
+			// aapt resource value: 0x7f010004
+			public const int fontProviderFetchStrategy = 2130771972;
+			
+			// aapt resource value: 0x7f010005
+			public const int fontProviderFetchTimeout = 2130771973;
+			
+			// aapt resource value: 0x7f010001
+			public const int fontProviderPackage = 2130771969;
+			
+			// aapt resource value: 0x7f010002
+			public const int fontProviderQuery = 2130771970;
 			
 			// aapt resource value: 0x7f010006
-			public const int unpinnedDrawable = 2130771974;
+			public const int fontStyle = 2130771974;
+			
+			// aapt resource value: 0x7f010008
+			public const int fontWeight = 2130771976;
+			
+			// aapt resource value: 0x7f010013
+			public const int indeterminate = 2130771987;
+			
+			// aapt resource value: 0x7f010014
+			public const int indeterminate_interval = 2130771988;
+			
+			// aapt resource value: 0x7f010011
+			public const int innerSize = 2130771985;
+			
+			// aapt resource value: 0x7f01000b
+			public const int max = 2130771979;
+			
+			// aapt resource value: 0x7f010012
+			public const int pinned = 2130771986;
+			
+			// aapt resource value: 0x7f01000e
+			public const int pinnedDrawable = 2130771982;
+			
+			// aapt resource value: 0x7f01000a
+			public const int progress = 2130771978;
+			
+			// aapt resource value: 0x7f010009
+			public const int progressButtonStyle = 2130771977;
+			
+			// aapt resource value: 0x7f01000d
+			public const int progressColor = 2130771981;
+			
+			// aapt resource value: 0x7f010010
+			public const int shadowDrawable = 2130771984;
+			
+			// aapt resource value: 0x7f01000f
+			public const int unpinnedDrawable = 2130771983;
 			
 			static Attribute()
 			{
@@ -209,188 +333,216 @@ namespace Samples
 			}
 		}
 		
+		public partial class Boolean
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int abc_action_bar_embed_tabs = 2131034112;
+			
+			static Boolean()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Boolean()
+			{
+			}
+		}
+		
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f04001f
-			public const int background_dark = 2130968607;
+			// aapt resource value: 0x7f070023
+			public const int background_dark = 2131165219;
 			
-			// aapt resource value: 0x7f040024
-			public const int background_holo_dark = 2130968612;
+			// aapt resource value: 0x7f070028
+			public const int background_holo_dark = 2131165224;
 			
-			// aapt resource value: 0x7f040025
-			public const int background_holo_light = 2130968613;
+			// aapt resource value: 0x7f070029
+			public const int background_holo_light = 2131165225;
 			
-			// aapt resource value: 0x7f040020
-			public const int background_light = 2130968608;
+			// aapt resource value: 0x7f070024
+			public const int background_light = 2131165220;
 			
-			// aapt resource value: 0x7f040021
-			public const int bright_foreground_dark = 2130968609;
+			// aapt resource value: 0x7f070025
+			public const int bright_foreground_dark = 2131165221;
 			
-			// aapt resource value: 0x7f040023
-			public const int bright_foreground_dark_disabled = 2130968611;
+			// aapt resource value: 0x7f070027
+			public const int bright_foreground_dark_disabled = 2131165223;
 			
-			// aapt resource value: 0x7f040028
-			public const int bright_foreground_disabled_holo_dark = 2130968616;
+			// aapt resource value: 0x7f07002c
+			public const int bright_foreground_disabled_holo_dark = 2131165228;
 			
-			// aapt resource value: 0x7f040029
-			public const int bright_foreground_disabled_holo_light = 2130968617;
+			// aapt resource value: 0x7f07002d
+			public const int bright_foreground_disabled_holo_light = 2131165229;
 			
-			// aapt resource value: 0x7f040026
-			public const int bright_foreground_holo_dark = 2130968614;
+			// aapt resource value: 0x7f07002a
+			public const int bright_foreground_holo_dark = 2131165226;
 			
-			// aapt resource value: 0x7f040027
-			public const int bright_foreground_holo_light = 2130968615;
+			// aapt resource value: 0x7f07002b
+			public const int bright_foreground_holo_light = 2131165227;
 			
-			// aapt resource value: 0x7f040022
-			public const int bright_foreground_light = 2130968610;
+			// aapt resource value: 0x7f070026
+			public const int bright_foreground_light = 2131165222;
 			
-			// aapt resource value: 0x7f04002b
-			public const int dim_foreground_disabled_holo_dark = 2130968619;
+			// aapt resource value: 0x7f07002f
+			public const int dim_foreground_disabled_holo_dark = 2131165231;
 			
-			// aapt resource value: 0x7f04002e
-			public const int dim_foreground_disabled_holo_light = 2130968622;
+			// aapt resource value: 0x7f070032
+			public const int dim_foreground_disabled_holo_light = 2131165234;
 			
-			// aapt resource value: 0x7f04002a
-			public const int dim_foreground_holo_dark = 2130968618;
+			// aapt resource value: 0x7f07002e
+			public const int dim_foreground_holo_dark = 2131165230;
 			
-			// aapt resource value: 0x7f04002d
-			public const int dim_foreground_holo_light = 2130968621;
+			// aapt resource value: 0x7f070031
+			public const int dim_foreground_holo_light = 2131165233;
 			
-			// aapt resource value: 0x7f040030
-			public const int highlighted_text_holo_dark = 2130968624;
+			// aapt resource value: 0x7f070034
+			public const int highlighted_text_holo_dark = 2131165236;
 			
-			// aapt resource value: 0x7f040031
-			public const int highlighted_text_holo_light = 2130968625;
+			// aapt resource value: 0x7f070035
+			public const int highlighted_text_holo_light = 2131165237;
 			
-			// aapt resource value: 0x7f04002c
-			public const int hint_foreground_holo_dark = 2130968620;
+			// aapt resource value: 0x7f070030
+			public const int hint_foreground_holo_dark = 2131165232;
 			
-			// aapt resource value: 0x7f04002f
-			public const int hint_foreground_holo_light = 2130968623;
+			// aapt resource value: 0x7f070033
+			public const int hint_foreground_holo_light = 2131165235;
 			
-			// aapt resource value: 0x7f04003b
-			public const int holo_blue_bright = 2130968635;
+			// aapt resource value: 0x7f07003f
+			public const int holo_blue_bright = 2131165247;
 			
-			// aapt resource value: 0x7f040035
-			public const int holo_blue_dark = 2130968629;
+			// aapt resource value: 0x7f070039
+			public const int holo_blue_dark = 2131165241;
 			
-			// aapt resource value: 0x7f040032
-			public const int holo_blue_light = 2130968626;
+			// aapt resource value: 0x7f070036
+			public const int holo_blue_light = 2131165238;
 			
-			// aapt resource value: 0x7f040036
-			public const int holo_green_dark = 2130968630;
+			// aapt resource value: 0x7f07003a
+			public const int holo_green_dark = 2131165242;
 			
-			// aapt resource value: 0x7f040033
-			public const int holo_green_light = 2130968627;
+			// aapt resource value: 0x7f070037
+			public const int holo_green_light = 2131165239;
 			
-			// aapt resource value: 0x7f04003a
-			public const int holo_orange_dark = 2130968634;
+			// aapt resource value: 0x7f07003e
+			public const int holo_orange_dark = 2131165246;
 			
-			// aapt resource value: 0x7f040039
-			public const int holo_orange_light = 2130968633;
+			// aapt resource value: 0x7f07003d
+			public const int holo_orange_light = 2131165245;
 			
-			// aapt resource value: 0x7f040038
-			public const int holo_purple = 2130968632;
+			// aapt resource value: 0x7f07003c
+			public const int holo_purple = 2131165244;
 			
-			// aapt resource value: 0x7f040037
-			public const int holo_red_dark = 2130968631;
+			// aapt resource value: 0x7f07003b
+			public const int holo_red_dark = 2131165243;
 			
-			// aapt resource value: 0x7f040034
-			public const int holo_red_light = 2130968628;
+			// aapt resource value: 0x7f070038
+			public const int holo_red_light = 2131165240;
 			
-			// aapt resource value: 0x7f040000
-			public const int progress_default_circle_color = 2130968576;
+			// aapt resource value: 0x7f070000
+			public const int notification_action_color_filter = 2131165184;
 			
-			// aapt resource value: 0x7f040001
-			public const int progress_default_progress_color = 2130968577;
+			// aapt resource value: 0x7f070001
+			public const int notification_icon_bg_color = 2131165185;
 			
-			// aapt resource value: 0x7f040002
-			public const int refractored_background_dark = 2130968578;
+			// aapt resource value: 0x7f070004
+			public const int progress_default_circle_color = 2131165188;
 			
-			// aapt resource value: 0x7f040007
-			public const int refractored_background_holo_dark = 2130968583;
+			// aapt resource value: 0x7f070005
+			public const int progress_default_progress_color = 2131165189;
 			
-			// aapt resource value: 0x7f040008
-			public const int refractored_background_holo_light = 2130968584;
+			// aapt resource value: 0x7f070006
+			public const int refractored_background_dark = 2131165190;
 			
-			// aapt resource value: 0x7f040003
-			public const int refractored_background_light = 2130968579;
+			// aapt resource value: 0x7f07000b
+			public const int refractored_background_holo_dark = 2131165195;
 			
-			// aapt resource value: 0x7f040004
-			public const int refractored_bright_foreground_dark = 2130968580;
+			// aapt resource value: 0x7f07000c
+			public const int refractored_background_holo_light = 2131165196;
 			
-			// aapt resource value: 0x7f040006
-			public const int refractored_bright_foreground_dark_disabled = 2130968582;
+			// aapt resource value: 0x7f070007
+			public const int refractored_background_light = 2131165191;
 			
-			// aapt resource value: 0x7f04000b
-			public const int refractored_bright_foreground_disabled_holo_dark = 2130968587;
+			// aapt resource value: 0x7f070008
+			public const int refractored_bright_foreground_dark = 2131165192;
 			
-			// aapt resource value: 0x7f04000c
-			public const int refractored_bright_foreground_disabled_holo_light = 2130968588;
+			// aapt resource value: 0x7f07000a
+			public const int refractored_bright_foreground_dark_disabled = 2131165194;
 			
-			// aapt resource value: 0x7f040009
-			public const int refractored_bright_foreground_holo_dark = 2130968585;
+			// aapt resource value: 0x7f07000f
+			public const int refractored_bright_foreground_disabled_holo_dark = 2131165199;
 			
-			// aapt resource value: 0x7f04000a
-			public const int refractored_bright_foreground_holo_light = 2130968586;
+			// aapt resource value: 0x7f070010
+			public const int refractored_bright_foreground_disabled_holo_light = 2131165200;
 			
-			// aapt resource value: 0x7f040005
-			public const int refractored_bright_foreground_light = 2130968581;
+			// aapt resource value: 0x7f07000d
+			public const int refractored_bright_foreground_holo_dark = 2131165197;
 			
-			// aapt resource value: 0x7f04000e
-			public const int refractored_dim_foreground_disabled_holo_dark = 2130968590;
+			// aapt resource value: 0x7f07000e
+			public const int refractored_bright_foreground_holo_light = 2131165198;
 			
-			// aapt resource value: 0x7f040011
-			public const int refractored_dim_foreground_disabled_holo_light = 2130968593;
+			// aapt resource value: 0x7f070009
+			public const int refractored_bright_foreground_light = 2131165193;
 			
-			// aapt resource value: 0x7f04000d
-			public const int refractored_dim_foreground_holo_dark = 2130968589;
+			// aapt resource value: 0x7f070012
+			public const int refractored_dim_foreground_disabled_holo_dark = 2131165202;
 			
-			// aapt resource value: 0x7f040010
-			public const int refractored_dim_foreground_holo_light = 2130968592;
+			// aapt resource value: 0x7f070015
+			public const int refractored_dim_foreground_disabled_holo_light = 2131165205;
 			
-			// aapt resource value: 0x7f040013
-			public const int refractored_highlighted_text_holo_dark = 2130968595;
+			// aapt resource value: 0x7f070011
+			public const int refractored_dim_foreground_holo_dark = 2131165201;
 			
-			// aapt resource value: 0x7f040014
-			public const int refractored_highlighted_text_holo_light = 2130968596;
+			// aapt resource value: 0x7f070014
+			public const int refractored_dim_foreground_holo_light = 2131165204;
 			
-			// aapt resource value: 0x7f04000f
-			public const int refractored_hint_foreground_holo_dark = 2130968591;
+			// aapt resource value: 0x7f070017
+			public const int refractored_highlighted_text_holo_dark = 2131165207;
 			
-			// aapt resource value: 0x7f040012
-			public const int refractored_hint_foreground_holo_light = 2130968594;
+			// aapt resource value: 0x7f070018
+			public const int refractored_highlighted_text_holo_light = 2131165208;
 			
-			// aapt resource value: 0x7f04001e
-			public const int refractored_holo_blue_bright = 2130968606;
+			// aapt resource value: 0x7f070013
+			public const int refractored_hint_foreground_holo_dark = 2131165203;
 			
-			// aapt resource value: 0x7f040018
-			public const int refractored_holo_blue_dark = 2130968600;
+			// aapt resource value: 0x7f070016
+			public const int refractored_hint_foreground_holo_light = 2131165206;
 			
-			// aapt resource value: 0x7f040015
-			public const int refractored_holo_blue_light = 2130968597;
+			// aapt resource value: 0x7f070022
+			public const int refractored_holo_blue_bright = 2131165218;
 			
-			// aapt resource value: 0x7f040019
-			public const int refractored_holo_green_dark = 2130968601;
+			// aapt resource value: 0x7f07001c
+			public const int refractored_holo_blue_dark = 2131165212;
 			
-			// aapt resource value: 0x7f040016
-			public const int refractored_holo_green_light = 2130968598;
+			// aapt resource value: 0x7f070019
+			public const int refractored_holo_blue_light = 2131165209;
 			
-			// aapt resource value: 0x7f04001d
-			public const int refractored_holo_orange_dark = 2130968605;
+			// aapt resource value: 0x7f07001d
+			public const int refractored_holo_green_dark = 2131165213;
 			
-			// aapt resource value: 0x7f04001c
-			public const int refractored_holo_orange_light = 2130968604;
+			// aapt resource value: 0x7f07001a
+			public const int refractored_holo_green_light = 2131165210;
 			
-			// aapt resource value: 0x7f04001b
-			public const int refractored_holo_purple = 2130968603;
+			// aapt resource value: 0x7f070021
+			public const int refractored_holo_orange_dark = 2131165217;
 			
-			// aapt resource value: 0x7f04001a
-			public const int refractored_holo_red_dark = 2130968602;
+			// aapt resource value: 0x7f070020
+			public const int refractored_holo_orange_light = 2131165216;
 			
-			// aapt resource value: 0x7f040017
-			public const int refractored_holo_red_light = 2130968599;
+			// aapt resource value: 0x7f07001f
+			public const int refractored_holo_purple = 2131165215;
+			
+			// aapt resource value: 0x7f07001e
+			public const int refractored_holo_red_dark = 2131165214;
+			
+			// aapt resource value: 0x7f07001b
+			public const int refractored_holo_red_light = 2131165211;
+			
+			// aapt resource value: 0x7f070002
+			public const int ripple_material_light = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int secondary_text_default_material_light = 2131165187;
 			
 			static Color()
 			{
@@ -405,11 +557,71 @@ namespace Samples
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int progress_inner_size = 2131034112;
+			// aapt resource value: 0x7f060004
+			public const int compat_button_inset_horizontal_material = 2131099652;
 			
-			// aapt resource value: 0x7f050001
-			public const int standard_padding = 2131034113;
+			// aapt resource value: 0x7f060005
+			public const int compat_button_inset_vertical_material = 2131099653;
+			
+			// aapt resource value: 0x7f060006
+			public const int compat_button_padding_horizontal_material = 2131099654;
+			
+			// aapt resource value: 0x7f060007
+			public const int compat_button_padding_vertical_material = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int compat_control_corner_material = 2131099656;
+			
+			// aapt resource value: 0x7f060009
+			public const int notification_action_icon_size = 2131099657;
+			
+			// aapt resource value: 0x7f06000a
+			public const int notification_action_text_size = 2131099658;
+			
+			// aapt resource value: 0x7f06000b
+			public const int notification_big_circle_margin = 2131099659;
+			
+			// aapt resource value: 0x7f060001
+			public const int notification_content_margin_start = 2131099649;
+			
+			// aapt resource value: 0x7f06000c
+			public const int notification_large_icon_height = 2131099660;
+			
+			// aapt resource value: 0x7f06000d
+			public const int notification_large_icon_width = 2131099661;
+			
+			// aapt resource value: 0x7f060002
+			public const int notification_main_column_padding_top = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int notification_media_narrow_margin = 2131099651;
+			
+			// aapt resource value: 0x7f06000e
+			public const int notification_right_icon_size = 2131099662;
+			
+			// aapt resource value: 0x7f060000
+			public const int notification_right_side_padding_top = 2131099648;
+			
+			// aapt resource value: 0x7f06000f
+			public const int notification_small_icon_background_padding = 2131099663;
+			
+			// aapt resource value: 0x7f060010
+			public const int notification_small_icon_size_as_large = 2131099664;
+			
+			// aapt resource value: 0x7f060011
+			public const int notification_subtext_size = 2131099665;
+			
+			// aapt resource value: 0x7f060012
+			public const int notification_top_pad = 2131099666;
+			
+			// aapt resource value: 0x7f060013
+			public const int notification_top_pad_large_text = 2131099667;
+			
+			// aapt resource value: 0x7f060014
+			public const int progress_inner_size = 2131099668;
+			
+			// aapt resource value: 0x7f060015
+			public const int standard_padding = 2131099669;
 			
 			static Dimension()
 			{
@@ -434,22 +646,58 @@ namespace Samples
 			public const int Icon = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int pin_progress_pinned = 2130837507;
+			public const int notification_action_background = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int pin_progress_shadow = 2130837508;
+			public const int notification_bg = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int pin_progress_unpinned = 2130837509;
+			public const int notification_bg_low = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int scrubber_control_normal_holo = 2130837510;
+			public const int notification_bg_low_normal = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int scrubber_control_pressed_holo = 2130837511;
+			public const int notification_bg_low_pressed = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int seattle = 2130837512;
+			public const int notification_bg_normal = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int notification_bg_normal_pressed = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int notification_icon_background = 2130837514;
+			
+			// aapt resource value: 0x7f020013
+			public const int notification_template_icon_bg = 2130837523;
+			
+			// aapt resource value: 0x7f020014
+			public const int notification_template_icon_low_bg = 2130837524;
+			
+			// aapt resource value: 0x7f02000b
+			public const int notification_tile_bg = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int notify_panel_notification_icon_bg = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int pin_progress_pinned = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int pin_progress_shadow = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int pin_progress_unpinned = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int scrubber_control_normal_holo = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int scrubber_control_pressed_holo = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int seattle = 2130837522;
 			
 			static Drawable()
 			{
@@ -464,119 +712,194 @@ namespace Samples
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090000
-			public const int bottom = 2131296256;
+			// aapt resource value: 0x7f09002a
+			public const int action_container = 2131296298;
 			
-			// aapt resource value: 0x7f090001
-			public const int center = 2131296257;
+			// aapt resource value: 0x7f090036
+			public const int action_divider = 2131296310;
 			
-			// aapt resource value: 0x7f090002
-			public const int center_horizontal = 2131296258;
+			// aapt resource value: 0x7f09002b
+			public const int action_image = 2131296299;
 			
-			// aapt resource value: 0x7f090003
-			public const int center_vertical = 2131296259;
+			// aapt resource value: 0x7f09002c
+			public const int action_text = 2131296300;
 			
-			// aapt resource value: 0x7f090015
-			public const int circular_progress_bar = 2131296277;
-			
-			// aapt resource value: 0x7f090004
-			public const int clip = 2131296260;
+			// aapt resource value: 0x7f090037
+			public const int actions = 2131296311;
 			
 			// aapt resource value: 0x7f090005
-			public const int clip_horizontal = 2131296261;
+			public const int async = 2131296261;
 			
 			// aapt resource value: 0x7f090006
-			public const int clip_vertical = 2131296262;
-			
-			// aapt resource value: 0x7f090025
-			public const int container = 2131296293;
-			
-			// aapt resource value: 0x7f090007
-			public const int end = 2131296263;
-			
-			// aapt resource value: 0x7f090008
-			public const int fill = 2131296264;
-			
-			// aapt resource value: 0x7f090009
-			public const int fill_horizontal = 2131296265;
+			public const int blocking = 2131296262;
 			
 			// aapt resource value: 0x7f09000a
-			public const int fill_vertical = 2131296266;
-			
-			// aapt resource value: 0x7f090018
-			public const int hide_ui = 2131296280;
-			
-			// aapt resource value: 0x7f09000f
-			public const int holoCircularProgressBar1 = 2131296271;
-			
-			// aapt resource value: 0x7f090011
-			public const int image = 2131296273;
-			
-			// aapt resource value: 0x7f090017
-			public const int image_loader = 2131296279;
+			public const int bottom = 2131296266;
 			
 			// aapt resource value: 0x7f09000b
-			public const int left = 2131296267;
-			
-			// aapt resource value: 0x7f090013
-			public const int main_layout = 2131296275;
-			
-			// aapt resource value: 0x7f090012
-			public const int name = 2131296274;
-			
-			// aapt resource value: 0x7f090019
-			public const int network = 2131296281;
-			
-			// aapt resource value: 0x7f090021
-			public const int pin_progress_1 = 2131296289;
-			
-			// aapt resource value: 0x7f090022
-			public const int pin_progress_2 = 2131296290;
-			
-			// aapt resource value: 0x7f090023
-			public const int pin_progress_3 = 2131296291;
-			
-			// aapt resource value: 0x7f090024
-			public const int pin_progress_4 = 2131296292;
-			
-			// aapt resource value: 0x7f090014
-			public const int progress_button = 2131296276;
-			
-			// aapt resource value: 0x7f090020
-			public const int progress_seek_bar = 2131296288;
+			public const int center = 2131296267;
 			
 			// aapt resource value: 0x7f09000c
-			public const int right = 2131296268;
-			
-			// aapt resource value: 0x7f090016
-			public const int scale_image = 2131296278;
+			public const int center_horizontal = 2131296268;
 			
 			// aapt resource value: 0x7f09000d
-			public const int start = 2131296269;
+			public const int center_vertical = 2131296269;
 			
-			// aapt resource value: 0x7f090010
-			public const int switch_theme = 2131296272;
-			
-			// aapt resource value: 0x7f09001a
-			public const int textView1 = 2131296282;
-			
-			// aapt resource value: 0x7f09001b
-			public const int textView2 = 2131296283;
-			
-			// aapt resource value: 0x7f09001c
-			public const int textView3 = 2131296284;
-			
-			// aapt resource value: 0x7f09001d
-			public const int textView4 = 2131296285;
-			
-			// aapt resource value: 0x7f09001e
-			public const int textView5 = 2131296286;
+			// aapt resource value: 0x7f090035
+			public const int chronometer = 2131296309;
 			
 			// aapt resource value: 0x7f09001f
-			public const int textView6 = 2131296287;
+			public const int circular_progress_bar = 2131296287;
 			
 			// aapt resource value: 0x7f09000e
-			public const int top = 2131296270;
+			public const int clip = 2131296270;
+			
+			// aapt resource value: 0x7f09000f
+			public const int clip_horizontal = 2131296271;
+			
+			// aapt resource value: 0x7f090010
+			public const int clip_vertical = 2131296272;
+			
+			// aapt resource value: 0x7f09003e
+			public const int container = 2131296318;
+			
+			// aapt resource value: 0x7f090011
+			public const int end = 2131296273;
+			
+			// aapt resource value: 0x7f090012
+			public const int fill = 2131296274;
+			
+			// aapt resource value: 0x7f090013
+			public const int fill_horizontal = 2131296275;
+			
+			// aapt resource value: 0x7f090014
+			public const int fill_vertical = 2131296276;
+			
+			// aapt resource value: 0x7f090007
+			public const int forever = 2131296263;
+			
+			// aapt resource value: 0x7f090022
+			public const int hide_ui = 2131296290;
+			
+			// aapt resource value: 0x7f090019
+			public const int holoCircularProgressBar1 = 2131296281;
+			
+			// aapt resource value: 0x7f09002e
+			public const int icon = 2131296302;
+			
+			// aapt resource value: 0x7f090038
+			public const int icon_group = 2131296312;
+			
+			// aapt resource value: 0x7f09001b
+			public const int image = 2131296283;
+			
+			// aapt resource value: 0x7f090021
+			public const int image_loader = 2131296289;
+			
+			// aapt resource value: 0x7f090031
+			public const int info = 2131296305;
+			
+			// aapt resource value: 0x7f090008
+			public const int italic = 2131296264;
+			
+			// aapt resource value: 0x7f090015
+			public const int left = 2131296277;
+			
+			// aapt resource value: 0x7f090000
+			public const int line1 = 2131296256;
+			
+			// aapt resource value: 0x7f090001
+			public const int line3 = 2131296257;
+			
+			// aapt resource value: 0x7f09001d
+			public const int main_layout = 2131296285;
+			
+			// aapt resource value: 0x7f09001c
+			public const int name = 2131296284;
+			
+			// aapt resource value: 0x7f090023
+			public const int network = 2131296291;
+			
+			// aapt resource value: 0x7f090009
+			public const int normal = 2131296265;
+			
+			// aapt resource value: 0x7f090033
+			public const int notification_background = 2131296307;
+			
+			// aapt resource value: 0x7f09002f
+			public const int notification_main_column = 2131296303;
+			
+			// aapt resource value: 0x7f09002d
+			public const int notification_main_column_container = 2131296301;
+			
+			// aapt resource value: 0x7f09003a
+			public const int pin_progress_1 = 2131296314;
+			
+			// aapt resource value: 0x7f09003b
+			public const int pin_progress_2 = 2131296315;
+			
+			// aapt resource value: 0x7f09003c
+			public const int pin_progress_3 = 2131296316;
+			
+			// aapt resource value: 0x7f09003d
+			public const int pin_progress_4 = 2131296317;
+			
+			// aapt resource value: 0x7f09001e
+			public const int progress_button = 2131296286;
+			
+			// aapt resource value: 0x7f090039
+			public const int progress_seek_bar = 2131296313;
+			
+			// aapt resource value: 0x7f090016
+			public const int right = 2131296278;
+			
+			// aapt resource value: 0x7f090032
+			public const int right_icon = 2131296306;
+			
+			// aapt resource value: 0x7f090030
+			public const int right_side = 2131296304;
+			
+			// aapt resource value: 0x7f090020
+			public const int scale_image = 2131296288;
+			
+			// aapt resource value: 0x7f090017
+			public const int start = 2131296279;
+			
+			// aapt resource value: 0x7f09001a
+			public const int switch_theme = 2131296282;
+			
+			// aapt resource value: 0x7f090002
+			public const int text = 2131296258;
+			
+			// aapt resource value: 0x7f090003
+			public const int text2 = 2131296259;
+			
+			// aapt resource value: 0x7f090024
+			public const int textView1 = 2131296292;
+			
+			// aapt resource value: 0x7f090025
+			public const int textView2 = 2131296293;
+			
+			// aapt resource value: 0x7f090026
+			public const int textView3 = 2131296294;
+			
+			// aapt resource value: 0x7f090027
+			public const int textView4 = 2131296295;
+			
+			// aapt resource value: 0x7f090028
+			public const int textView5 = 2131296296;
+			
+			// aapt resource value: 0x7f090029
+			public const int textView6 = 2131296297;
+			
+			// aapt resource value: 0x7f090034
+			public const int time = 2131296308;
+			
+			// aapt resource value: 0x7f090004
+			public const int title = 2131296260;
+			
+			// aapt resource value: 0x7f090018
+			public const int top = 2131296280;
 			
 			static Id()
 			{
@@ -591,11 +914,14 @@ namespace Samples
 		public partial class Integer
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int circular_indeterminent_interval = 2131099649;
+			// aapt resource value: 0x7f0a0002
+			public const int circular_indeterminent_interval = 2131361794;
 			
-			// aapt resource value: 0x7f060000
-			public const int progressbutton_indeterminent_interval = 2131099648;
+			// aapt resource value: 0x7f0a0001
+			public const int progressbutton_indeterminent_interval = 2131361793;
+			
+			// aapt resource value: 0x7f0a0000
+			public const int status_bar_notification_info_maxnum = 2131361792;
 			
 			static Integer()
 			{
@@ -626,10 +952,28 @@ namespace Samples
 			public const int Network = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int progress_button = 2130903045;
+			public const int notification_action = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ScaleImage = 2130903046;
+			public const int notification_action_tombstone = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int notification_template_custom_big = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int notification_template_icon_group = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int notification_template_part_chronometer = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int notification_template_part_time = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int progress_button = 2130903051;
+			
+			// aapt resource value: 0x7f03000c
+			public const int ScaleImage = 2130903052;
 			
 			static Layout()
 			{
@@ -644,50 +988,53 @@ namespace Samples
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int ApplicationName = 2131230721;
+			// aapt resource value: 0x7f040002
+			public const int ApplicationName = 2130968578;
 			
-			// aapt resource value: 0x7f080000
-			public const int Hello = 2131230720;
+			// aapt resource value: 0x7f040001
+			public const int Hello = 2130968577;
 			
-			// aapt resource value: 0x7f080003
-			public const int circular_progress_bar = 2131230723;
+			// aapt resource value: 0x7f040004
+			public const int circular_progress_bar = 2130968580;
 			
-			// aapt resource value: 0x7f080004
-			public const int content_desc_pinned_downloaded = 2131230724;
+			// aapt resource value: 0x7f040005
+			public const int content_desc_pinned_downloaded = 2130968581;
 			
-			// aapt resource value: 0x7f080005
-			public const int content_desc_pinned_downloading = 2131230725;
+			// aapt resource value: 0x7f040006
+			public const int content_desc_pinned_downloading = 2130968582;
 			
-			// aapt resource value: 0x7f080006
-			public const int content_desc_pinned_not_downloaded = 2131230726;
+			// aapt resource value: 0x7f040007
+			public const int content_desc_pinned_not_downloaded = 2130968583;
 			
-			// aapt resource value: 0x7f080007
-			public const int content_desc_unpinned_downloaded = 2131230727;
+			// aapt resource value: 0x7f040008
+			public const int content_desc_unpinned_downloaded = 2130968584;
 			
-			// aapt resource value: 0x7f080008
-			public const int content_desc_unpinned_downloading = 2131230728;
+			// aapt resource value: 0x7f040009
+			public const int content_desc_unpinned_downloading = 2130968585;
 			
-			// aapt resource value: 0x7f080009
-			public const int content_desc_unpinned_not_downloaded = 2131230729;
+			// aapt resource value: 0x7f04000a
+			public const int content_desc_unpinned_not_downloaded = 2130968586;
 			
-			// aapt resource value: 0x7f08000d
-			public const int hide_ui = 2131230733;
+			// aapt resource value: 0x7f04000e
+			public const int hide_ui = 2130968590;
 			
-			// aapt resource value: 0x7f08000c
-			public const int image_loader = 2131230732;
+			// aapt resource value: 0x7f04000d
+			public const int image_loader = 2130968589;
 			
-			// aapt resource value: 0x7f08000e
-			public const int network = 2131230734;
+			// aapt resource value: 0x7f04000f
+			public const int network = 2130968591;
 			
-			// aapt resource value: 0x7f080002
-			public const int progress_button = 2131230722;
+			// aapt resource value: 0x7f040003
+			public const int progress_button = 2130968579;
 			
-			// aapt resource value: 0x7f08000b
-			public const int scale_image = 2131230731;
+			// aapt resource value: 0x7f04000c
+			public const int scale_image = 2130968588;
 			
-			// aapt resource value: 0x7f08000a
-			public const int switch_theme = 2131230730;
+			// aapt resource value: 0x7f040000
+			public const int status_bar_notification_info_overflow = 2130968576;
+			
+			// aapt resource value: 0x7f04000b
+			public const int switch_theme = 2130968587;
 			
 			static String()
 			{
@@ -702,50 +1049,71 @@ namespace Samples
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f07000c
-			public const int AlertThemeDark = 2131165196;
+			// aapt resource value: 0x7f080013
+			public const int AlertThemeDark = 2131230739;
 			
-			// aapt resource value: 0x7f07000b
-			public const int AlertThemeLight = 2131165195;
+			// aapt resource value: 0x7f080012
+			public const int AlertThemeLight = 2131230738;
 			
-			// aapt resource value: 0x7f070002
-			public const int CircularProgressBar = 2131165186;
+			// aapt resource value: 0x7f080009
+			public const int CircularProgressBar = 2131230729;
 			
-			// aapt resource value: 0x7f070003
-			public const int CircularProgressBarLight = 2131165187;
+			// aapt resource value: 0x7f08000a
+			public const int CircularProgressBarLight = 2131230730;
 			
-			// aapt resource value: 0x7f07000e
-			public const int ExpandableListViewStyle = 2131165198;
+			// aapt resource value: 0x7f080015
+			public const int ExpandableListViewStyle = 2131230741;
 			
-			// aapt resource value: 0x7f07000d
-			public const int ListViewStyle = 2131165197;
+			// aapt resource value: 0x7f080014
+			public const int ListViewStyle = 2131230740;
 			
-			// aapt resource value: 0x7f070009
-			public const int MyTheme = 2131165193;
+			// aapt resource value: 0x7f080010
+			public const int MyTheme = 2131230736;
 			
-			// aapt resource value: 0x7f07000a
-			public const int MyThemeDark = 2131165194;
+			// aapt resource value: 0x7f080011
+			public const int MyThemeDark = 2131230737;
 			
-			// aapt resource value: 0x7f070000
-			public const int ProgressButton = 2131165184;
+			// aapt resource value: 0x7f080007
+			public const int ProgressButton = 2131230727;
 			
-			// aapt resource value: 0x7f070004
-			public const int ProgressButton_1 = 2131165188;
+			// aapt resource value: 0x7f08000b
+			public const int ProgressButton_1 = 2131230731;
 			
-			// aapt resource value: 0x7f070005
-			public const int ProgressButton_2 = 2131165189;
+			// aapt resource value: 0x7f08000c
+			public const int ProgressButton_2 = 2131230732;
 			
-			// aapt resource value: 0x7f070006
-			public const int ProgressButton_Clickable = 2131165190;
+			// aapt resource value: 0x7f08000d
+			public const int ProgressButton_Clickable = 2131230733;
 			
-			// aapt resource value: 0x7f070007
-			public const int ProgressButton_Clickable_3 = 2131165191;
+			// aapt resource value: 0x7f08000e
+			public const int ProgressButton_Clickable_3 = 2131230734;
 			
-			// aapt resource value: 0x7f070008
-			public const int ProgressButton_Clickable_4 = 2131165192;
+			// aapt resource value: 0x7f08000f
+			public const int ProgressButton_Clickable_4 = 2131230735;
 			
-			// aapt resource value: 0x7f070001
-			public const int ProgressButton_Pin = 2131165185;
+			// aapt resource value: 0x7f080008
+			public const int ProgressButton_Pin = 2131230728;
+			
+			// aapt resource value: 0x7f080000
+			public const int TextAppearance_Compat_Notification = 2131230720;
+			
+			// aapt resource value: 0x7f080001
+			public const int TextAppearance_Compat_Notification_Info = 2131230721;
+			
+			// aapt resource value: 0x7f080006
+			public const int TextAppearance_Compat_Notification_Line2 = 2131230726;
+			
+			// aapt resource value: 0x7f080002
+			public const int TextAppearance_Compat_Notification_Time = 2131230722;
+			
+			// aapt resource value: 0x7f080003
+			public const int TextAppearance_Compat_Notification_Title = 2131230723;
+			
+			// aapt resource value: 0x7f080004
+			public const int Widget_Compat_NotificationActionContainer = 2131230724;
+			
+			// aapt resource value: 0x7f080005
+			public const int Widget_Compat_NotificationActionText = 2131230725;
 			
 			static Style()
 			{
@@ -760,15 +1128,55 @@ namespace Samples
 		public partial class Styleable
 		{
 			
+			public static int[] FontFamily = new int[] {
+					2130771968,
+					2130771969,
+					2130771970,
+					2130771971,
+					2130771972,
+					2130771973};
+			
+			// aapt resource value: 0
+			public const int FontFamily_fontProviderAuthority = 0;
+			
+			// aapt resource value: 3
+			public const int FontFamily_fontProviderCerts = 3;
+			
+			// aapt resource value: 4
+			public const int FontFamily_fontProviderFetchStrategy = 4;
+			
+			// aapt resource value: 5
+			public const int FontFamily_fontProviderFetchTimeout = 5;
+			
+			// aapt resource value: 1
+			public const int FontFamily_fontProviderPackage = 1;
+			
+			// aapt resource value: 2
+			public const int FontFamily_fontProviderQuery = 2;
+			
+			public static int[] FontFamilyFont = new int[] {
+					2130771974,
+					2130771975,
+					2130771976};
+			
+			// aapt resource value: 1
+			public const int FontFamilyFont_font = 1;
+			
+			// aapt resource value: 0
+			public const int FontFamilyFont_fontStyle = 0;
+			
+			// aapt resource value: 2
+			public const int FontFamilyFont_fontWeight = 2;
+			
 			public static int[] HoloCircularProgressBar = new int[] {
-					2130771980,
-					2130771981,
-					2130771982,
-					2130771983,
-					2130771984,
-					2130771985,
-					2130771986,
-					2130771987};
+					2130771989,
+					2130771990,
+					2130771991,
+					2130771992,
+					2130771993,
+					2130771994,
+					2130771995,
+					2130771996};
 			
 			// aapt resource value: 0
 			public const int HoloCircularProgressBar_circular_gravity = 0;
@@ -798,17 +1206,17 @@ namespace Samples
 					16842970,
 					16842981,
 					16843534,
-					2130771969,
-					2130771970,
-					2130771971,
-					2130771972,
-					2130771973,
-					2130771974,
-					2130771975,
-					2130771976,
-					2130771977,
 					2130771978,
-					2130771979};
+					2130771979,
+					2130771980,
+					2130771981,
+					2130771982,
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987,
+					2130771988};
 			
 			// aapt resource value: 1
 			public const int ProgressButton_android_clickable = 1;
@@ -853,7 +1261,7 @@ namespace Samples
 			public const int ProgressButton_unpinnedDrawable = 8;
 			
 			public static int[] Theme = new int[] {
-					2130771988};
+					2130771997};
 			
 			// aapt resource value: 0
 			public const int Theme_circularProgressBarStyle = 0;

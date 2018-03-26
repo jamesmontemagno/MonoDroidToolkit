@@ -34,7 +34,7 @@ namespace MonoDroidToolkit
                         return string.Empty;
 
                     var buf = new StringBuilder();
-                    for (int idx = 0; idx < mac.Length; idx++)
+                    for (var idx = 0; idx < mac.Length; idx++)
                     {
                         buf.Append(mac[idx].ToString("x2"));
                         if (idx != mac.Length - 1)
@@ -63,14 +63,14 @@ namespace MonoDroidToolkit
                 var interfaces = GetAllNetworkInterfaces();
                 foreach (var intf in interfaces)
                 {
-                    for (int index = 0; index < intf.InitAddresses.Count; index++)
+                    for (var index = 0; index < intf.InitAddresses.Count; index++)
                     {
                         var addr = intf.InitAddresses[index];
                         var ipAddr = intf.IpAddresses[index];
                         if (!intf.IsLoopback)
                         {
-                            String sAddr = addr.HostAddress.ToUpper();
-                            bool isIPv4 = ipAddr.AddressFamily == AddressFamily.InterNetwork;
+                            var sAddr = addr.HostAddress.ToUpper();
+                            var isIPv4 = ipAddr.AddressFamily == AddressFamily.InterNetwork;
                             if (useIPv4)
                             {
                                 if (isIPv4)
@@ -80,7 +80,7 @@ namespace MonoDroidToolkit
                             {
                                 if (!isIPv4)
                                 {
-                                    int delim = sAddr.IndexOf('%'); // drop ip6 port suffix
+                                    var delim = sAddr.IndexOf('%'); // drop ip6 port suffix
                                     return delim < 0 ? sAddr : sAddr.Substring(0, delim);
                                 }
                             }
@@ -108,7 +108,7 @@ namespace MonoDroidToolkit
                 var interfaces = GetAllNetworkInterfaces();
                 foreach (var intf in interfaces)
                 {
-                    for (int index = 0; index < intf.InitAddresses.Count; index++)
+                    for (var index = 0; index < intf.InitAddresses.Count; index++)
                     {
                         var addr = intf.InitAddresses[index];
                         var ipAddr = intf.IpAddresses[index];
@@ -116,7 +116,7 @@ namespace MonoDroidToolkit
                         
                         if (!addr.IsLoopbackAddress)
                         {
-                            bool isIPv4 = ipAddr.AddressFamily == AddressFamily.InterNetwork;
+                            var isIPv4 = ipAddr.AddressFamily == AddressFamily.InterNetwork;
                             if (isIPv4)
                             {
                                 var hostName = addr.HostName.ToUpper();
@@ -168,7 +168,7 @@ namespace MonoDroidToolkit
                 
                 var hasMoreInterfaces = JNIEnv.CallBooleanMethod(networkInterfacesEnumeration, hasMoreElementsMethod);
 
-                int moreInterfacesCount = 0;
+                var moreInterfacesCount = 0;
 
                 while (hasMoreInterfaces)
                 {
@@ -204,7 +204,7 @@ namespace MonoDroidToolkit
                             IsLoopback = isLoopback
                         };
 
-                    int moreInetCount = 0;
+                    var moreInetCount = 0;
                     while (hasMoreInetAddresses)
                     {
                         moreInetCount++;

@@ -1,9 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 /*
  * Copyright (C) 2013 @JamesMontemagno http://www.montemagno.com http://www.refractored.com
  * 
@@ -24,14 +19,12 @@ using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
 
 namespace MonoDroidToolkit
 {
-    public class HoloCircularProgressBar : View
+	public class HoloCircularProgressBar : View
     {
         private static string TAG = "CircularProgressBar";
         private const string INSTANCE_STATE_SAVEDSTATE = "saved_state";
@@ -48,152 +41,152 @@ namespace MonoDroidToolkit
         private int progressBackgroundColor;
 
         public int CircleStrokeWidth
-        {
-            get { return circleStrokeWidth; }
-            set
-            {
-                if (circleStrokeWidth == value)
-                    return;
+		{
+			get => circleStrokeWidth;
+			set
+			{
+				if (circleStrokeWidth == value)
+					return;
 
-                circleStrokeWidth = value;
-                thumbRadius = circleStrokeWidth * 2;
-                ProgressColor = ProgressColor;
-                ProgressBackgroundColor = ProgressBackgroundColor;
-            }
-        }
-        /// <summary>
-        /// Gets or sets the progress color
-        /// </summary>
-        public int ProgressColor
-        {
-            get { return progressColor; }
-            set
-            {
-                progressColor = value;
-                progressColorPaint = new Paint(PaintFlags.AntiAlias);
-                progressColorPaint.Color = new Color(progressColor);
-                progressColorPaint.SetStyle(Paint.Style.Stroke);
-                progressColorPaint.StrokeWidth = circleStrokeWidth;
+				circleStrokeWidth = value;
+				thumbRadius = circleStrokeWidth * 2;
+				ProgressColor = ProgressColor;
+				ProgressBackgroundColor = ProgressBackgroundColor;
+			}
+		}
+		/// <summary>
+		/// Gets or sets the progress color
+		/// </summary>
+		public int ProgressColor
+		{
+			get => progressColor;
+			set
+			{
+				progressColor = value;
+				progressColorPaint = new Paint(PaintFlags.AntiAlias);
+				progressColorPaint.Color = new Color(progressColor);
+				progressColorPaint.SetStyle(Paint.Style.Stroke);
+				progressColorPaint.StrokeWidth = circleStrokeWidth;
 
-                thumbColorPaint = new Paint(PaintFlags.AntiAlias);
-                thumbColorPaint.Color = new Color(progressColor);
-                thumbColorPaint.SetStyle(Paint.Style.FillAndStroke);
-                thumbColorPaint.StrokeWidth = circleStrokeWidth;
-                Invalidate();
-            }
-        }
+				thumbColorPaint = new Paint(PaintFlags.AntiAlias);
+				thumbColorPaint.Color = new Color(progressColor);
+				thumbColorPaint.SetStyle(Paint.Style.FillAndStroke);
+				thumbColorPaint.StrokeWidth = circleStrokeWidth;
+				Invalidate();
+			}
+		}
 
-        public int ProgressBackgroundColor
-        {
-            get { return progressBackgroundColor; }
-            set
-            {
-                progressBackgroundColor = value;
-                backgroundColorPaint = new Paint(PaintFlags.AntiAlias);
-                backgroundColorPaint.Color = new Color(progressBackgroundColor);
-                backgroundColorPaint.SetStyle(Paint.Style.Stroke);
-                backgroundColorPaint.StrokeWidth = circleStrokeWidth;
+		public int ProgressBackgroundColor
+		{
+			get => progressBackgroundColor;
+			set
+			{
+				progressBackgroundColor = value;
+				backgroundColorPaint = new Paint(PaintFlags.AntiAlias);
+				backgroundColorPaint.Color = new Color(progressBackgroundColor);
+				backgroundColorPaint.SetStyle(Paint.Style.Stroke);
+				backgroundColorPaint.StrokeWidth = circleStrokeWidth;
 
-                markerColorPaint = new Paint(PaintFlags.AntiAlias);
-                markerColorPaint.Color = new Color(progressBackgroundColor);
-                markerColorPaint.SetStyle(Paint.Style.Stroke);
-                markerColorPaint.StrokeWidth = (circleStrokeWidth / 2.0f);
-                Invalidate();
-            }
-        }
+				markerColorPaint = new Paint(PaintFlags.AntiAlias);
+				markerColorPaint.Color = new Color(progressBackgroundColor);
+				markerColorPaint.SetStyle(Paint.Style.Stroke);
+				markerColorPaint.StrokeWidth = (circleStrokeWidth / 2.0f);
+				Invalidate();
+			}
+		}
 
-        private int m_IndeterminateInterval = 100;
+		private int indeterminateInterval = 100;
         public int IndeterminateInterval
-        {
-            get { return m_IndeterminateInterval; }
-            set
-            {
-                m_IndeterminateInterval = value;
-                if (m_IndeterminateInterval < 50)
-                    m_IndeterminateInterval = 50;
+		{
+			get => indeterminateInterval;
+			set
+			{
+				indeterminateInterval = value;
+				if (indeterminateInterval < 50)
+					indeterminateInterval = 50;
 
-            }
-        }
+			}
+		}
 
-        private bool m_Indeterminate = false;
+		private bool indeterminate = false;
         /// <summary>
         /// Get or set if the Spinner is indeterminate
         /// </summary>
         public bool Indeterminate
-        {
-            get { return m_Indeterminate; }
-            set
-            {
+		{
+			get => indeterminate;
+			set
+			{
 
-                m_Indeterminate = value;
-                if (m_Indeterminate)
-                {
-                    //start
-                    UpdateIndeterminate();
-                }
-                else
-                {
-                    //stop
-                    if (m_IndeterminateHandler == null)
-                        return;
+				indeterminate = value;
+				if (indeterminate)
+				{
+					//start
+					UpdateIndeterminate();
+				}
+				else
+				{
+					//stop
+					if (indeterminateHandler == null)
+						return;
 
-                    m_IndeterminateHandler.RemoveCallbacks(IndeterminateRunnable);
-                }
-            }
-        }
+					indeterminateHandler.RemoveCallbacks(IndeterminateRunnable);
+				}
+			}
+		}
 
-        private Paint progressColorPaint;
+		private Paint progressColorPaint;
         private float progress = 30.0f;
 
 
         private float max = 100.0f;
         public float Max
-        {
-            get { return max; }
-            set
-            {
-                max = value;
-                if (max <= 0)
-                    max = 1;
-            }
-        }
+		{
+			get => max;
+			set
+			{
+				max = value;
+				if (max <= 0)
+					max = 1;
+			}
+		}
 
-        /// <summary>
-        /// gets or sets the progress 0 to Max(default 100)
-        /// </summary>
-        public float Progress
-        {
-            get { return progress; }
-            set
-            {
-                if (Math.Abs(progress - value) < float.Epsilon)
-                    return;
+		/// <summary>
+		/// gets or sets the progress 0 to Max(default 100)
+		/// </summary>
+		public float Progress
+		{
+			get => progress;
+			set
+			{
+				if (Math.Abs(progress - value) < float.Epsilon)
+					return;
 
-                progress = value;
-                overdraw = value >= Max;
+				progress = value;
+				overdraw = value >= Max;
 
-                if (isInitializing)
-                    return;
+				if (isInitializing)
+					return;
 
-                Invalidate();
-            }
-        }
-        private Paint thumbColorPaint = new Paint();
+				Invalidate();
+			}
+		}
+		private Paint thumbColorPaint = new Paint();
         private float markerProgress = 0.0f;
         /// <summary>
         /// Gets or sets the marker progress. Settings this will also enable marker
         /// </summary>
         public float MarkerProgress
-        {
-            get { return markerProgress; }
-            set
-            {
-                markerProgress = value;
-                IsMarkerEnabled = true;
-            }
-        }
+		{
+			get => markerProgress;
+			set
+			{
+				markerProgress = value;
+				IsMarkerEnabled = true;
+			}
+		}
 
-        private Paint markerColorPaint;
+		private Paint markerColorPaint;
         /// <summary>
         /// Gets or sets if marker is enabled
         /// </summary>
@@ -249,7 +242,7 @@ namespace MonoDroidToolkit
 
             thumbRadius = circleStrokeWidth * 2;
 
-            m_IndeterminateInterval = indeterminateInterval;
+            this.indeterminateInterval = indeterminateInterval;
             Indeterminate = indeterminate;
 
             isInitializing = false;
@@ -341,14 +334,14 @@ namespace MonoDroidToolkit
 
 
 
-        readonly Handler m_IndeterminateHandler = new Handler();
+        readonly Handler indeterminateHandler = new Handler();
         private void UpdateIndeterminate()
         {
-            if (m_IndeterminateHandler == null)
+            if (indeterminateHandler == null)
                 return;
 
-            m_IndeterminateHandler.RemoveCallbacks(IndeterminateRunnable);
-            m_IndeterminateHandler.PostDelayed(IndeterminateRunnable, m_IndeterminateInterval);
+            indeterminateHandler.RemoveCallbacks(IndeterminateRunnable);
+            indeterminateHandler.PostDelayed(IndeterminateRunnable, indeterminateInterval);
         }
 
 
@@ -361,7 +354,7 @@ namespace MonoDroidToolkit
             Progress = newProgress;
 
             if (Indeterminate)
-                m_IndeterminateHandler.PostDelayed(IndeterminateRunnable, m_IndeterminateInterval);
+                indeterminateHandler.PostDelayed(IndeterminateRunnable, indeterminateInterval);
         }
 
 

@@ -62,7 +62,7 @@ namespace MonoDroidToolkit
             // Calculate entire height by providing a very large height hint.
             // But do not use the highest 2 bits of this integer; those are
             // reserved for the MeasureSpec mode.
-            int expandSpec = MeasureSpec.MakeMeasureSpec(int.MaxValue >> 2, MeasureSpecMode.AtMost);
+            var expandSpec = MeasureSpec.MakeMeasureSpec(int.MaxValue >> 2, MeasureSpecMode.AtMost);
             base.OnMeasure(widthMeasureSpec, expandSpec);
         }
     }

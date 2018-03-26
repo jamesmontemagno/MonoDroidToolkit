@@ -24,43 +24,43 @@ namespace MonoDroidToolkit
 {
     public class FileCache
     {
-        private File m_CacheDir;
+        private File cacheDir;
 
         public FileCache(Context context)
         {
-            string stuff = Android.OS.Environment.ExternalStorageState;
+            var stuff = Android.OS.Environment.ExternalStorageState;
             if (Android.OS.Environment.ExternalStorageState.Equals(Android.OS.Environment.MediaMounted))
             {
-                m_CacheDir = new File(Android.OS.Environment.ExternalStorageDirectory, "Android/data/" + context.ApplicationContext.PackageName);
-                m_CacheDir = context.ExternalCacheDir;
+                cacheDir = new File(Android.OS.Environment.ExternalStorageDirectory, "Android/data/" + context.ApplicationContext.PackageName);
+                cacheDir = context.ExternalCacheDir;
             }
             else
             {
-                m_CacheDir = context.CacheDir;
+                cacheDir = context.CacheDir;
             }
 
-            if (m_CacheDir == null)
-                m_CacheDir = context.CacheDir;
+            if (cacheDir == null)
+                cacheDir = context.CacheDir;
 
 
 
 
-            if (!m_CacheDir.Exists())
+            if (!cacheDir.Exists())
             {
-                var success = m_CacheDir.Mkdirs();
+                var success = cacheDir.Mkdirs();
             }
         }
 
         public File GetFile(string url)
         {
             var fileName = url.GetHashCode().ToString();
-            var file = new File(m_CacheDir, fileName);
+            var file = new File(cacheDir, fileName);
             return file;
         }
 
         public void Clear()
         {
-            File[] files = m_CacheDir.ListFiles();
+            var files = cacheDir.ListFiles();
             if (files == null)
                 return;
 

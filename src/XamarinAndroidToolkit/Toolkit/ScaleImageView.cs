@@ -29,10 +29,10 @@ namespace MonoDroidToolkit
 
     public class ScaleImageViewGestureDetector : GestureDetector.SimpleOnGestureListener
     {
-        private readonly ScaleImageView m_ScaleImageView;
+        private readonly ScaleImageView scaleImageView;
         public ScaleImageViewGestureDetector(ScaleImageView imageView)
         {
-            m_ScaleImageView = imageView;
+            scaleImageView = imageView;
         }
 
         public override bool OnDown(MotionEvent e)
@@ -42,44 +42,44 @@ namespace MonoDroidToolkit
 
         public override bool OnDoubleTap(MotionEvent e)
         {
-            m_ScaleImageView.MaxZoomTo((int)e.GetX(), (int)e.GetY());
-            m_ScaleImageView.Cutting();
+            scaleImageView.MaxZoomTo((int)e.GetX(), (int)e.GetY());
+            scaleImageView.Cutting();
             return true;
         }
     }
 
     public class ScaleImageView : ImageView, View.IOnTouchListener
     {
-        private Context m_Context;
+        private Context context;
 
-        private float m_MaxScale = 2.0f;
+        private float maxScale = 2.0f;
 
-        private Matrix m_Matrix;
-        private float[] m_MatrixValues = new float[9];
-        private int m_Width;
-        private int m_Height;
-        private int m_IntrinsicWidth;
-        private int m_IntrinsicHeight;
-        private float m_Scale;
-        private float m_MinScale;
-        private float m_PreviousDistance;
-        private int m_PreviousMoveX;
-        private int m_PreviousMoveY;
+        private Matrix matrix;
+        private float[] matrixValues = new float[9];
+        private int width;
+        private int height;
+        private int intrinsicWidth;
+        private int intrinsicHeight;
+        private float scale;
+        private float minScale;
+        private float previousDistance;
+        private int previousMoveX;
+        private int previousMoveY;
 
-        private bool m_IsScaling;
-        private GestureDetector m_GestureDetector;
+        private bool isScaling;
+        private GestureDetector gestureDetector;
 
         public ScaleImageView(Context context, IAttributeSet attrs) :
             base(context, attrs)
         {
-            m_Context = context;
+            this.context = context;
             Initialize();
         }
 
         public ScaleImageView(Context context, IAttributeSet attrs, int defStyle) :
             base(context, attrs, defStyle)
         {
-            m_Context = context;
+            this.context = context;
             Initialize();
         }
 
@@ -98,144 +98,144 @@ namespace MonoDroidToolkit
         private void Initialize()
         {
             this.SetScaleType(ScaleType.Matrix);
-            m_Matrix = new Matrix();
+            matrix = new Matrix();
 
             if (Drawable != null)
             {
-                m_IntrinsicWidth = Drawable.IntrinsicWidth;
-                m_IntrinsicHeight = Drawable.IntrinsicHeight;
+                intrinsicWidth = Drawable.IntrinsicWidth;
+                intrinsicHeight = Drawable.IntrinsicHeight;
                 this.SetOnTouchListener(this);
             }
 
-            m_GestureDetector = new GestureDetector(m_Context, new ScaleImageViewGestureDetector(this));
+            gestureDetector = new GestureDetector(context, new ScaleImageViewGestureDetector(this));
         }
 
         protected override bool SetFrame(int l, int t, int r, int b)
         {
-            m_Width = r - l;
-            m_Height = b - t;
+            width = r - l;
+            height = b - t;
 
-            m_Matrix.Reset();
+            matrix.Reset();
             var r_norm = r - l;
-            m_Scale = (float)r_norm / (float)m_IntrinsicWidth;
+            scale = (float)r_norm / (float)intrinsicWidth;
 
             var paddingHeight = 0;
             var paddingWidth = 0;
-            if (m_Scale * m_IntrinsicHeight > m_Height)
+            if (scale * intrinsicHeight > height)
             {
-                m_Scale = (float)m_Height / (float)m_IntrinsicHeight;
-                m_Matrix.PostScale(m_Scale, m_Scale);
-                paddingWidth = (r - m_Width) / 2;
+                scale = (float)height / (float)intrinsicHeight;
+                matrix.PostScale(scale, scale);
+                paddingWidth = (r - width) / 2;
             }
             else
             {
-                m_Matrix.PostScale(m_Scale, m_Scale);
-                paddingHeight = (b - m_Height) / 2;
+                matrix.PostScale(scale, scale);
+                paddingHeight = (b - height) / 2;
             }
 
-            m_Matrix.PostTranslate(paddingWidth, paddingHeight);
-            ImageMatrix = m_Matrix;
-            m_MinScale = m_Scale;
-            ZoomTo(m_Scale, m_Width / 2, m_Height / 2);
+            matrix.PostTranslate(paddingWidth, paddingHeight);
+            ImageMatrix = matrix;
+            minScale = scale;
+            ZoomTo(scale, width / 2, height / 2);
             Cutting();
             return base.SetFrame(l, t, r, b);
         }
 
         private float GetValue(Matrix matrix, int whichValue)
         {
-            matrix.GetValues(m_MatrixValues);
-            return m_MatrixValues[whichValue];
+            matrix.GetValues(matrixValues);
+            return matrixValues[whichValue];
         }
 
 
 
         public float Scale
         {
-            get { return this.GetValue(m_Matrix, Matrix.MscaleX); }
+            get { return this.GetValue(matrix, Matrix.MscaleX); }
         }
 
         public float TranslateX
         {
-            get { return this.GetValue(m_Matrix, Matrix.MtransX); }
+            get { return this.GetValue(matrix, Matrix.MtransX); }
         }
 
         public float TranslateY
         {
-            get { return this.GetValue(m_Matrix, Matrix.MtransY); }
+            get { return this.GetValue(matrix, Matrix.MtransY); }
         }
 
         public void MaxZoomTo(int x, int y)
         {
-            if (this.m_MinScale != this.Scale && (Scale - m_MinScale) > 0.1f)
+            if (this.minScale != this.Scale && (Scale - minScale) > 0.1f)
             {
-                var scale = m_MinScale / Scale;
+                var scale = minScale / Scale;
                 ZoomTo(scale, x, y);
             }
             else
             {
-                var scale = m_MaxScale / Scale;
+                var scale = maxScale / Scale;
                 ZoomTo(scale, x, y);
             }
         }
 
     public void ZoomTo(float scale, int x, int y)
     {
-        if (Scale * scale < m_MinScale)
+        if (Scale * scale < minScale)
         {
-            scale = m_MinScale / Scale;
+            scale = minScale / Scale;
         }
         else
         {
-            if (scale >= 1 && Scale * scale > m_MaxScale)
+            if (scale >= 1 && Scale * scale > maxScale)
             {
-                scale = m_MaxScale / Scale;
+                scale = maxScale / Scale;
             }
         }
-        m_Matrix.PostScale(scale, scale);
+        matrix.PostScale(scale, scale);
         //move to center
-        m_Matrix.PostTranslate(-(m_Width * scale - m_Width) / 2, -(m_Height * scale - m_Height) / 2);
+        matrix.PostTranslate(-(width * scale - width) / 2, -(height * scale - height) / 2);
 
         //move x and y distance
-        m_Matrix.PostTranslate(-(x - (m_Width / 2)) * scale, 0);
-        m_Matrix.PostTranslate(0, -(y - (m_Height / 2)) * scale);
-        ImageMatrix = m_Matrix;
+        matrix.PostTranslate(-(x - (width / 2)) * scale, 0);
+        matrix.PostTranslate(0, -(y - (height / 2)) * scale);
+        ImageMatrix = matrix;
     }
     
         public void Cutting()
         {
-            var width = (int)(m_IntrinsicWidth * Scale);
-            var height = (int)(m_IntrinsicHeight * Scale);
-            if (TranslateX < -(width - m_Width))
+            var width = (int)(intrinsicWidth * Scale);
+            var height = (int)(intrinsicHeight * Scale);
+            if (TranslateX < -(width - this.width))
             {
-                m_Matrix.PostTranslate(-(TranslateX + width - m_Width), 0);
+				matrix.PostTranslate(-(TranslateX + width - this.width), 0);
             }
 
             if (TranslateX > 0)
             {
-                m_Matrix.PostTranslate(-TranslateX, 0);
+                matrix.PostTranslate(-TranslateX, 0);
             }
 
-            if (TranslateY < -(height - m_Height))
+            if (TranslateY < -(height - this.height))
             {
-                m_Matrix.PostTranslate(0, -(TranslateY + height - m_Height));
+				matrix.PostTranslate(0, -(TranslateY + height - this.height));
             }
 
             if (TranslateY > 0)
             {
-                m_Matrix.PostTranslate(0, -TranslateY);
+                matrix.PostTranslate(0, -TranslateY);
             }
 
-            if (width < m_Width)
+            if (width < this.width)
             {
-                m_Matrix.PostTranslate((m_Width - width) / 2, 0);
+				matrix.PostTranslate((this.width - width) / 2, 0);
             }
 
-            if (height < m_Height)
+            if (height < this.height)
             {
-                m_Matrix.PostTranslate(0, (m_Height - height) / 2);
+				matrix.PostTranslate(0, (this.height - height) / 2);
             }
 
-            ImageMatrix = m_Matrix;
+            ImageMatrix = matrix;
         }
 
         private float Distance(float x0, float x1, float y0, float y1)
@@ -247,15 +247,15 @@ namespace MonoDroidToolkit
 
         private float DispDistance()
         {
-            return FloatMath.Sqrt(m_Width * m_Width + m_Height * m_Height);
+            return FloatMath.Sqrt(width * width + height * height);
         }
 
         public override bool OnTouchEvent(MotionEvent e)
         {
-            if (m_GestureDetector.OnTouchEvent(e))
+            if (gestureDetector.OnTouchEvent(e))
             {
-                m_PreviousMoveX = (int)e.GetX();
-                m_PreviousMoveY = (int)e.GetY();
+                previousMoveX = (int)e.GetX();
+                previousMoveY = (int)e.GetY();
                 return true;
             }
 
@@ -269,32 +269,32 @@ namespace MonoDroidToolkit
                         if (touchCount >= 2)
                         {
                             var distance = this.Distance(e.GetX(0), e.GetX(1), e.GetY(0), e.GetY(1));
-                            m_PreviousDistance = distance;
-                            m_IsScaling = true;
+                            previousDistance = distance;
+                            isScaling = true;
                         }
                     }
                     break;
                 
                 case MotionEventActions.Move:
                     {
-                        if (touchCount >= 2 && m_IsScaling)
+                        if (touchCount >= 2 && isScaling)
                         {
                             var distance = this.Distance(e.GetX(0), e.GetX(1), e.GetY(0), e.GetY(1));
-                            var scale = (distance - m_PreviousDistance) / this.DispDistance();
-                            m_PreviousDistance = distance;
+                            var scale = (distance - previousDistance) / this.DispDistance();
+                            previousDistance = distance;
                             scale += 1;
                             scale = scale * scale;
-                            this.ZoomTo(scale, m_Width / 2, m_Height / 2);
+                            this.ZoomTo(scale, width / 2, height / 2);
                             this.Cutting();
                         }
-                        else if (!m_IsScaling)
+                        else if (!isScaling)
                         {
-                            var distanceX = m_PreviousMoveX - (int)e.GetX();
-                            var distanceY = m_PreviousMoveY - (int)e.GetY();
-                            m_PreviousMoveX = (int)e.GetX();
-                            m_PreviousMoveY = (int)e.GetY();
+                            var distanceX = previousMoveX - (int)e.GetX();
+                            var distanceY = previousMoveY - (int)e.GetY();
+                            previousMoveX = (int)e.GetX();
+                            previousMoveY = (int)e.GetY();
 
-                            m_Matrix.PostTranslate(-distanceX, -distanceY);
+                            matrix.PostTranslate(-distanceX, -distanceY);
                             this.Cutting();
                         }
                     }
@@ -305,7 +305,7 @@ namespace MonoDroidToolkit
                     {
                         if (touchCount <= 1)
                         {
-                            m_IsScaling = false;
+                            isScaling = false;
                         }
                     }
                     break;

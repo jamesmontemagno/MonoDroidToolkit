@@ -40,38 +40,38 @@ namespace MonoDroidToolkit
 
         public override void Setup()
         {
-            if ((m_Flags & FLAG_LAYOUT_IN_SCREEN_OLDER_DEVICES) == 0)
+            if ((flags & FLAG_LAYOUT_IN_SCREEN_OLDER_DEVICES) == 0)
             {
-                m_Activity.Window.SetFlags(WindowManagerFlags.LayoutInScreen | WindowManagerFlags.LayoutNoLimits,
+                activity.Window.SetFlags(WindowManagerFlags.LayoutInScreen | WindowManagerFlags.LayoutNoLimits,
                                             WindowManagerFlags.LayoutInScreen | WindowManagerFlags.LayoutNoLimits);
             }
         }
 
-        private bool m_IsVisible = true;
+        private bool isVisible = true;
         public override bool IsVisible
-        {
-            get { return m_IsVisible; }
-            set { m_IsVisible = value; }
-        }
+		{
+			get => isVisible;
+			set => isVisible = value;
+		}
 
-        public override void Hide()
+		public override void Hide()
         {
-            if ((m_Flags & FLAG_FULLSCREEN) != 0)
+            if ((flags & FLAG_FULLSCREEN) != 0)
             {
-                m_Activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
+                activity.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
             }
-            m_OnVisibilityChangeListener.OnVisibilityChange(false);
-            m_IsVisible = false;
+            onVisibilityChangeListener.OnVisibilityChange(false);
+            isVisible = false;
         }
 
         public override void Show()
         {
-            if ((m_Flags & FLAG_FULLSCREEN) != 0)
+            if ((flags & FLAG_FULLSCREEN) != 0)
             {
-                m_Activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
+                activity.Window.SetFlags(0, WindowManagerFlags.Fullscreen);
             }
-            m_OnVisibilityChangeListener.OnVisibilityChange(true);
-            m_IsVisible = true;
+            onVisibilityChangeListener.OnVisibilityChange(true);
+            isVisible = true;
         }
     }
 }
