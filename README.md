@@ -3,7 +3,7 @@ MonoDroidToolkit
 
 Now available on NuGet: https://www.nuget.org/packages/MonoDroid.Toolkit
 
-Build status: [![Build status](https://ci.appveyor.com/api/projects/status/vh63s5x6n39lp56d/branch/master?svg=true)](https://ci.appveyor.com/project/JamesMontemagno/monodroidtoolkit/branch/master)
+Build status: ![Build status](https://jamesmontemagno.visualstudio.com/_apis/public/build/definitions/6b79a378-ddd6-4e31-98ac-a12fcd68644c/15/badge)
 
 Created by:
 James Montemagno ([@JamesMontemagno](http://www.twitter.com/jamesmontemagno))
